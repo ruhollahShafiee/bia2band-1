@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { SettingOutlined } from "@ant-design/icons";
 
 import { useAppContext } from "@/hooks";
 
-import { Col, Layout, Row, theme } from "antd";
+import { Layout, theme } from "antd";
 import { Drawers, SettingDrawer } from "@/components";
+import MainNavbar from "./components/Navbar";
 
 // layoutModules
 const { Header, Content } = Layout;
@@ -31,47 +31,44 @@ const MainLayout = () => {
 		selectedToken,
 	} = useAppContext();
 	// handles
-	const onCloseDrawer = () => {
-		setOpen(false);
-	};
+	const onCloseDrawer = useCallback((navAction) => {
+		setOpen(navAction ? (perValue) => !perValue : false);
+	}, []);
 	// return
 	return (
 		<Layout className="main-layout" dir={direction}>
 			<Header style={{ background: token.colorPrimaryLight, height: 50 }}>
-				<Row justify="end">
-					<Col className="gutter-row">
-						<SettingOutlined
-							className="text-xl"
-							onClick={() => setOpen((perValue) => !perValue)}
-						/>
-						<Drawers
-							title={t("layouts.drawerTitle")}
-							open={open}
-							onClose={onCloseDrawer}
-							placement={placement}
-							content={
-								<SettingDrawer
-									{...{
-										language,
-										changeLanguage,
-										themeMode,
-										changeTheme,
-										fontMode,
-										changeFontMode,
-										tokens,
-										changeTokenMode,
-										selectedToken,
-									}}
-								/>
-							}
-						/>
-					</Col>
-				</Row>
+				<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+					<MainNavbar {...{ onCloseDrawer }} />
+					<Drawers
+						title={t("layouts.drawerTitle")}
+						open={open}
+						onClose={onCloseDrawer}
+						placement={placement}
+						content={
+							<SettingDrawer
+								{...{
+									language,
+									changeLanguage,
+									themeMode,
+									changeTheme,
+									fontMode,
+									changeFontMode,
+									tokens,
+									changeTokenMode,
+									selectedToken,
+								}}
+							/>
+						}
+					/>
+				</div>
 			</Header>
 			<Content style={{ background: token?.colorPrimaryLighter, height: "calc(100vh - 50px)" }}>
-				{/* children */}
-				<Outlet />
-				{/* children */}
+				<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+					{/* children */}
+					<Outlet />
+					{/* children */}
+				</div>
 			</Content>
 		</Layout>
 	);

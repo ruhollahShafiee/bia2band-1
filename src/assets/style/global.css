@@ -3,18 +3,47 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Dana-FaNum-Regular";
-    src: url("../fonts/Dana-FaNum-Regular.ttf");
+	font-family: "Dana-FaNum-Regular";
+	src: url("../fonts/Dana-FaNum-Regular.ttf");
 }
 @font-face {
-    font-family: "Dana-FaNum-Bold";
-    src: url("../fonts/Dana-FaNum-Bold.ttf");
-}
-.Regular-font {
-    font-family: Dana-FaNum-Regular;
-}
-.bold-font {
-    font-family: Dana-FaNum-Bold;
+	font-family: "Dana-FaNum-Bold";
+	src: url("../fonts/Dana-FaNum-Bold.ttf");
 }
 
+@layer base {
+	* {
+		font-family: Dana-FaNum-Bold !important;
+		font-weight: 600;
+	}
+}
 
+/* document style */
+html {
+	overflow-x: hidden;
+}
+body {
+	position: relative;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* scroll style */
+* {
+	scroll-behavior: smooth;
+	scrollbar-width: thin;
+	scrollbar-color: #ffa50050 #0000000d;
+}
+*::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+}
+*::-webkit-scrollbar-track {
+	background: #ffa6001a;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: #ffa50050;
+	border: 3px solid #0000000d;
+}

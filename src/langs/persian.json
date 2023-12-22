@@ -31,6 +31,10 @@
 		"nationalCard": "بارگزاری کارت ملی و شناسنامه",
 		"uploadHint": "فقط فایل با پسوند jpg یا png و حداکثر 5mb بارگزاری شود ."
 	},
+	"header": {
+		"auth": "ورود / ثبت نام",
+		"contactUs": "تماس با ما"
+	},
 	"layouts": {
 		"drawerTitle": "تنظیمات",
 		"theme": "پوسته سایت :",
