@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: "Dana-FaNum-Regular";
-	src: url("../fonts/Dana-FaNum-Regular.ttf");
-}
-@font-face {
 	font-family: "Dana-FaNum-Bold";
 	src: url("../fonts/Dana-FaNum-Bold.ttf");
 }

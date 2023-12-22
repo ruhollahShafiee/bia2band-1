@@ -1,4 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Suspense } from "react";
 import { I18nextProvider } from "react-i18next";
 import { Provider } from "react-redux";
 
@@ -10,6 +11,7 @@ import ContextApi from "@/context/ContextApi";
 import MainLayout from "@/layout/MainLayouts";
 // pages
 import HomePage from "@/pages/home";
+import AboutPage from "@/pages/about";
 
 const router = createBrowserRouter([
 	{
@@ -18,7 +20,17 @@ const router = createBrowserRouter([
 		children: [
 			{
 				index: true,
+				id: "home",
 				element: <HomePage />,
+			},
+			{
+				path: "/about",
+				id: "about",
+				element: (
+					<Suspense fallback={<>loading</>}>
+						<AboutPage />
+					</Suspense>
+				),
 			},
 		],
 	},
