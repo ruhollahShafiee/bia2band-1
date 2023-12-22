@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Dana-FaNum-Regular";
+    src: url("../fonts/Dana-FaNum-Regular.ttf");
+}
+@font-face {
+    font-family: "Dana-FaNum-Bold";
+    src: url("../fonts/Dana-FaNum-Bold.ttf");
+}
+.Regular-font {
+    font-family: Dana-FaNum-Regular;
+}
+.bold-font {
+    font-family: Dana-FaNum-Bold;
+}
+
+
