@@ -22,7 +22,7 @@ const mainRoutes = {
 			element: <HomePage />,
 		},
 		{
-			path: "/about",
+			path: "about",
 			id: "about",
 			lazy: async () => ({ Component: (await import("../pages/about")).default }),
 		},

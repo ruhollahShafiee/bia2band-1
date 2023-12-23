@@ -14,18 +14,13 @@ const Inputs = ({
 	patternMessage,
 	defaultValue,
 	placeholder,
-	tabIndex,
 	disabled,
-	visibilityToggle,
-	formatter,
-	parser,
-	size,
 	min,
 	max,
 	maxLength,
 	minLength,
-	hasNotPattern,
-	children,
+	prefix,
+	size = "large",
 }) => {
 	const { t } = useTranslation();
 	const rules = [
@@ -57,6 +52,8 @@ const Inputs = ({
 				value={value}
 				defaultValue={defaultValue}
 				disabled={disabled}
+				prefix={prefix}
+				size={size}
 				min={min}
 				max={max}
 				maxLength={maxLength}

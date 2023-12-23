@@ -1,28 +1,30 @@
-import styles from "./styles.module.scss";
 import { Button, Form } from "antd";
 
 const Buttons = ({
 	onClick = () => {},
 	loading = false,
 	disabled = false,
-	children,
+	content,
 	type = "primary",
 	htmlType = "button",
 	classes = "",
-	flavor = "",
+	block,
+	size = "large",
 }) => {
 	// return
 	return (
 		<Form.Item>
 			<Button
+				size={size}
+				block={block}
 				loading={loading}
 				type={type}
 				htmlType={htmlType}
 				onClick={onClick}
 				disabled={disabled}
-				className={`${styles["btn-public"]}  ${flavor ? styles[`btn-${flavor}`] : ""} ${classes}`}
+				className={classes}
 			>
-				{children}
+				{content}
 			</Button>
 		</Form.Item>
 	);

@@ -1,7 +1,5 @@
 import { SafetyOutlined, UserOutlined } from "@ant-design/icons";
 
-import img from "./test.jpg";
-
 const Descriptions = ({ color }) => {
 	const TitleItem = () => (
 		<li className="flex">
@@ -25,7 +23,7 @@ const Descriptions = ({ color }) => {
 	);
 };
 
-const SingleCard = ({ id, color }) => {
+const SingleCard = ({ id, color, imgUrl }) => {
 	return (
 		<div
 			key={id}
@@ -38,7 +36,7 @@ const SingleCard = ({ id, color }) => {
 				/>
 				<img
 					className={`absolute top-0 left-0 rounded-full h-28 w-28 shadow-md shadow-app${color}`}
-					src={img}
+					src={imgUrl}
 					alt=""
 					loading="lazy"
 				/>
