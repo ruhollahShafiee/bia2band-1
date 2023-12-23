@@ -1,5 +1,4 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Suspense } from "react";
 import { I18nextProvider } from "react-i18next";
 import { Provider } from "react-redux";
 
@@ -8,33 +7,32 @@ import i18n from "../langs";
 
 import ContextApi from "@/context/ContextApi";
 // layout
+import { Loadings } from "@/components";
 import MainLayout from "@/layout/MainLayouts";
 // pages
 import HomePage from "@/pages/home";
-import AboutPage from "@/pages/about";
 
-const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <MainLayout />,
-		children: [
-			{
-				index: true,
-				id: "home",
-				element: <HomePage />,
-			},
-			{
-				path: "/about",
-				id: "about",
-				element: (
-					<Suspense fallback={<>loading</>}>
-						<AboutPage />
-					</Suspense>
-				),
-			},
-		],
-	},
-]);
+const mainRoutes = {
+	path: "/",
+	element: <MainLayout />,
+	children: [
+		{
+			index: true,
+			id: "home",
+			element: <HomePage />,
+		},
+		{
+			path: "/about",
+			id: "about",
+			lazy: async () => ({ Component: (await import("../pages/about")).default }),
+		},
+	],
+};
+
+const dashboardRoutes = {};
+const adminRoutes = {};
+
+const router = createBrowserRouter([mainRoutes, dashboardRoutes, adminRoutes]);
 
 function App() {
 	// return
@@ -42,7 +40,7 @@ function App() {
 		<Provider store={store}>
 			<I18nextProvider i18n={i18n}>
 				<ContextApi>
-					<RouterProvider router={router} />
+					<RouterProvider router={router} fallbackElement={<Loadings />}  />
 				</ContextApi>
 			</I18nextProvider>
 		</Provider>

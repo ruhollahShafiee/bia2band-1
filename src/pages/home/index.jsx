@@ -1,9 +1,9 @@
+import Producers from "./components/producers";
+
 const HomePage = () => {
 	return (
 		<>
-			<p>sasdasdssadsad</p>
-			<p>sasdasdssadsad</p>
-		
+			<Producers />
 		</>
 	);
 };
