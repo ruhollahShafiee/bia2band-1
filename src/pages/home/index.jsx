@@ -9,7 +9,7 @@ import BanderGrid from "./components/bander";
 import ShopGrid from "./components/shop";
 
 const HomePage = () => {
-	const [swiperSliders, setSwiperSliders] = useState([{ key: "1" }, { key: "2" }, { key: "3" }, { key: "4" }]);
+	const [swiperSliders, setSwiperSliders] = useState([{ key: "1" }, { key: "2" }, { key: "3" }]);
 	// return
 	return (
 		<>
