@@ -12,4 +12,5 @@ export { default as SwipeModule } from "./swiper";
 
 // *** app components ***
 export { default as SettingDrawer } from "./App/settingDrawer";
-export { default as SingleCard } from "./App/singleCard";
+export { default as SingleCard } from "./App/singleCard/producer";
+export { default as AppCard } from "./App/singleCard/appCard";

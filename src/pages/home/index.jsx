@@ -22,6 +22,9 @@ const HomePage = () => {
 				<SearchForm />
 			</section>
 			<Producers />
+			<Producers />
+			<Producers />
+			<Producers />
 		</>
 	);
 };

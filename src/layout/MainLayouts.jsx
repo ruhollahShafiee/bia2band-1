@@ -63,12 +63,10 @@ const MainLayout = () => {
 					/>
 				</div>
 			</Header>
-			<Content style={{ background: token?.colorPrimaryLighter, height: "calc(100vh - 50px)" }}>
-				<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-					{/* children */}
-					<Outlet />
-					{/* children */}
-				</div>
+			<Content className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+				{/* children */}
+				<Outlet />
+				{/* children */}
 			</Content>
 		</Layout>
 	);
