@@ -32,45 +32,50 @@ const SearchForm = () => {
 	];
 	// return
 	return (
-		<Form form={form} name="search-form" className="search-form" onFinish={onSubmit}>
-			<Row gutter={[8, 8]} align={"middle"}>
-				<Col span={24}>
-					<RadioGroup plainOptions={userTypeOptions} name="userType" initialValue={"1"} required={true} />
-				</Col>
-				<Col xs={24} md={12} lg={8}>
-					<Inputs
-						name="names"
-						placeholder={t("نام شخص , گروه , ساز و ...")}
-						prefix={<SearchOutlined className="mx-2 text-gray-400/75" />}
-					/>
-				</Col>
-				<Col xs={24} md={12} lg={6}>
-					<Selects
-						name="city"
-						placeholder={
-							<div className="flex gap-2 align-middle items-center">
-								<AppstoreOutlined className="pb-1"/>
-								<span >نام شهر</span>
-							</div>
-						}
-					/>
-				</Col>
-				<Col xs={24} md={12} lg={6}>
-					<Selects
-						name="groups"
-						placeholder={
-							<div className="flex gap-2 align-middle items-center">
-								<AppstoreOutlined className="pb-1"/>
-								<span > همه دسته بندی ها</span>
-							</div>
-						}
-					/>
-				</Col>
-				<Col xs={24} md={12} lg={4}>
-					<Buttons content={t("جست و جو")} htmlType="submit" block={true} />
-				</Col>
-			</Row>
-		</Form>
+		<section
+			id="search-form"
+			className="mx-auto max-w-6xl px-8 pt-8 lg:pt-14 rounded-3xl -mt-10 shadow-2xl border border-gray-200"
+		>
+			<Form form={form} name="search-form" className="search-form" onFinish={onSubmit}>
+				<Row gutter={[8, 8]} align={"middle"}>
+					<Col span={24}>
+						<RadioGroup plainOptions={userTypeOptions} name="userType" initialValue={"1"} required={true} />
+					</Col>
+					<Col xs={24} md={12} lg={8}>
+						<Inputs
+							name="names"
+							placeholder={t("نام شخص , گروه , ساز و ...")}
+							prefix={<SearchOutlined className="mx-2 text-gray-400/75" />}
+						/>
+					</Col>
+					<Col xs={24} md={12} lg={6}>
+						<Selects
+							name="city"
+							placeholder={
+								<div className="flex gap-2 align-middle items-center">
+									<AppstoreOutlined className="pb-1" />
+									<span>نام شهر</span>
+								</div>
+							}
+						/>
+					</Col>
+					<Col xs={24} md={12} lg={6}>
+						<Selects
+							name="groups"
+							placeholder={
+								<div className="flex gap-2 align-middle items-center">
+									<AppstoreOutlined className="pb-1" />
+									<span> همه دسته بندی ها</span>
+								</div>
+							}
+						/>
+					</Col>
+					<Col xs={24} md={12} lg={4}>
+						<Buttons content={t("جست و جو")} htmlType="submit" block={true} />
+					</Col>
+				</Row>
+			</Form>
+		</section>
 	);
 };
 export default SearchForm;

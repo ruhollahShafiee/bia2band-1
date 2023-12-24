@@ -8,7 +8,7 @@ import { Buttons } from "@/components";
 const { Title } = Typography;
 
 const ShopGrid = () => (
-	<>
+	<section id="shop-grid" className="mx-auto max-w-7xl px-5 pt-8 lg:p-10">
 		<div className="flex justify-between align-bottom items-end">
 			<div className="producer-title">
 				<Title level={2}>برترین آهنگسازان</Title>
@@ -35,7 +35,7 @@ const ShopGrid = () => (
 				<div className="row-span-4 col-span-3 bander-grid-cover bg-blue-200"></div>
 			</div>
 		</section>
-	</>
+	</section>
 );
 
 export default ShopGrid;
