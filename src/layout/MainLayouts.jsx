@@ -38,7 +38,7 @@ const MainLayout = () => {
 	return (
 		<Layout className="main-layout" dir={direction}>
 			<Header style={{ background: token.colorPrimaryLight, height: 50 }}>
-				<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+				<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-10">
 					<MainNavbar {...{ onCloseDrawer, token }} />
 					<Drawers
 						title={t("layouts.drawerTitle")}
