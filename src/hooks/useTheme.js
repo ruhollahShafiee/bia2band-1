@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { getFromStorage, setToStorage } from "@/utils/storage";
 import tokens from "@/theme";
 
-let defaultTheme = getFromStorage("theme") || "dark";
+let defaultTheme = getFromStorage("theme") || "light";
 let defaultFontSize = getFromStorage("fontSize") || "default";
 let defaultToken = getFromStorage("tokenColor") || "default";
 

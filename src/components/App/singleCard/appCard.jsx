@@ -5,11 +5,7 @@ import { BookOutlined } from "@ant-design/icons";
 const { Meta } = Card;
 
 const AppCard = ({ id, imgUrl = "", title = "", description = "" }) => (
-	<Card
-		hoverable
-		cover={<img alt={`cover-${id}`} src={imgUrl} className="h-40" />}
-		// actions={[<BookOutlined key="BookOutlined" className="text-3xl" />]}
-	>
+	<Card hoverable cover={<img alt={`cover-${id}`} src={imgUrl} className="h-40" />}>
 		<Meta
 			avatar={<Avatar src={imgUrl} className="-mt-14 h-24 w-24 shadow-xl" />}
 			title={title}
