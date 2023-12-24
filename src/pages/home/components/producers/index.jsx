@@ -1,15 +1,17 @@
-import { Carousel } from "antd";
+import { Carousel, Typography } from "antd";
 import { DoubleLeftOutlined } from "@ant-design/icons";
 
 import { Buttons } from "@/components";
 import ProducerCards from "./CardSection";
+
+const { Title } = Typography;
 
 export default function Producers() {
 	return (
 		<section className="producer-sections mx-auto max-w-7xl px-5 pt-8 lg:p-10">
 			<div className="flex justify-between align-bottom items-end">
 				<div className="producer-title">
-					<h2 className="text-2xl font-extrabold">برترین آهنگسازان</h2>
+					<Title level={2}>برترین آهنگسازان</Title>
 					<p className="my-3 text-slate-400">شما دراین بخش می توانید مورد علاقه خود را پیدا کنید</p>
 				</div>
 				<Buttons
