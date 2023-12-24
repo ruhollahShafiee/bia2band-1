@@ -9,7 +9,7 @@ const description = "سام شسیشی  شسی حشمتی سامان حشمتی 
 
 const JoinUs = () => {
 	return (
-		<section id="shop-grid" className="mx-auto max-w-7xl px-5 pt-8 lg:p-10">
+		<section id="shop-grid" className="mx-auto p-5 mt-8">
 			<div className="flex gap-5">
 				<div className="flex-none w-1/2 ">
 					<img src={img} alt="contact-us-img" className="object-cover rounded-lg" loading="lazy" />

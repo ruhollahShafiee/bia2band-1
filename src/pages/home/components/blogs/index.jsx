@@ -8,7 +8,7 @@ const { Title } = Typography;
 
 export default function Blogs() {
 	return (
-		<section className="blog-sections mx-auto max-w-7xl px-5 pt-8 lg:p-10">
+		<section className="blog-sections mx-auto p-5 mt-8">
 			<div className="flex justify-between align-bottom items-end">
 				<div className="blog-title">
 					<Title level={2}>بلاگ</Title>

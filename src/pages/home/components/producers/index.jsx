@@ -8,7 +8,7 @@ const { Title } = Typography;
 
 export default function Producers() {
 	return (
-		<section className="producer-sections mx-auto max-w-7xl px-5 pt-8 lg:p-10">
+		<section className="producer-sections mx-auto p-5 mt-8">
 			<div className="flex justify-between align-bottom items-end">
 				<div className="producer-title">
 					<Title level={2}>برترین آهنگسازان</Title>
