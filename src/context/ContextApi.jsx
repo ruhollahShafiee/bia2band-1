@@ -26,6 +26,7 @@ function ContextApi({ children }) {
 		};
 	}, [locale, dispatch]);
 	// return
+	
 	return (
 		<AppContext.Provider
 			value={{
