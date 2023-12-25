@@ -26,6 +26,7 @@ function ContextApi({ children }) {
 		};
 	}, [locale, dispatch]);
 	// return
+	console.log(themeAntMode);
 	return (
 		<AppContext.Provider
 			value={{
@@ -47,7 +48,14 @@ function ContextApi({ children }) {
 				direction={direction}
 				theme={{
 					algorithm: [themeAntMode, ...fontAntMode],
-					token: tokens[selectedToken],
+					token: {
+						...tokens[selectedToken],
+						components: {
+							Button: {
+								algorithm: false,
+							},
+						},
+					},
 				}}
 			>
 				{children}

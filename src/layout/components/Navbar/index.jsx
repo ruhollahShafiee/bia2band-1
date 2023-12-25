@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Typography } from "antd";
 import { SettingOutlined } from "@ant-design/icons";
 
 import { userSelector } from "@/store/selector";
@@ -8,6 +8,8 @@ import { userSelector } from "@/store/selector";
 import logo from "/vite.svg";
 import LogoSection from "./components/Logo";
 import NavbarMobileMenu from "./components/MobileMenu";
+
+const { Paragraph } = Typography;
 
 const MainNavbar = ({ onCloseDrawer, token }) => {
 	const user = useSelector(userSelector);
@@ -20,7 +22,7 @@ const MainNavbar = ({ onCloseDrawer, token }) => {
 		{ to: "/contact", title: "درباره ما" },
 	];
 	// return
-	const hoverClass = `hover:text-[${token?.colorPrimary}]`;
+	const linkClass = `pt-5 hover:text-[${token?.colorPrimary}]`;
 	return (
 		<div className="relative flex h-12 items-center justify-between">
 			{/* NavbarMobileMenu */}
@@ -33,22 +35,25 @@ const MainNavbar = ({ onCloseDrawer, token }) => {
 					<div className="flex space-x-7">
 						<img src={logo} alt="logo" className="pl-10" />
 						{links.map(({ title, ...linkOptions }) => (
-							<NavLink key={title} {...linkOptions} className={`${hoverClass} pt-2`}>
-								{title}
+							<NavLink key={title} {...linkOptions}>
+								<Paragraph className={linkClass}>{title}</Paragraph>
 							</NavLink>
 						))}
 					</div>
 				</div>
 			</div>
 			{/* LogoSection */}
-			<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
-				<LogoSection user={user} hoverClass={hoverClass} />
-				<SettingOutlined className="text-xl mr-3 pt-2" onClick={() => onCloseDrawer("navAction")} />
-				<div className="hidden hover:text-[#1677ff]" />
-				<div className="hidden hover:text-[#1c4e80]" />
-				<div className="hidden hover:text-[#1dc362]" />
-				<div className="hidden hover:text-[#d32d41]" />
-				<div className="hidden hover:text-[#1c4e80]" />
+			<div className="flex">
+				<LogoSection user={user} linkClass={linkClass} />
+				<SettingOutlined
+					className={`text-[${token?.colorPrimary}] text-xl pt-1`}
+					onClick={() => onCloseDrawer("navAction")}
+				/>
+				<div className="hidden hover:text-[#1677ff] text-[#1677ff]" />
+				<div className="hidden hover:text-[#1c4e80] text-[#1c4e80]" />
+				<div className="hidden hover:text-[#1dc362] text-[#1dc362]" />
+				<div className="hidden hover:text-[#d32d41] text-[#d32d41]" />
+				<div className="hidden hover:text-[#1c4e80] text-[#1c4e80]" />
 			</div>
 		</div>
 	);

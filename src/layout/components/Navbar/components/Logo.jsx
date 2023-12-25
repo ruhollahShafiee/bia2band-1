@@ -1,23 +1,30 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
+import { Typography } from "antd";
 import { PhoneOutlined, UserOutlined } from "@ant-design/icons";
 
-export default function LogoSection({ user, hoverClass }) {
+const { Paragraph } = Typography;
+
+export default function LogoSection({ user, linkClass }) {
 	const { t } = useTranslation();
 	// return
 	return (
 		<div className="hidden sm:block">
-			<div className="flex">
+			<div className="flex mx-3">
 				{!user && (
-					<NavLink to={"/contact-us"} className={`mx-4 mt-2 ${hoverClass} no-underline`}>
-						<PhoneOutlined className="mx-2 text-xl" rotate={90} />
-						{t("header.contactUs")}
+					<NavLink to={"/contact-us"} className={`mx-1`}>
+						<Paragraph className={linkClass}>
+							<PhoneOutlined className="mx-2 text-lg" rotate={90} />
+							{t("header.contactUs")}
+						</Paragraph>
 					</NavLink>
 				)}
-				<NavLink to={"/auth"} className={`mx-4 mt-2 ${hoverClass} no-underline`}>
-					<UserOutlined className="mx-2 text-xl" />
-					{t("header.auth")}
+				<NavLink to={"/auth"} className={`mx-1`}>
+					<Paragraph className={linkClass}>
+						<UserOutlined className="mx-2 text-lg" />
+						{t("header.auth")}
+					</Paragraph>
 				</NavLink>
 			</div>
 		</div>

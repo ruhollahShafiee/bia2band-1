@@ -1,8 +1,6 @@
 import { Typography } from "antd";
 import { DoubleLeftOutlined } from "@ant-design/icons";
 
-import "./style.css";
-
 import { Buttons } from "@/components";
 
 const { Title } = Typography;
@@ -29,10 +27,10 @@ const ShopGrid = () => (
 		</div>
 		<section id="shop-cards" className="p-5 rounded-3xl shadow-2xl border border-gray-200">
 			<div className="grid grid-rows-4 grid-flow-col gap-2 h-[400px]">
-				<div className="row-span-2 col-span-2 bander-grid-cover bg-slate-200"></div>
-				<div className="row-span-2 col-span-1 bander-grid-cover bg-purple-200"></div>
-				<div className="row-span-2 col-span-1 bander-grid-cover bg-purple-200"></div>
-				<div className="row-span-4 col-span-3 bander-grid-cover bg-blue-200"></div>
+				<div className="row-span-2 col-span-2 h-full w-full rounded-2xl bg-slate-200"></div>
+				<div className="row-span-2 col-span-1 h-full w-full rounded-2xl bg-purple-200"></div>
+				<div className="row-span-2 col-span-1 h-full w-full rounded-2xl bg-purple-200"></div>
+				<div className="row-span-4 col-span-3 h-full w-full rounded-2xl bg-blue-200"></div>
 			</div>
 		</section>
 	</section>
