@@ -4,12 +4,14 @@ import { useTranslation } from "react-i18next";
 
 import { useAppContext } from "@/hooks";
 
-import { Layout, theme } from "antd";
+import { Layout, theme, Typography } from "antd";
 import { Drawers, SettingDrawer } from "@/components";
 import MainNavbar from "./components/Navbar";
+import MainFooter from "./components/Footer";
 
+const { Text } = Typography;
 // layoutModules
-const { Header, Content } = Layout;
+const { Header, Content, Footer } = Layout;
 
 const MainLayout = () => {
 	const [open, setOpen] = useState(false);
@@ -36,7 +38,7 @@ const MainLayout = () => {
 	}, []);
 	// return
 	return (
-		<Layout className="main-layout" dir={direction}>
+		<Layout dir={direction}>
 			<Header style={{ background: token.colorPrimaryLight, height: 50 }}>
 				<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-10">
 					<MainNavbar {...{ onCloseDrawer, token }} />
@@ -68,6 +70,15 @@ const MainLayout = () => {
 				<Outlet />
 				{/* children */}
 			</Content>
+			<Footer>
+				<MainFooter />
+				<div
+					style={{ background: token.colorPrimaryLight, border: "1px solid", height: 50 }}
+					className="grid place-content-center rounded-lg mt-3"
+				>
+					<Text className="">تمام حقوق این سایت متعلق به بیا تو بند می باشد</Text>
+				</div>
+			</Footer>
 		</Layout>
 	);
 };

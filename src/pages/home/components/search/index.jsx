@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import { Col, Form, Row } from "antd";
-import { AppstoreOutlined, SearchOutlined } from "@ant-design/icons";
+import { AppstoreOutlined, SearchOutlined, EnvironmentOutlined } from "@ant-design/icons";
 
 import { Buttons, Inputs, Selects, RadioGroup } from "@/components";
 
@@ -53,7 +53,7 @@ const SearchForm = () => {
 							name="city"
 							placeholder={
 								<div className="flex gap-2 align-middle items-center">
-									<AppstoreOutlined className="pb-1" />
+									<EnvironmentOutlined className="pb-1" />
 									<span>نام شهر</span>
 								</div>
 							}

@@ -1,8 +1,11 @@
-import Meta from "antd/es/card/Meta";
+import { Typography, Card } from "antd";
 
 import { Buttons } from "@/components";
 
 import img from "../test.jpg";
+
+const { Title } = Typography;
+const { Meta } = Card;
 
 const title = "سامان حشمتی";
 const description = "سام شسیشی  شسی حشمتی سامان حشمتی سامان حشمتیسام شسیشی  شسی حشمتی سامان حشمتی سامان حشمتی";
@@ -17,9 +20,13 @@ const JoinUs = () => {
 				<div className="col-span-1">
 					<div className="flex flex-col justify-between h-full">
 						<Meta
-							title={<h5 className="text-3xl mb-3 pt-5">{title}</h5>}
+							title={
+								<Title level={2} className="mb-3 pt-5">
+									{title}
+								</Title>
+							}
 							description={
-								<p className="text-sm text-justify text-slate-500">
+								<p className="text-justify text-slate-500">
 									{description + description + description + description + description + description}
 								</p>
 							}
