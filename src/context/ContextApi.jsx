@@ -26,7 +26,6 @@ function ContextApi({ children }) {
 		};
 	}, [locale, dispatch]);
 	// return
-	console.log(themeAntMode);
 	return (
 		<AppContext.Provider
 			value={{
