@@ -10,3 +10,13 @@
 	min-width: 100%;
 	min-height: 100%;
 }
+
+.footer-container {
+	border-top: 1px solid;
+	padding-top: 50px;
+	border-radius: 2rem;
+	-webkit-border-radius: 2rem;
+	-moz-border-radius: 2rem;
+	-ms-border-radius: 2rem;
+	-o-border-radius: 2rem;
+}
