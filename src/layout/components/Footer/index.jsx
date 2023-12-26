@@ -1,9 +1,10 @@
 import { Col, Row } from "antd";
 import { PhoneOutlined, EnvironmentOutlined } from "@ant-design/icons";
 
+import logo from "/assets/icon/vite.svg";
+import eNamad from "/assets/image/e-namad.png";
+import samandehi from "/assets/image/samandehi.png";
 import "./style.css";
-import img from "./test.jpg";
-import logo from "/vite.svg";
 
 const MainFooter = () => {
 	return (
@@ -59,21 +60,19 @@ const MainFooter = () => {
 				<Row gutter={[2, 2]}>
 					<Col span={12} className="img-fill">
 						<img
-							src={img}
-							alt="guaranty-us-img"
+							src={eNamad}
+							alt="eNamad-img"
 							className="rounded-lg"
-							width={150}
-							height={200}
+							height={150}
 							loading="lazy"
 						/>
 					</Col>
 					<Col span={12} className="img-fill">
 						<img
-							src={img}
-							alt="guaranty-u-img"
+							src={samandehi}
+							alt="samandehi-img"
 							className="rounded-lg"
-							width={150}
-							height={200}
+							height={150}
 							loading="lazy"
 						/>
 					</Col>

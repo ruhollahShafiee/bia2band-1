@@ -5,7 +5,7 @@ import { SettingOutlined } from "@ant-design/icons";
 
 import { userSelector } from "@/store/selector";
 
-import logo from "/vite.svg";
+import logo from "/assets/icon/vite.svg";
 import LogoSection from "./components/Logo";
 import NavbarMobileMenu from "./components/MobileMenu";
 
