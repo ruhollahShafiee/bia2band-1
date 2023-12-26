@@ -29,26 +29,25 @@ const Uploads = ({
 	};
 	// return
 	return (
-		<Form.Item className={className}>
-			<Form.Item
-				rules={rules}
-				name={name}
-				valuePropName="fileList"
-				getValueFromEvent={normFile}
-				noStyle
-			>
-				<Upload.Dragger name="files" action="/upload.do" maxCount={maxCount}>
-					<div className="flex justify-around">
-						<p className="ant-upload-drag-icon">
-							<InboxOutlined />
-						</p>
-						<div>
-							<p className="ant-upload-text">{uploadText}</p>
-							{uploadHint && <p className="ant-upload-hint">{uploadHint}</p>}
-						</div>
+		<Form.Item
+			className={className}
+			rules={rules}
+			name={name}
+			valuePropName="fileList"
+			getValueFromEvent={normFile}
+			noStyle
+		>
+			<Upload.Dragger name="files" action="/upload.do" maxCount={maxCount}>
+				<div className="flex justify-around">
+					<p className="ant-upload-drag-icon">
+						<InboxOutlined />
+					</p>
+					<div>
+						<p className="ant-upload-text">{uploadText}</p>
+						{uploadHint && <p className="ant-upload-hint">{uploadHint}</p>}
 					</div>
-				</Upload.Dragger>
-			</Form.Item>
+				</div>
+			</Upload.Dragger>
 		</Form.Item>
 	);
 };

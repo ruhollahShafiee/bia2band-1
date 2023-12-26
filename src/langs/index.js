@@ -1,23 +1,21 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
+
 // languages
 import english from "./english.json";
 import persian from "./persian.json";
 
-const options = {
+i18n.use(initReactI18next).init({
 	resources: {
-		en: {
-			translation: english,
-		},
-		fa: {
-			translation: persian,
-		},
+		fa: { translation: persian },
+		en: { translation: english },
 	},
+	lng: "fa",
 	fallbackLng: "fa",
-	debug: false,
-};
-
-i18n.use(initReactI18next).use(LanguageDetector).init(options);
+	// react already safes from xss
+	interpolation: {
+		escapeValue: false,
+	},
+});
 
 export default i18n;

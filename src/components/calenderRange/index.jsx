@@ -1,10 +1,10 @@
 import "dayjs/locale/fa";
 import locale from "antd/locale/fa_IR";
 
-import { useTranslation } from "react-i18next";
 import { DatePicker, Form } from "antd";
+import { useTranslation } from "react-i18next";
 
-const CalenderDatePicker = ({ required = false, defaultValue = null, extraClasses = "" }) => {
+const CalenderDatePicker = ({ required = false, initialValue = null, extraClasses = "" }) => {
     const { t } = useTranslation();
     const rules = [
         {
@@ -19,7 +19,7 @@ const CalenderDatePicker = ({ required = false, defaultValue = null, extraClasse
             className={extraClasses}
             label={"انتخاب بازه زمانی :"}
             name={"dateRange"}
-            initialValue={defaultValue}
+            initialValue={initialValue}
             rules={rules}
         >
             <DatePicker.RangePicker

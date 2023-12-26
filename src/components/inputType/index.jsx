@@ -12,7 +12,7 @@ const InputType = ({
 	required,
 	pattern,
 	patternMessage,
-	defaultValue = undefined,
+	initialValue = undefined,
 	placeholder = "",
 	disabled,
 	visibilityToggle,
@@ -21,7 +21,6 @@ const InputType = ({
 	min,
 	max,
 	style = {},
-	children,
 	autoSize = false,
 }) => {
 	const { t } = useTranslation();
@@ -38,7 +37,7 @@ const InputType = ({
 			className={extraClasses}
 			label={label}
 			name={name}
-			initialValue={defaultValue}
+			initialValue={initialValue}
 			rules={rules}
 		>
 			{type === "number" ? (
@@ -52,7 +51,7 @@ const InputType = ({
 					max={max}
 					style={style}
 					autoComplete="off"
-					defaultValue={defaultValue}
+					defaultValue={initialValue}
 				/>
 			) : type === "password" ? (
 				<Input.Password

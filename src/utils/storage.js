@@ -1,3 +1,5 @@
+import Cookie from "universal-cookie";
+
 export const setToStorage = (key = "", value = {}, sessionStorage = false) => {
 	if (typeof window !== "undefined") {
 		try {
@@ -28,5 +30,39 @@ export const removeFromStorage = (key = "", sessionStorage = false) => {
 		} catch {
 			return null;
 		}
+	}
+};
+
+export const setToCookie = (key = "", value = {}, { httpOnly = false, maxAge = 24 * 24 * 3600, path = "/" }) => {
+	try {
+		const cookie = new Cookie();
+		cookie.set(key, JSON.stringify(value), {
+			httpOnly,
+			maxAge,
+			path,
+		});
+	} catch {
+		return null;
+	}
+};
+
+export const getFromCookie = (key = "") => {
+	try {
+		const cookie = new Cookie();
+		const value = cookie.get(key);
+		if (value) {
+			return JSON.parse(value);
+		}
+	} catch {
+		return null;
+	}
+};
+
+export const removeFromCookie = (key = "") => {
+	try {
+		const cookie = new Cookie();
+		cookie.remove(key);
+	} catch {
+		return null;
 	}
 };

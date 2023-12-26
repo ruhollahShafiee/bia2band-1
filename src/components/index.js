@@ -7,8 +7,7 @@ export { default as Selects } from "./select";
 export { default as RadioGroup } from "./radioGroup";
 export { default as Drawers } from "./drawer";
 
-// packages
-export { default as SwipeModule } from "./swiper";
+export { default as CarouselModule } from "./carousel";
 
 // *** app components ***
 export { default as SettingDrawer } from "./App/settingDrawer";
