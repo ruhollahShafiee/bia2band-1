@@ -34,7 +34,8 @@ const SearchForm = () => {
 	return (
 		<section
 			id="search-form"
-			className="mx-auto max-w-6xl px-8 pt-8 lg:pt-14 rounded-3xl -mt-10 shadow-2xl border border-gray-200"
+			className="mx-auto max-w-6xl px-8 pt-8 lg:pt-14 rounded-3xl -mt-16 shadow-2xl"
+			style={{ borderBottom: "1px solid white" }}
 		>
 			<Form form={form} name="search-form" className="search-form" onFinish={onSubmit}>
 				<Row gutter={[8, 8]} align={"middle"}>
