@@ -1,5 +1,6 @@
 // import Swiper core and required modules
 import { Carousel } from "antd";
+import "./style.css";
 
 const CarouselModule = ({
 	swiperSliders = [],
@@ -12,10 +13,13 @@ const CarouselModule = ({
 	className = "",
 	dotPosition = "bottom",
 	easing = "linear", // css easing !s
-	effect = "fade", // "scrollx"
+	effect = "scrollx", // "fade"
+	name,
 }) => {
 	return (
 		<Carousel
+			id={name}
+			key={name}
 			autoplay={autoplay}
 			dotPosition={dotPosition}
 			dots={showDots}

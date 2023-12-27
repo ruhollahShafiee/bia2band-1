@@ -48,14 +48,7 @@ function ContextApi({ children }) {
 				direction={direction}
 				theme={{
 					algorithm: [themeAntMode, ...fontAntMode],
-					token: {
-						...tokens[selectedToken],
-						components: {
-							Button: {
-								algorithm: false,
-							},
-						},
-					},
+					token: tokens[selectedToken]
 				}}
 			>
 				{children}

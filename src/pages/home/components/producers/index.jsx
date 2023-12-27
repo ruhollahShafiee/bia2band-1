@@ -1,12 +1,14 @@
-import { Carousel, Typography } from "antd";
+import { useState } from "react";
+import { Typography } from "antd";
 import { DoubleLeftOutlined } from "@ant-design/icons";
 
-import { Buttons } from "@/components";
+import { Buttons, CarouselModule } from "@/components";
 import ProducerCards from "./CardSection";
 
 const { Title } = Typography;
 
 export default function Producers() {
+	const [swiperSliders, setSwiperSliders] = useState([{ key: "1" }, { key: "2" }, { key: "3" }]);
 	return (
 		<section className="producer-sections mx-auto p-5 mt-8">
 			<div className="flex justify-between align-bottom items-end">
@@ -27,11 +29,12 @@ export default function Producers() {
 					classes="text-sm"
 				/>
 			</div>
-			<Carousel key="producers" id="producers" autoplaySpeed={10000} autoplay waitForAnimate>
-				<ProducerCards id="1" />
-				<ProducerCards id="2" />
-				<ProducerCards id="3" />
-			</Carousel>
+			<CarouselModule
+				name="producers"
+				swiperSliders={swiperSliders.map(({ key }) => (
+					<ProducerCards key={key} id={key} />
+				))}
+			/>
 		</section>
 	);
 }
