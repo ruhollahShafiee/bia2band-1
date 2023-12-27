@@ -37,7 +37,7 @@ const SearchForm = () => {
 			className="mx-auto max-w-6xl px-8 pt-8 lg:pt-14 rounded-3xl -mt-16 shadow-2xl"
 			style={{ borderBottom: "1px solid white" }}
 		>
-			<Form form={form} name="search-form" className="search-form" onFinish={onSubmit}>
+			<Form form={form} name="search-form" className="search-form" layout="vertical" onFinish={onSubmit}>
 				<Row gutter={[8, 8]} align={"middle"}>
 					<Col span={24}>
 						<RadioGroup plainOptions={userTypeOptions} name="userType" initialValue={"1"} required={true} />
