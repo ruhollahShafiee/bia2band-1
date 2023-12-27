@@ -12,6 +12,9 @@
 		font-family: Dana-FaNum-Bold !important;
 		font-weight: 600;
 	}
+	.borders {
+		border: 1px solid !important;
+	}
 }
 
 /* document style */

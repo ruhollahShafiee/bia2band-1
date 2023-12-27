@@ -7,6 +7,8 @@ export { default as Selects } from "./select";
 export { default as RadioGroup } from "./radioGroup";
 
 // module
+export { default as Modals } from "./modal";
+export { default as confirm } from "./submit";
 export { default as Drawers } from "./drawer";
 export { default as CarouselModule } from "./carousel";
 

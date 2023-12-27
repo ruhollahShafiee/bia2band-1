@@ -1,21 +1,24 @@
 import { useState, useImperativeHandle } from "react";
-import { Modal, theme } from "antd";
+
+import { Modal } from "antd";
+import { CloseCircleOutlined } from "@ant-design/icons";
 
 const Modals = ({
 	title = "",
-	width = "70%",
+	width = "60%",
 	className = "",
 	removeCloseButton = false,
 	maskClosable = true,
 	destroyOnClose = true,
 	keyboard = false,
 	centered = true,
+	footer = null,
 	reference,
-	children,
+	content = null,
+	closeIcon = <CloseCircleOutlined className="text-2xl"/>,
 }) => {
 	const [open, setOpen] = useState(false);
 	// hooks
-	const { token } = theme.useToken();
 	useImperativeHandle(reference, () => ({
 		showModal: () => {
 			setOpen(true);
@@ -36,12 +39,11 @@ const Modals = ({
 			closable={!removeCloseButton}
 			onCancel={() => setOpen(false)}
 			centered={centered}
-			footer={null}
+			footer={footer}
+			closeIcon={closeIcon}
 			open={open}
 		>
-			<div className="modals-layout" style={{ background: token?.colorPrimaryLighter }}>
-				{children}
-			</div>
+			{content}
 		</Modal>
 	);
 };

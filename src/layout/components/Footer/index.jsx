@@ -1,10 +1,10 @@
 import { Col, Row } from "antd";
 import { PhoneOutlined, EnvironmentOutlined } from "@ant-design/icons";
 
+import "./style.css";
 import logo from "/assets/icon/vite.svg";
 import eNamad from "/assets/image/e-namad.png";
 import samandehi from "/assets/image/samandehi.png";
-import "./style.css";
 
 const MainFooter = () => {
 	return (
