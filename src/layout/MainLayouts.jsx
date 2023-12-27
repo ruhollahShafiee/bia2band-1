@@ -19,19 +19,7 @@ const MainLayout = () => {
 	const { t } = useTranslation();
 	const { token } = theme.useToken();
 	// theme
-	const {
-		language,
-		placement,
-		direction,
-		changeLanguage,
-		themeMode,
-		changeTheme,
-		fontMode,
-		changeFontMode,
-		tokens,
-		changeTokenMode,
-		selectedToken,
-	} = useAppContext();
+	const { direction, placement, ...otherParams } = useAppContext();
 	// handles
 	const onCloseDrawer = useCallback((navAction) => {
 		setOpen(navAction ? (perValue) => !perValue : false);
@@ -39,7 +27,7 @@ const MainLayout = () => {
 	// return
 	return (
 		<Layout dir={direction}>
-			<Header style={{ background: token.colorPrimaryLight, height: 50 }}>
+			<Header style={{ background: token?.colorPrimaryLight, height: 50 }}>
 				<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-10">
 					<MainNavbar {...{ onCloseDrawer, token }} />
 					<Drawers
@@ -47,21 +35,7 @@ const MainLayout = () => {
 						open={open}
 						onClose={onCloseDrawer}
 						placement={placement}
-						content={
-							<SettingDrawer
-								{...{
-									language,
-									changeLanguage,
-									themeMode,
-									changeTheme,
-									fontMode,
-									changeFontMode,
-									tokens,
-									changeTokenMode,
-									selectedToken,
-								}}
-							/>
-						}
+						content={<SettingDrawer {...otherParams} />}
 					/>
 				</div>
 			</Header>
@@ -73,7 +47,7 @@ const MainLayout = () => {
 			<Footer>
 				<MainFooter />
 				<div
-					style={{ background: token.colorPrimaryLight, border: "1px solid", height: 50 }}
+					style={{ background: token?.colorPrimaryLight, border: "1px solid", height: 50 }}
 					className="grid place-content-center rounded-lg mt-3"
 				>
 					<Text className="">تمام حقوق این سایت متعلق به بیا تو بند می باشد</Text>

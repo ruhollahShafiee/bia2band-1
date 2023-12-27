@@ -2,7 +2,7 @@ import { Typography, Card } from "antd";
 
 import { Buttons } from "@/components";
 
-import img from "../test.jpg";
+import img from "/assets/image/test.jpg";
 
 const { Title } = Typography;
 const { Meta } = Card;

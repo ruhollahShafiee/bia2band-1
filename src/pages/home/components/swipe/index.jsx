@@ -1,5 +1,5 @@
 import { useState } from "react";
-import img from "../test.jpg";
+import img from "/assets/image/test.jpg";
 
 import { CarouselModule } from "@/components";
 

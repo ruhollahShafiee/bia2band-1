@@ -1,5 +1,6 @@
-import { Col, Radio, Row, Typography } from "antd";
+import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
+import { Col, Radio, Row, Typography } from "antd";
 
 const { Title } = Typography;
 
@@ -15,19 +16,19 @@ const DrawerContent = ({
 	changeTokenMode,
 }) => {
 	const { t } = useTranslation();
-	const colors = Object.entries(tokens).map(([key, { colorPrimary }]) => ({
-		style: { backgroundColor: colorPrimary },
-		value: key,
-	}));
+	const colors = useMemo(
+		() =>
+			Object.entries(tokens).map(([key, { colorPrimary }]) => ({
+				style: { backgroundColor: colorPrimary },
+				value: key,
+			})),
+		[tokens],
+	);
 	return (
 		<Row gutter={[16, 16]}>
 			<Title level={5}>{t("layouts.mode")}</Title>
 			<Col span={24}>
-				<Radio.Group
-					buttonStyle="solid"
-					defaultValue={themeMode}
-					onChange={(e) => changeTheme(e.target.value)}
-				>
+				<Radio.Group buttonStyle="solid" defaultValue={themeMode} onChange={(e) => changeTheme(e.target.value)}>
 					<Radio.Button value="light">{t("layouts.light")}</Radio.Button>
 					<Radio.Button value="dark">{t("layouts.dark")}</Radio.Button>
 				</Radio.Group>

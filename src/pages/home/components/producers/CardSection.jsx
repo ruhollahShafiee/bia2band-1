@@ -1,6 +1,6 @@
 import { AppCard } from "@/components";
 
-import img from "../test.jpg";
+import img from "/assets/image/test.jpg";
 
 const title = "سامان حشمتی";
 const description = "سام شسیشی  شسی حشمتی سامان حشمتی سامان حشمتی";

@@ -12,9 +12,8 @@ i18n.use(initReactI18next).init({
 	},
 	lng: "fa",
 	fallbackLng: "fa",
-	// react already safes from xss
 	interpolation: {
-		escapeValue: false,
+		escapeValue: false, // react already safes from xss
 	},
 });
 
