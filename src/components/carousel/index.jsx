@@ -1,6 +1,5 @@
 // import Swiper core and required modules
 import { Carousel } from "antd";
-import "./style.css";
 
 const CarouselModule = ({
 	swiperSliders = [],

@@ -5,8 +5,9 @@ export { default as Buttons } from "./button";
 export { default as Inputs } from "./input";
 export { default as Selects } from "./select";
 export { default as RadioGroup } from "./radioGroup";
-export { default as Drawers } from "./drawer";
 
+// module
+export { default as Drawers } from "./drawer";
 export { default as CarouselModule } from "./carousel";
 
 // *** app components ***

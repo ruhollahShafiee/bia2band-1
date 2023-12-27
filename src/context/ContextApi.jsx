@@ -26,7 +26,7 @@ function ContextApi({ children }) {
 		};
 	}, [locale, dispatch]);
 	// return
-	
+	const themColorObject = tokens[selectedToken];
 	return (
 		<AppContext.Provider
 			value={{
@@ -48,7 +48,14 @@ function ContextApi({ children }) {
 				direction={direction}
 				theme={{
 					algorithm: [themeAntMode, ...fontAntMode],
-					token: tokens[selectedToken]
+					token: themColorObject,
+					components: {
+						Carousel: {
+							colorBgContainer: themColorObject?.colorPrimary,
+							dotWidth: 8,
+							dotHeight: 8,
+						},
+					},
 				}}
 			>
 				{children}
