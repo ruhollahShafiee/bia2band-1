@@ -2,7 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { I18nextProvider } from "react-i18next";
 import { Provider } from "react-redux";
 
-import store from "../store";
+import store from "../store/store";
 import i18n from "../langs";
 
 import ContextApi from "@/context/ContextApi";
