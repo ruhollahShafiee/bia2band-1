@@ -22,6 +22,7 @@ const ListModule = ({
 		grid={{
 			gutter,
 			column,
+			xs: 1,
 		}}
 		pagination={{
 			onChange,

@@ -4,7 +4,7 @@ export { default as Loadings } from "./loading";
 export { default as Buttons } from "./button";
 export { default as Inputs } from "./input";
 export { default as Selects } from "./select";
-export { default as RadioGroup } from "./radioGroup";
+export { default as RadioGroup } from "./radio";
 
 // module
 export { default as Modals } from "./modal";

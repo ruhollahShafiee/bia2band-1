@@ -1,9 +1,8 @@
 import { Suspense, useRef } from "react";
-import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { Typography } from "antd";
-import { PhoneOutlined, UserOutlined } from "@ant-design/icons";
+import { UserOutlined } from "@ant-design/icons";
 
 import { Modals } from "@/components";
 import Auth from "../../auth";
@@ -28,20 +27,14 @@ export default function LogoSection({ user, linkClass }) {
 			<div className="hidden sm:block">
 				<div className="flex mx-3">
 					{!user && (
-						<NavLink to={"/contact-us"} className={`mx-1`}>
-							<Paragraph className={linkClass}>
-								<PhoneOutlined className="mx-2 text-lg" rotate={90} />
-								{t("header.contactUs")}
-							</Paragraph>
-						</NavLink>
+						<Paragraph
+							className={`${linkClass} mx-1 cursor-pointer tracking-tighter`}
+							onClick={() => handleModal("show")}
+						>
+							<UserOutlined className="mx-2 text-lg" />
+							<span className="pb-1">{t("header.auth")}</span>
+						</Paragraph>
 					)}
-					<Paragraph
-						className={`${linkClass} mx-1 cursor-pointer tracking-tighter`}
-						onClick={() => handleModal("show")}
-					>
-						<UserOutlined className="mx-2 text-lg" />
-						<span className="pb-1">{t("header.auth")}</span>
-					</Paragraph>
 				</div>
 			</div>
 			<Modals

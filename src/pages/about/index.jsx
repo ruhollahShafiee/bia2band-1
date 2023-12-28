@@ -1,15 +1,9 @@
 const AboutPage = () => {
 	return (
 		<>
-			<p>sasdasdssadsad</p>
-			<p>sasdasdssadsad</p>
-			<p>sasdasdssadsad</p>
-			<p>sasdasdssadsad</p>
-			<p>sasdasdssadsad</p>
-			<p>sasdasdssadsad</p>
-			<p>sasdasdssadsad</p>
-			<p>sasdasdssadsad</p>
-			<p>sasdasdssadsad</p>
+			<center>
+				<p>AboutPage</p>
+			</center>
 		</>
 	);
 };

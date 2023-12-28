@@ -19,7 +19,6 @@ const MainNavbar = ({ onCloseDrawer, token }) => {
 		{ to: "/sample", title: "هم بندی ها" },
 		{ to: "/blog", title: "کار ها" },
 		{ to: "/about", title: "بلاگ" },
-		{ to: "/contact", title: "درباره ما" },
 	];
 	// return
 	const linkClass = `pt-5 hover:text-[${token?.colorPrimary}]`;

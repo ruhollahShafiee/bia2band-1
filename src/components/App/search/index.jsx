@@ -10,8 +10,6 @@ const SearchForm = forwardRef(function Searching({ onSubmit = () => {}, classes 
 	// hooks
 	const { t } = useTranslation();
 	const [form] = Form.useForm();
-	// hooks
-	useImperativeHandle(ref, () => form, [form]);
 	// options
 	const userTypeOptions = [
 		{
@@ -31,13 +29,21 @@ const SearchForm = forwardRef(function Searching({ onSubmit = () => {}, classes 
 			value: "4",
 		},
 	];
+	// forwardRef
+	useImperativeHandle(ref, () => ({ ...(form || {}), userTypeOptions }), [form]);
 	// return
 	return (
 		<section className={`mx-auto max-w-6xl px-8 pt-8 lg:pt-14 rounded-3xl shadow-2xl borders ${classes}`}>
 			<Form name={name} form={form} className="search-form" layout="vertical" onFinish={onSubmit}>
 				<Row gutter={[8, 8]} align={"middle"}>
 					<Col span={24}>
-						<RadioGroup plainOptions={userTypeOptions} name="userType" initialValue={"1"} required={true} />
+						<RadioGroup
+							plainOptions={userTypeOptions}
+							name="userType"
+							initialValue={"1"}
+							required={true}
+							size="large"
+						/>
 					</Col>
 					<Col xs={24} md={12} lg={8}>
 						<Inputs

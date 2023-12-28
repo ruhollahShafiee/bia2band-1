@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { SearchForm } from "@/components";
+
 import SwipeSection from "./components/swipe";
 import BanderGrid from "./components/bander";
 import Producers from "./components/producers";
@@ -7,6 +8,7 @@ import ShopGrid from "./components/shop";
 import Blogs from "./components/blogs";
 import AboutSection from "./components/about";
 import JoinUs from "./components/joinUs";
+import FloatLabel from "./components/float";
 
 const HomePage = () => {
 	const formRef = useRef();
@@ -33,6 +35,7 @@ const HomePage = () => {
 			<Blogs />
 			{/* JoinUs */}
 			<JoinUs />
+			<FloatLabel />
 		</>
 	);
 };

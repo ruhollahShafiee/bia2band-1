@@ -27,6 +27,11 @@ const mainRoutes = {
 			lazy: async () => ({ Component: (await import("../pages/search")).default }),
 		},
 		{
+			path: "contact",
+			id: "contact",
+			lazy: async () => ({ Component: (await import("../pages/contact")).default }),
+		},
+		{
 			path: "about",
 			id: "about",
 			lazy: async () => ({ Component: (await import("../pages/about")).default }),
@@ -34,10 +39,10 @@ const mainRoutes = {
 	],
 };
 
-const dashboardRoutes = {};
+const userRoutes = {};
 const adminRoutes = {};
 
-const router = createBrowserRouter([mainRoutes, dashboardRoutes, adminRoutes]);
+const router = createBrowserRouter([mainRoutes, userRoutes, adminRoutes]);
 
 function App() {
 	// return
@@ -45,7 +50,7 @@ function App() {
 		<Provider store={store}>
 			<I18nextProvider i18n={i18n}>
 				<ContextApi>
-					<RouterProvider router={router} fallbackElement={<Loadings />}  />
+					<RouterProvider router={router} fallbackElement={<Loadings />} />
 				</ContextApi>
 			</I18nextProvider>
 		</Provider>

@@ -1,16 +1,11 @@
-import { useTranslation } from "react-i18next";
-import { Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
 
-const Loadings = ({ children, isLoading }) => {
-	const { t } = useTranslation();
-	// antIcon
-	const antIcon = <LoadingOutlined className="text-3xl spin-loading" spin={true} />;
+const Loadings = () => {
 	// return
 	return (
-		<Spin spinning={isLoading} indicator={antIcon} tip={t("messages.loading")} size="large" >
-			{children}
-		</Spin>
+		<div className="grid place-content-center h-screen text-8xl bg-slate-200">
+			<LoadingOutlined spin={true} />
+		</div>
 	);
 };
 
