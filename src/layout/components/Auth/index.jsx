@@ -36,7 +36,7 @@ const Auth = () => {
 				/>
 			</Form>
 			<p>
-				با ورود به بیا تو بند , <strong className="text-blue-600">شرایط و قوانین حریم خصوصی</strong> را می پذیرم
+				با ورود به بیا تو بند , <strong className="text-blue-600 cursor-pointer">شرایط و قوانین حریم خصوصی</strong> را می پذیرم
 			</p>
 		</div>
 	);

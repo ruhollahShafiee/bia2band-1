@@ -1,3 +1,4 @@
+import { forwardRef, useImperativeHandle } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Col, Form, Row } from "antd";
@@ -5,12 +6,12 @@ import { AppstoreOutlined, SearchOutlined, EnvironmentOutlined } from "@ant-desi
 
 import { Buttons, Inputs, Selects, RadioGroup } from "@/components";
 
-const SearchForm = () => {
+const SearchForm = forwardRef(function Searching({ onSubmit = () => {}, classes = "", name = "search-form" }, ref) {
 	// hooks
 	const { t } = useTranslation();
 	const [form] = Form.useForm();
-	// handles
-	const onSubmit = (formValues) => {};
+	// hooks
+	useImperativeHandle(ref, () => form, [form]);
 	// options
 	const userTypeOptions = [
 		{
@@ -32,12 +33,8 @@ const SearchForm = () => {
 	];
 	// return
 	return (
-		<section
-			id="search-form"
-			className="mx-auto max-w-6xl px-8 pt-8 lg:pt-14 rounded-3xl -mt-16 shadow-2xl"
-			style={{ borderBottom: "1px solid white" }}
-		>
-			<Form form={form} name="search-form" className="search-form" layout="vertical" onFinish={onSubmit}>
+		<section className={`mx-auto max-w-6xl px-8 pt-8 lg:pt-14 rounded-3xl shadow-2xl borders ${classes}`}>
+			<Form name={name} form={form} className="search-form" layout="vertical" onFinish={onSubmit}>
 				<Row gutter={[8, 8]} align={"middle"}>
 					<Col span={24}>
 						<RadioGroup plainOptions={userTypeOptions} name="userType" initialValue={"1"} required={true} />
@@ -78,5 +75,6 @@ const SearchForm = () => {
 			</Form>
 		</section>
 	);
-};
+});
+
 export default SearchForm;

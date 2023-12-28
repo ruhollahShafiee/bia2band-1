@@ -3,7 +3,7 @@ import { I18nextProvider } from "react-i18next";
 import { Provider } from "react-redux";
 
 import store from "../store/store";
-import i18n from "../langs";
+import i18n from "../langs/i18n";
 
 import ContextApi from "@/context/ContextApi";
 // layout
@@ -20,6 +20,11 @@ const mainRoutes = {
 			index: true,
 			id: "home",
 			element: <HomePage />,
+		},
+		{
+			path: "search",
+			id: "search",
+			lazy: async () => ({ Component: (await import("../pages/search")).default }),
 		},
 		{
 			path: "about",

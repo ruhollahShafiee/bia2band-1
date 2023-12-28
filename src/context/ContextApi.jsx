@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux";
 import { ConfigProvider, theme } from "antd";
 
 import callApi from "@/service";
-import useLanguage from "@/hooks/useLanguage";
-import useTheme from "@/hooks/useTheme";
+import useLanguage from "@/langs/useLanguage";
+import useTheme from "@/theme/useTheme";
 
 import { getCurrentUser } from "../store/auth/action";
 

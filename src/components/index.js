@@ -11,8 +11,10 @@ export { default as Modals } from "./modal";
 export { default as confirm } from "./submit";
 export { default as Drawers } from "./drawer";
 export { default as CarouselModule } from "./carousel";
+export { default as ListModule } from "./list";
 
 // *** app components ***
+export { default as SearchForm } from "./App/search";
 export { default as SettingDrawer } from "./App/settingDrawer";
 export { default as SingleCard } from "./App/singleCard/producer";
 export { default as AppCard } from "./App/singleCard/appCard";

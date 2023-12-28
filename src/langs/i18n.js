@@ -2,8 +2,8 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 // languages
-import english from "./english.json";
-import persian from "./persian.json";
+import english from "./resources/english.json";
+import persian from "./resources/persian.json";
 
 i18n.use(initReactI18next).init({
 	resources: {
