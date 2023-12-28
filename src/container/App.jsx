@@ -9,6 +9,7 @@ import ContextApi from "@/context/ContextApi";
 // layout
 import { Loadings } from "@/components";
 import MainLayout from "@/layout/MainLayouts";
+import UserLayout from "@/layout/UserLayout";
 // pages
 import HomePage from "@/pages/home";
 
@@ -36,13 +37,24 @@ const mainRoutes = {
 			id: "about",
 			lazy: async () => ({ Component: (await import("../pages/about")).default }),
 		},
+		{
+			path: "user",
+			id: "user",
+			element: <UserLayout />,
+			children: [
+				{
+					index: true,
+					id: "profile",
+					lazy: async () => ({ Component: (await import("../pages/user/profile")).default }),
+				},
+			],
+		},
 	],
 };
 
-const userRoutes = {};
 const adminRoutes = {};
 
-const router = createBrowserRouter([mainRoutes, userRoutes, adminRoutes]);
+const router = createBrowserRouter([mainRoutes, adminRoutes]);
 
 function App() {
 	// return

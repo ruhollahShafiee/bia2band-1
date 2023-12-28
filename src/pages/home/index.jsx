@@ -16,7 +16,7 @@ const HomePage = () => {
 	const onSubmit = (formValues) => {};
 	// return
 	return (
-		<>
+		<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 			<SwipeSection />
 			{/* SearchForm */}
 			<SearchForm {...{ onSubmit, classes: "-mt-16" }} ref={formRef} />
@@ -36,7 +36,7 @@ const HomePage = () => {
 			{/* JoinUs */}
 			<JoinUs />
 			<FloatLabel />
-		</>
+		</div>
 	);
 };
 

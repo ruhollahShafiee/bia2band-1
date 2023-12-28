@@ -1,5 +1,4 @@
 import { Form, Radio } from "antd";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const { Group } = Radio;
@@ -12,17 +11,16 @@ const RadioGroup = ({
 	extraClasses = "",
 	label = "",
 	name = "",
-	required,
+	required = false,
+	outForm = false,
 	size = "middle",
 	buttonStyle = "solid", // outline
 	optionType = "default", // button
 }) => {
-	const [value, setValue] = useState();
 	const { t } = useTranslation();
 	// handles
-	const handleOnChange = (value) => {
-		setValue(value);
-		onChange(value);
+	const handleOnChange = (e) => {
+		onChange(e.target.value);
 	};
 	// options
 	const rules = [
@@ -31,29 +29,38 @@ const RadioGroup = ({
 			message: t("schemas.required"),
 		},
 	];
+	// component
+	const InnerJSX = () => (
+		<Group
+			size={size}
+			name={name}
+			optionType={optionType}
+			onChange={handleOnChange}
+			options={plainOptions}
+			className={extraClasses}
+			buttonStyle={buttonStyle}
+			defaultValue={initialValue}
+		/>
+	);
 	// return
 	return (
-		<Form.Item
-			labelCol={{ xs: 24 }}
-			wrapperCol={{ xs: 24 }}
-			className={classes}
-			label={label}
-			name={name}
-			initialValue={initialValue}
-			rules={rules}
-		>
-			<Group
-				size={size}
-				name={name}
-				optionType={optionType}
-				defaultValue={initialValue}
-				onChange={(e) => handleOnChange(e.target.value)}
-				options={plainOptions}
-				className={extraClasses}
-				buttonStyle={buttonStyle}
-				value={value}
-			/>
-		</Form.Item>
+		<>
+			{outForm ? (
+				<InnerJSX />
+			) : (
+				<Form.Item
+					labelCol={{ xs: 24 }}
+					wrapperCol={{ xs: 24 }}
+					className={classes}
+					label={label}
+					name={name}
+					initialValue={initialValue}
+					rules={rules}
+				>
+					<InnerJSX />
+				</Form.Item>
+			)}
+		</>
 	);
 };
 

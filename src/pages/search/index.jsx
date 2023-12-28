@@ -23,7 +23,7 @@ const SearchPage = () => {
 		const { userTypeOptions, getFieldsValue } = formRef?.current || {};
 		if (userTypeOptions) {
 			const { userType } = getFieldsValue();
-			const { label } = userTypeOptions.find(({ value }) => value === userType);
+			const { label = "" } = userTypeOptions.find(({ value }) => value === userType) || {};
 			setUserType(label);
 		}
 	}, [formRef]);
@@ -31,36 +31,37 @@ const SearchPage = () => {
 	const filterOptions = [
 		{
 			label: t("مرتبط ترین"),
-			value: "1",
+			value: "x",
 		},
 		{
 			label: t("پربازدید ترین"),
-			value: "2",
+			value: "y",
 		},
 		{
 			label: t("تکمیل پروفایل"),
-			value: "3",
+			value: "z",
 		},
 		{
 			label: t("فعال ترین"),
-			value: "4",
+			value: "a",
 		},
 	];
 	// return
 	return (
-		<>
+		<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 			{/* SearchForm */}
 			<SearchForm {...{ onSubmit, classes: "mt-10" }} ref={formRef} />
 			{/* SearchItems */}
 			<section className="producer-sections mx-auto p-5 mt-8">
-				<div className="flex justify-between align-bottom items-end mb-3">
+				<div className="flex justify-between align-middle items-center mb-3">
 					<Title level={2}>{userTypeName}</Title>
 					<RadioGroup
-						classes="opacity-70"
+						extraClasses="opacity-70"
 						plainOptions={filterOptions}
 						name="filters"
-						initialValue={"1"}
+						initialValue={"x"}
 						required={true}
+						outForm={true}
 						optionType={"button"}
 					/>
 				</div>
@@ -71,7 +72,7 @@ const SearchPage = () => {
 					}))}
 				/>
 			</section>
-		</>
+		</div>
 	);
 };
 

@@ -39,9 +39,9 @@ const MainLayout = () => {
 					/>
 				</div>
 			</Header>
-			<Content className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+			<Content>
 				{/* children */}
-				<Outlet />
+				<Outlet key={"main-layout"} />
 				{/* children */}
 			</Content>
 			<Footer>
