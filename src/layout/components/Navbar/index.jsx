@@ -17,7 +17,6 @@ const MainNavbar = ({ onCloseDrawer, token }) => {
 	const links = [
 		{ to: "/", title: "صفحه نخست" },
 		{ to: "/sample", title: "هم بندی ها" },
-		{ to: "/blog", title: "کار ها" },
 		{ to: "/about", title: "بلاگ" },
 	];
 	// return
