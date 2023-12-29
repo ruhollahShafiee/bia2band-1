@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import { FloatButton } from "antd";
-import { PhoneOutlined, SearchOutlined, InfoCircleOutlined } from "@ant-design/icons";
+import { BackTop, FloatButton, Tooltip } from "antd";
+import { PhoneOutlined, SearchOutlined, InfoCircleOutlined, UpCircleOutlined } from "@ant-design/icons";
 
 const FloatLabel = () => {
 	const { t } = useTranslation();
@@ -50,6 +50,18 @@ const FloatLabel = () => {
 					</Link>
 				}
 			/>
+			<Tooltip title="بازگشت به بالا" placement="left">
+				<BackTop
+					className="bg-slate-400 grid place-content-center rounded-full"
+					style={{
+						direction: "ltr",
+						right: 50,
+						bottom: 200,
+					}}
+				>
+					<UpCircleOutlined className="text-white text-xl" />
+				</BackTop>
+			</Tooltip>
 		</>
 	);
 };
