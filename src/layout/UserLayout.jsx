@@ -12,12 +12,15 @@ const UserLayout = () => {
 	// hooks
 	const { t } = useTranslation();
 	const navigation = useNavigate();
-	const { user, loading } = useSelector(authSelector);
+	const { user, loading } = useSelector(authSelector, {
+		equalityFn: ({ user }, { user: nextUser }) => !!user !== !!nextUser,
+	});
 	// authentication
 	if (loading) {
 		return <Loadings />;
 	}
-	if (user) { // *** !user ***
+	if (!user) {
+		// *** !user ***
 		notificationMaker(t("برای دسترسی به این بخش وارد حساب کاربری خود شوید"));
 		navigation("/");
 		return <Loadings />;
