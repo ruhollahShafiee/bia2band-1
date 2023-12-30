@@ -16,8 +16,10 @@ const MainNavbar = ({ onCloseDrawer, token }) => {
 	// links
 	const links = [
 		{ to: "/", title: "صفحه نخست" },
-		{ to: "/sample", title: "هم بندی ها" },
-		{ to: "/about", title: "بلاگ" },
+		{ to: "/user", title: "هم بندی ها" },
+		{ to: "/blogs", title: "بلاگ" },
+		{ to: "/about", title: "درباره ما" },
+		{ to: "/contact", title: "تماس با ما" },
 	];
 	// return
 	const linkClass = `pt-5 hover:text-[${token?.colorPrimary}]`;
