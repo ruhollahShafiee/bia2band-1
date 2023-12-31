@@ -19,7 +19,7 @@ const mainRoutes = {
 	children: [
 		{
 			index: true,
-			id: "home",
+			id: "/",
 			element: <HomePage />,
 		},
 		{
@@ -39,17 +39,41 @@ const mainRoutes = {
 		},
 		{
 			path: "user",
-			id: "user",
 			element: <UserLayout />,
 			children: [
 				{
 					index: true,
-					id: "profile",
+					id: "user",
 					lazy: async () => ({ Component: (await import("../pages/user/profile")).default }),
 				},
 				{
-					path: "skills",
-					id: "skills",
+					path: "contact",
+					id: "user/contact",
+					lazy: async () => ({ Component: (await import("../pages/user/profile")).default }),
+				},
+				{
+					path: "about",
+					id: "user/about",
+					lazy: async () => ({ Component: (await import("../pages/user/profile")).default }),
+				},
+				{
+					path: "skill",
+					id: "user/skill",
+					lazy: async () => ({ Component: (await import("../pages/user/profile")).default }),
+				},
+				{
+					path: "information",
+					id: "user/information",
+					lazy: async () => ({ Component: (await import("../pages/user/profile")).default }),
+				},
+				{
+					path: "portfolio",
+					id: "user/portfolio",
+					lazy: async () => ({ Component: (await import("../pages/user/profile")).default }),
+				},
+				{
+					path: "view",
+					id: "user/view",
 					lazy: async () => ({ Component: (await import("../pages/user/profile")).default }),
 				},
 			],
