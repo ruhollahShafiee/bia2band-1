@@ -38,6 +38,16 @@ const mainRoutes = {
 			lazy: async () => ({ Component: (await import("../pages/about")).default }),
 		},
 		{
+			path: "blogs",
+			id: "blogs",
+			lazy: async () => ({ Component: (await import("../pages/blogs")).default }),
+		},
+		{
+			path: "blogs/:id",
+			id: "blog",
+			lazy: async () => ({ Component: (await import("../pages/blogs")).default }),
+		},
+		{
 			path: "user",
 			element: <UserLayout />,
 			children: [
