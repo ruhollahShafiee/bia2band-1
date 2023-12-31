@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { getFromStorage, setToStorage } from "@/utils/storage";
 import tokens from "@/theme";
 
-let defaultTheme = getFromStorage("theme") || "light";
-let defaultFontSize = getFromStorage("fontSize") || "default";
+let defaultTheme = getFromStorage("theme") || "default";
+let defaultFontSize = getFromStorage("fontSize") || "none";
 let defaultToken = getFromStorage("tokenColor") || "black";
 
 const useTheme = (theme) => {
-	const [themeMode, setThemeMode] = useState("light");
-	const [fontMode, setFontSize] = useState("default");
-	const [selectedToken, setToken] = useState("default");
+	const [themeMode, setThemeMode] = useState(defaultTheme);
+	const [fontMode, setFontSize] = useState(defaultFontSize);
+	const [selectedToken, setToken] = useState(defaultToken);
 	// themeAntMode
 	const changeTheme = (mode) => {
 		// light, dark
@@ -18,48 +18,20 @@ const useTheme = (theme) => {
 		// setToStorage
 		setToStorage("theme", mode);
 	};
-	let themeAntMode;
-	switch (themeMode) {
-		case "light":
-			themeAntMode = theme["defaultAlgorithm"];
-			break;
-		case "dark":
-			themeAntMode = theme["darkAlgorithm"];
-			break;
-		default:
-			themeAntMode = theme["defaultAlgorithm"];
-			break;
-	}
+	let themeAntMode = theme[`${themeMode}Algorithm`] || [];
 	// fontAntMode
 	const changeFontMode = (mode) => {
 		setFontSize(mode); // small, default
 		// setToStorage
 		setToStorage("fontSize", mode);
 	};
-	let fontAntMode;
-	switch (fontMode) {
-		case "default":
-			fontAntMode = [];
-			break;
-		case "small":
-			fontAntMode = [theme["compactAlgorithm"]];
-			break;
-		default:
-			fontAntMode = [];
-			break;
-	}
+	let fontAntMode = [theme[`${fontMode}Algorithm`]].filter(Boolean)
 	// tokenMode
 	const changeTokenMode = (mode) => {
 		setToken(mode);
 		// setToStorage
 		setToStorage("tokenColor", mode);
 	};
-	// init theme
-	useEffect(() => {
-		changeTheme(defaultTheme);
-		changeFontMode(defaultFontSize);
-		changeTokenMode(defaultToken)
-	}, []);
 	// return
 	return {
 		changeTheme,
