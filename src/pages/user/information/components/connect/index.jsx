@@ -1,6 +1,6 @@
 import { Form, Row, Col, Card } from "antd";
 import Meta from "antd/es/card/Meta";
-import { Inputs, Buttons } from "@components";
+import { Inputs, Buttons } from "@/components";
 import { useTranslation } from "react-i18next";
 import { TwitterOutlined, FacebookOutlined, InstagramFilled } from "@ant-design/icons";
 

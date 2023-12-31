@@ -74,7 +74,7 @@ const mainRoutes = {
 				{
 					path: "information",
 					id: "user/information",
-					lazy: async () => ({ Component: (await import("../pages/user/profile")).default }),
+					lazy: async () => ({ Component: (await import("../pages/user/information")).default }),
 				},
 				{
 					path: "portfolio",

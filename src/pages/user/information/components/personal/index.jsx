@@ -1,12 +1,13 @@
+import { useTranslation } from "react-i18next";
 import { Form, Row, Col, Card } from "antd";
 import Meta from "antd/es/card/Meta";
-import img from "../test.jpg";
-import { Selects } from "@components";
-import { useTranslation } from "react-i18next";
 import { AppstoreOutlined } from "@ant-design/icons";
-import Inputs from "../../../../components/input";
-import Regex from "../../../../utils/regex";
 
+import Regex from "@/utils/regex";
+
+import { Selects, Inputs } from "@/components";
+
+import img from "../test.jpg";
 
 const title = "مشخصات شخصی من";
 
@@ -14,29 +15,15 @@ const Personal = () => {
 	const { t } = useTranslation();
 	return (
 		<>
-			<Card cover={<img src={img} className="h-20" />}
-				bordered
-
-			>
-				<Meta title={title}
-				/>
+			<Card cover={<img src={img} className="h-20" />} bordered>
+				<Meta title={title} />
 				<Form name="personal-form" className="search-form mt-5 fs-sx" layout="vertical">
 					<Row gutter={[8, 8]} align={"right"}>
 						<Col xs={24} md={16} lg={12}>
-							<Inputs
-								name="name"
-								label="نام"
-								placeholder={t("سامان حشمتی")}
-							/>
+							<Inputs name="name" label="نام" placeholder={t("سامان حشمتی")} />
 						</Col>
 						<Col xs={24} md={16} lg={12}>
-							<Inputs
-
-								name="email"
-								label="ایمیل"
-
-								placeholder={t("samanHeshmati@gmail.com")}
-							/>
+							<Inputs name="email" label="ایمیل" placeholder={t("samanHeshmati@gmail.com")} />
 						</Col>
 					</Row>
 					<Row gutter={[8, 8]} align={"middle"}>
@@ -80,7 +67,6 @@ const Personal = () => {
 				</Form>
 			</Card>
 		</>
-
 	);
 };
 

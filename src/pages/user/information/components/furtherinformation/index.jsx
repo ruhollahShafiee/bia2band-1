@@ -2,7 +2,7 @@ import { Card, Form, Row, Col, Checkbox } from "antd";
 import Meta from "antd/es/card/Meta";
 import { useTranslation } from "react-i18next";
 import { AppstoreOutlined } from "@ant-design/icons";
-import { Inputs, Selects, Buttons } from "@components";
+import { Inputs, Selects, Buttons } from "@/components";
 import TextArea from "antd/es/input/TextArea";
 
 const title = "اطلاعات تکمیلی من";

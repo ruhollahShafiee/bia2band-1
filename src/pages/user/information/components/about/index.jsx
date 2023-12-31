@@ -1,6 +1,6 @@
 import { Card, Form, Row, Col } from "antd";
 import Meta from "antd/es/card/Meta";
-import { Inputs, Buttons } from "@components"
+import { Inputs, Buttons } from "@/components"
 import { useTranslation } from "react-i18next";
 import TextArea from "antd/es/input/TextArea";
 

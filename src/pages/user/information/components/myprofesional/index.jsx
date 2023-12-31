@@ -1,7 +1,7 @@
 import { Card, Form, Row, Col } from "antd";
 import Meta from "antd/es/card/Meta";
 import { useTranslation } from "react-i18next";
-import { Selects, Buttons } from "@components";
+import { Selects, Buttons } from "@/components";
 import img from "../test.jpg";
 
 const title = "اطلاعات تخصصی من";
