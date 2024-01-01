@@ -19,7 +19,7 @@ const HomePage = () => {
 		<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 			<SwipeSection />
 			{/* SearchForm */}
-			<SearchForm {...{ onSubmit, classes: "-mt-16" }} ref={formRef} />
+			<SearchForm {...{ onSubmit, classes: "-mt-16 sticky" }} ref={formRef} />
 			{/* BanderGrid */}
 			<BanderGrid />
 			{/* Producers */}
