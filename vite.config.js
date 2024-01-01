@@ -7,12 +7,14 @@ import * as path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
 	resolve: {
-		// eslint-disable-next-line no-undef
-		alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }],
+		alias: [
+			// eslint-disable-next-line no-undef
+			{ find: "@", replacement: path.resolve(__dirname, "src") },
+		],
 	},
 	plugins: [
 		react(),
-    // https://www.saurabhmisra.dev/setup-react-pwa-using-vite/
+		// https://www.saurabhmisra.dev/setup-react-pwa-using-vite/
 		VitePWA({
 			registerType: "autoUpdate",
 			includeAssets: ["favicon.ico", "apple-touch-icon.png", "mask-icon.svg"],
