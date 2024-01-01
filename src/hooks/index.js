@@ -277,13 +277,3 @@ export function useWindowSize() {
 	// return
 	return windowSize;
 }
-
-export default function WindowSizeComponent() {
-	const { width, height } = useWindowSize();
-	// return
-	return (
-		<div>
-			{width} x {height}
-		</div>
-	);
-}
