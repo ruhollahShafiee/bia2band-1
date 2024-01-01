@@ -13,23 +13,19 @@ const useTheme = (theme) => {
 	const [selectedToken, setToken] = useState(defaultToken);
 	// themeAntMode
 	const changeTheme = (mode) => {
-		// light, dark
 		setThemeMode(mode);
-		// setToStorage
 		setToStorage("theme", mode);
 	};
 	let themeAntMode = theme[`${themeMode}Algorithm`] || [];
 	// fontAntMode
 	const changeFontMode = (mode) => {
-		setFontSize(mode); // small, default
-		// setToStorage
+		setFontSize(mode);
 		setToStorage("fontSize", mode);
 	};
-	let fontAntMode = [theme[`${fontMode}Algorithm`]].filter(Boolean)
+	let fontAntMode = [theme[`${fontMode}Algorithm`]].filter(Boolean);
 	// tokenMode
 	const changeTokenMode = (mode) => {
 		setToken(mode);
-		// setToStorage
 		setToStorage("tokenColor", mode);
 	};
 	// return

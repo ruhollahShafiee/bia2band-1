@@ -1,7 +1,7 @@
 import { forwardRef, useImperativeHandle } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Col, Form, Row } from "antd";
+import { Col, Form, Row, theme } from "antd";
 import { AppstoreOutlined, SearchOutlined, EnvironmentOutlined } from "@ant-design/icons";
 
 import { Buttons, Inputs, Selects, RadioGroup } from "@/components";
@@ -10,6 +10,7 @@ const SearchForm = forwardRef(function Searching({ onSubmit = () => {}, classes 
 	// hooks
 	const { t } = useTranslation();
 	const [form] = Form.useForm();
+	const { token } = theme.useToken();
 	// options
 	const userTypeOptions = [
 		{
@@ -33,7 +34,10 @@ const SearchForm = forwardRef(function Searching({ onSubmit = () => {}, classes 
 	useImperativeHandle(ref, () => ({ ...(form || {}), userTypeOptions }), [form]);
 	// return
 	return (
-		<section className={`mx-auto max-w-6xl px-8 pt-8 lg:pt-14 rounded-3xl shadow-2xl borders ${classes}`}>
+		<section
+			className={`mx-auto max-w-6xl p-8 rounded-3xl shadow-2xl borders ${classes}`}
+			style={{ background: token?.colorBgBase }}
+		>
 			<Form name={name} form={form} className="search-form" layout="vertical" onFinish={onSubmit}>
 				<Row gutter={[8, 8]} align={"middle"}>
 					<Col span={24}>
