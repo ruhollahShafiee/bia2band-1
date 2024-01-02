@@ -20,3 +20,4 @@ export { default as SettingDrawer } from "./App/settingDrawer";
 export { default as SingleCard } from "./App/singleCard/producer";
 export { default as AppCard } from "./App/singleCard/appCard";
 export { default as BlogCard } from "./App/singleCard/blogCard";
+export { default as ProfileCard } from "./App/singleCard/profileCard";
