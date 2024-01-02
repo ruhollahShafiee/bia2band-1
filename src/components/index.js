@@ -3,6 +3,7 @@ export { default as Loadings } from "./loading";
 // common
 export { default as Buttons } from "./button";
 export { default as Inputs } from "./input";
+export { default as InputType } from "./inputType";
 export { default as Selects } from "./select";
 export { default as RadioGroup } from "./radio";
 
