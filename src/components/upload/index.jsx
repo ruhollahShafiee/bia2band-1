@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
-import { InboxOutlined } from "@ant-design/icons";
 import { Form, Upload } from "antd";
+import { InboxOutlined } from "@ant-design/icons";
 
 const Uploads = ({
 	name = "attachments",

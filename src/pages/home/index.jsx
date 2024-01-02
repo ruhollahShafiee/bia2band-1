@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { SearchForm } from "@/components";
+import { SearchPersons } from "@/components";
 
 import SwipeSection from "./components/swipe";
 import BanderGrid from "./components/bander";
@@ -19,7 +19,7 @@ const HomePage = () => {
 		<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 			<SwipeSection />
 			{/* SearchForm */}
-			<SearchForm {...{ onSubmit, classes: "-mt-16 sticky" }} ref={formRef} />
+			<SearchPersons {...{ onSubmit, classes: "-mt-16 sticky" }} ref={formRef} />
 			{/* BanderGrid */}
 			<BanderGrid />
 			{/* Producers */}
