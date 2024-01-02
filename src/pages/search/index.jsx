@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Typography } from "antd";
-import { SearchForm, RadioGroup, ListModule, AppCard } from "@/components";
+import { SearchPersons, RadioGroup, ListModule, AppCard } from "@/components";
 
 import img from "/assets/image/test.jpg";
 const title = "سامان حشمتی";
@@ -50,7 +50,7 @@ const SearchPage = () => {
 	return (
 		<div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 			{/* SearchForm */}
-			<SearchForm {...{ onSubmit, classes: "mt-10" }} ref={formRef} />
+			<SearchPersons {...{ onSubmit, classes: "mt-10" }} ref={formRef} />
 			{/* SearchItems */}
 			<section className="producer-sections mx-auto p-5 mt-8">
 				<div className="flex justify-between align-middle items-center mb-3">

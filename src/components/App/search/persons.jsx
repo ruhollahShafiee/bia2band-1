@@ -6,7 +6,7 @@ import { AppstoreOutlined, SearchOutlined, EnvironmentOutlined } from "@ant-desi
 
 import { Buttons, Inputs, Selects, RadioGroup } from "@/components";
 
-const SearchForm = forwardRef(function Searching({ onSubmit = () => {}, classes = "", name = "search-form" }, ref) {
+const SearchPersons = forwardRef(function Searching({ onSubmit = () => {}, classes = "", name = "search-form" }, ref) {
 	// hooks
 	const { t } = useTranslation();
 	const [form] = Form.useForm();
@@ -87,4 +87,4 @@ const SearchForm = forwardRef(function Searching({ onSubmit = () => {}, classes 
 	);
 });
 
-export default SearchForm;
+export default SearchPersons;
