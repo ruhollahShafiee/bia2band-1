@@ -16,7 +16,6 @@ const submitModals = (customOptions = {}, onOk = () => { }, onCancel = () => { }
 		...options,
 		// icon: <ExclamationCircleFilled />,
 		onOk: async () => {
-			// eslint-disable-next-line no-undef
 			return await new Promise((resolve, reject) => {
 				onOk(); // resolve handler
 				resolve()
