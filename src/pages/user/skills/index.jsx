@@ -10,7 +10,7 @@ import Description from "./components/description";
 
 const Skills = () => {
 	const {
-		token: { colorBgBase },
+		token: { colorBgContainer },
 	} = theme.useToken();
 	return (
 		<section className="flex flex-col gap-5">
@@ -19,7 +19,7 @@ const Skills = () => {
 			<About />
 			<MyProfesional />
 			<FurtherInfo />
-			<Portfolio bgColor={colorBgBase} />
+			<Portfolio bgColor={colorBgContainer} />
 			<Description />
 		</section>
 	);
