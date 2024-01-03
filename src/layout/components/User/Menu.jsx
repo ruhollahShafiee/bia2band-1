@@ -16,7 +16,7 @@ const UserSidebarMenu = () => {
 		{ label: "مشخصات شخصی من", icon: UserOutlined, path: "" },
 		{ label: "ارتباط با من", icon: CustomerServiceOutlined, path: "contact" },
 		{ label: "درباره من", icon: InfoCircleOutlined, path: "about" },
-		{ label: "اطلاعات تخصصی من", icon: FileDoneOutlined, path: "skill" },
+		{ label: "اطلاعات تخصصی من", icon: FileDoneOutlined, path: "skills" },
 		{ label: "اطلاعات تکمیلی من", icon: SolutionOutlined, path: "information" },
 		{ label: "نمونه کار ها", icon: AppstoreOutlined, path: "portfolio" },
 		{ label: "نمای کلی پروفایل", icon: IdcardOutlined, path: "view" },
