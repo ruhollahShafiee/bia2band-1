@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Menu } from "antd";
 import {
 	AppstoreOutlined,
@@ -12,28 +13,25 @@ import {
 
 const UserSidebarMenu = () => {
 	const items = [
-		{ label: "مشخصات شخصی من", icon: UserOutlined },
-		{ label: "ارتباط با من", icon: CustomerServiceOutlined },
-		{ label: "درباره من", icon: InfoCircleOutlined },
-		{ label: "اطلاعات تخصصی من", icon: FileDoneOutlined },
-		{ label: "اطلاعات تکمیلی من", icon: SolutionOutlined },
-		{ label: "نمونه کار ها", icon: AppstoreOutlined },
-		{ label: "نمای کلی پروفایل", icon: IdcardOutlined },
-	].map(({ label, icon }) => ({
-		key: label,
-		icon: React.createElement(icon, { style: { fontSize: "20px" } }),
-		label,
-	}));
+		{ label: "مشخصات شخصی من", icon: UserOutlined, path: "" },
+		{ label: "ارتباط با من", icon: CustomerServiceOutlined, path: "contact" },
+		{ label: "درباره من", icon: InfoCircleOutlined, path: "about" },
+		{ label: "اطلاعات تخصصی من", icon: FileDoneOutlined, path: "skill" },
+		{ label: "اطلاعات تکمیلی من", icon: SolutionOutlined, path: "information" },
+		{ label: "نمونه کار ها", icon: AppstoreOutlined, path: "portfolio" },
+		{ label: "نمای کلی پروفایل", icon: IdcardOutlined, path: "view" },
+	];
 	// option
 	const [defaultSelectedKeys] = items;
 	// return
 	return (
-		<Menu
-			className="max-w-96 bg-transparent"
-			defaultSelectedKeys={defaultSelectedKeys.key}
-			mode="inline"
-			items={items}
-		/>
+		<Menu className="max-w-96 bg-transparent" defaultSelectedKeys={defaultSelectedKeys.label} mode="inline">
+			{items.map(({ label, icon, path }) => (
+				<Menu.Item key={label} icon={React.createElement(icon, { style: { fontSize: "20px" } })}>
+					<Link to={path}>{label}</Link>
+				</Menu.Item>
+			))}
+		</Menu>
 	);
 };
 

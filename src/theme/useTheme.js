@@ -5,7 +5,7 @@ import tokens from "@/theme";
 
 let defaultTheme = getFromStorage("theme") || "default";
 let defaultFontSize = getFromStorage("fontSize") || "none";
-let defaultToken = getFromStorage("tokenColor") || "black";
+let defaultToken = getFromStorage("tokenColor") || "default";
 
 const useTheme = (theme) => {
 	const [themeMode, setThemeMode] = useState(defaultTheme);

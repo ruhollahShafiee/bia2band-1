@@ -12,7 +12,7 @@ const description = "سام شسیشی  شسی حشمتی سامان حشمتی 
 
 const AboutSection = () => {
 	return (
-		<section id="shop-grid" className="mx-auto p-5 mt-8">
+		<section id="about-grid" className="mx-auto p-5 mt-8">
 			<div className="grid gap-4 grid-cols-2">
 				<div className="col-span-1">
 					<div className="flex flex-col justify-between h-full">

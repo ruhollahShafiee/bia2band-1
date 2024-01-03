@@ -11,7 +11,7 @@ const CarouselModule = ({
 	classes = "",
 	className = "",
 	dotPosition = "bottom",
-	easing = "linear", // css easing !s
+	easing = "linear", // css easing !
 	effect = "scrollx", // "fade"
 	name,
 }) => {
