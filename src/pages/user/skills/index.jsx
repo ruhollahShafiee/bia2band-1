@@ -9,32 +9,20 @@ import Portfolio from "./components/portfo";
 import Description from "./components/description";
 
 const Skills = () => {
-    const {token:{ colorBgBase }} = theme.useToken()
-    return (
-        <div className="pb-10">
-            <div className="mb-5">
-                <Personal/>
-            </div>
-            <div className="mb-5">
-                <Connect />
-            </div>
-            <div className="mb-5">
-                <About />
-            </div>
-            <div className="mb-5">
-                <MyProfesional />
-            </div>
-            <div className="mb-5">
-                <FurtherInfo />
-            </div>
-            <div className="mb-5">
-                <Portfolio bgColor={colorBgBase} />
-            </div>
-            <div className="mb-5">
-                <Description />
-            </div>
-        </div>
-    )
-}
+	const {
+		token: { colorBgBase },
+	} = theme.useToken();
+	return (
+		<section className="flex flex-col gap-5">
+			<Personal />
+			<Connect />
+			<About />
+			<MyProfesional />
+			<FurtherInfo />
+			<Portfolio bgColor={colorBgBase} />
+			<Description />
+		</section>
+	);
+};
 
 export default Skills;
