@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Form, Row, Col, Card } from "antd";
+import { Form, Row, Col, Card, Avatar } from "antd";
 import Meta from "antd/es/card/Meta";
 import { AppstoreOutlined } from "@ant-design/icons";
 
@@ -15,9 +15,11 @@ const Personal = () => {
 	const { t } = useTranslation();
 	return (
 		<>
-			<Card cover={<img src={img} className="h-20" />} bordered>
-				<Meta title={title} />
-				<Form name="personal-form" className="search-form mt-5 fs-sx" layout="vertical">
+			<Card cover={<img src={img} className="h-36" />} bordered>
+				<Meta 
+				avatar={<Avatar src={img}  className="-mt-16 size-24 mb-5" />} />
+				{title}
+				<Form name="personal-form" className="personal-form mt-5 fs-sx" layout="vertical">
 					<Row gutter={[8, 8]} align={"right"}>
 						<Col xs={24} md={16} lg={12}>
 							<Inputs name="name" label="نام" placeholder={t("سامان حشمتی")} />

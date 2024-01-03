@@ -16,7 +16,7 @@ const Connect = () => {
             >
                 <Meta title={title}
                 />
-                <Form name="connect-form" className="search-form mt-5 fs-sx" layout="horizental">
+                <Form name="connect-form" className="connect-form mt-5 fs-sx" layout="horizental">
                     <Row gutter={[8, 8]} align={"middle"}>
                         <Col xs={24} md={12} lg={8}>
                             <Inputs
