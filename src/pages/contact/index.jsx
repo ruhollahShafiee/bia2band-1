@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Form, Typography } from "antd";
+import { Col, Form, Row, Typography } from "antd";
 
 import { Buttons, Inputs, InputType } from "@/components";
 
@@ -31,18 +31,26 @@ const ContactPage = () => {
 							onFinish={onSubmit}
 							className="flex flex-col justify-between h-full"
 						>
-							<div className="flex flex-col">
-								<Title level={2} className="pb-4">
+							<Row gutter={[8, 8]}>
+								<Title level={2} className="pb-4 w-full">
 									{title}
 								</Title>
-								<Inputs name="email" label={t("ایمیل")} required classes="w-2/3"/>
-								<Inputs name="mobile" label={t("شماره همراه")} required classes="w-2/3"/>
-								<Inputs name="title" label={t("عنوان")} required classes="w-2/3"/>
-								<InputType name="description" label={t("متن")} required type="textarea" />
-							</div>
-							<div className="flex gap-3 justify-end">
-								<Buttons content={<span className="px-8">ارسال</span>} htmlType="submit" />
-							</div>
+								<Col md={12}>
+									<Inputs name="email" label={t("ایمیل")} required classes="grow" />
+								</Col>
+								<Col md={12}>
+									<Inputs name="mobile" label={t("شماره همراه")} required classes="grow" />
+								</Col>
+								<Col md={12}>
+									<Inputs name="title" label={t("عنوان")} required />
+								</Col>
+								<Col span={24}>
+									<InputType name="description" label={t("متن پیام")} required type="textarea" />
+								</Col>
+								<Col span={24} className="flex justify-end">
+									<Buttons content={<span className="px-8">ارسال</span>} htmlType="submit" />
+								</Col>
+							</Row>
 						</Form>
 					</div>
 				</div>

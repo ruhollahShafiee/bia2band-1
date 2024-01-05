@@ -20,8 +20,12 @@ const BlogsPage = () => {
 	// options
 	const filterOptions = [
 		{
-			label: t("مرتبط ترین"),
+			label: t("جدید ترین"),
 			value: "x",
+		},
+		{
+			label: t("قدیمی ترین"),
+			value: "a",
 		},
 		{
 			label: t("پربازدید ترین"),
