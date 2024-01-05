@@ -1,10 +1,14 @@
+import About from "./components/about";
+import MyProfile from "./components/myProfile";
+import MySkills from "./components/mySkills";
+
 const UserProfilePage = () => {
 	return (
-		<>
-			<center>
-				<p>UserProfilePage</p>
-			</center>
-		</>
+		<section className="flex flex-col gap-5">
+			<MyProfile />
+			<About />
+			<MySkills />
+		</section>
 	);
 };
 
