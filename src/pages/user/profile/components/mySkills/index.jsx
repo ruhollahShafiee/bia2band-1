@@ -24,8 +24,8 @@ const tabList = [
 
 const contentList = {
     instrument1: <Instrument1/>,
-    instrument2: <p>app content</p>,
-    instrument3: <p>project content</p>,
+    instrument2: <Instrument1 />,
+    instrument3: <Instrument1 />,
 };
 
 const MySkills = () => {
