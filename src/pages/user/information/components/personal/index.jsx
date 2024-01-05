@@ -16,11 +16,11 @@ const Personal = () => {
 	return (
 		<>
 			<Card cover={<img src={img} className="h-36" />} bordered>
-				<Meta 
-				avatar={<Avatar src={img}  className="-mt-16 size-24 mb-5" />} />
+				<Meta
+					avatar={<Avatar src={img} className="-mt-16 size-24 mb-5" />} />
 				{title}
 				<Form name="personal-form" className="personal-form mt-5 fs-sx" layout="vertical">
-					<Row gutter={[8, 8]} align={"right"}>
+					<Row gutter={[8, 8]} align={"middle"}>
 						<Col xs={24} md={16} lg={12}>
 							<Inputs name="name" label="نام" placeholder={t("سامان حشمتی")} />
 						</Col>
