@@ -15,6 +15,12 @@
 	.borders {
 		border: 1px solid whitesmoke !important;
 	}
+	.ltr {
+		direction: ltr !important;
+	}
+	.rtl {
+		direction: rtl !important;
+	}
 }
 
 /* document style */

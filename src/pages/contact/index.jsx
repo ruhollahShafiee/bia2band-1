@@ -36,10 +36,10 @@ const ContactPage = () => {
 									{title}
 								</Title>
 								<Col md={12}>
-									<Inputs name="email" label={t("ایمیل")} required classes="grow" />
+									<Inputs name="email" label={t("ایمیل")} required classes="grow ltr" />
 								</Col>
 								<Col md={12}>
-									<Inputs name="mobile" label={t("شماره همراه")} required classes="grow" />
+									<Inputs name="mobile" label={t("شماره همراه")} required classes="grow ltr" />
 								</Col>
 								<Col md={12}>
 									<Inputs name="title" label={t("عنوان")} required />
