@@ -18,7 +18,9 @@ const About = () => {
                         <h3>{title1}</h3>
                     </Col>
                     <Col xs={24} md={16} lg={12}>
-                        <h3>{title2}</h3>
+                        <div className=" grid justify-items-center">
+                            <h3>{title2}</h3>
+                        </div>
                     </Col>
                 </Row>
                 <Row gutter={[8, 8]} align={"middle"}>
@@ -26,24 +28,28 @@ const About = () => {
                         <p className="text-slate-400">{description + description + description + description + description}</p>
                     </Col>
                     <Col xs={24} md={16} lg={12}>
-                        <video controls poster={img} height={200} width={200} className="rounded-md">
-                            <source src={img} type="video/mp4" />
-                        </video>
+                        <div className="grid justify-items-center">
+                            <video controls poster={img} height={200} width={200} className="rounded-md">
+                                <source src={img} type="video/mp4" />
+                            </video>
+                        </div>
                     </Col>
                 </Row>
                 <Row gutter={[8, 8]} justify={"end"} align={"middle"}>
                     <Col xs={24} md={16} lg={12}>
-                        <Buttons content={<span className="text-xs">مشاهده همه ی کارها</span>}
-                            type="default"
-                            htmlType="button"
-                            classes="float-end"
-                            size="default"
-                        />
+                        <div className="grid justify-items-center mt-4">
+                            <Buttons content={<span className="text-xs">مشاهده همه ی کارها</span>}
+                                type="default"
+                                htmlType="button"
+                                classes="float-end"
+                                size="default"
+                            />
+                        </div>
                     </Col>
                 </Row>
             </div>
         </Card>
-    )
-}
+    );
+};
 
 export default About;

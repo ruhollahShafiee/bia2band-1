@@ -12,13 +12,13 @@ const description = "استادیار/تخصص های دیگر...استادیا�
 const SectionProfile = () => {
     const { t } = useTranslation();
     return (
-        <section id="sectionprofile-grid" className="mx-auto p-4 mt-0">
+        <section id="sectionprofile-grid" className="mx-auto p-4 pt-0">
             <div className="grid gap-4 grid-cols-2">
                 <div className="col-span-1">
                     <div className="flex flex-col justify-between h-full">
                         <Meta
                             title={
-                                <Title level={5} className=" mb-3 pt-12">
+                                <Title level={5} className="mb-3">
                                     {title}
                                 </Title>
                             }
@@ -46,10 +46,10 @@ const SectionProfile = () => {
                     classes="float-end"
                     size="default"
                 />
-                <BookOutlined style={{fontSize: "xx-large"}} className="pb-5"/>
+                <BookOutlined style={{fontSize: "x-large"}} className="pb-6"/>
             </Row>
         </section>
-    )
-}
+    );
+};
 
 export default SectionProfile;

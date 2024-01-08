@@ -13,25 +13,24 @@ const MyProfile = () => {
     return (
         <Card cover={<img src={img} className="h-36" />}
             bordered>
-            <Meta avatar={[<Avatar src={img} className="-mt-16 size-24 mb-7" />,
-
+            <Meta avatar={[<Avatar src={img} className="-mt-16 size-24" />,
             ]}
-                title={
-                    <Title level={3} pt-7>
-                        {title}
-                    </Title>
-                }
             />
-            <div className="-mt-20 flex justify-end gap-2">
+            <div className="-mt-10 flex justify-end gap-2">
                 <YoutubeFilled />
                 <WhatsAppOutlined />
                 <InstagramFilled />
                 <TwitterOutlined />
                 <FacebookOutlined />
             </div>
+            <div className="grid mt-4 pt-2">
+                <Title level={3}>
+                    {title}
+                </Title>
+            </div>
             <SectionProfile />
         </Card>
-    )
-}
+    );
+};
 
 export default MyProfile;
