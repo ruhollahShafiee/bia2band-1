@@ -23,7 +23,7 @@ const tabList = [
 ];
 
 const contentList = {
-    instrument1: <Instrument1/>,
+    instrument1: <Instrument1 />,
     instrument2: <Instrument1 />,
     instrument3: <Instrument1 />,
 };
@@ -36,7 +36,7 @@ const MySkills = () => {
     }
     return (
         <>
-            <Card
+            <Card className="pt-5 pb-5"
                 style={{
                     width: '100%',
                 }}

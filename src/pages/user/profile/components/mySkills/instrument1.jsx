@@ -12,10 +12,12 @@ const Instrument1 = () => {
                         <span>-کارگاه تئوری موسیقی طهماسبی</span>
                     </Col>
                     <Col xs={24} md={16} lg={12}>
-                        <img src={img} height={100} width={150} className="rounded" />
-                        <video controls poster={img} height={110} width={150} className="rounded">
-                            <source src={img} type="video/mp4" />
-                        </video>
+                        <div className="flex justify-items-between gap-5">
+                            <img src={img} height={120} width={150} className="rounded pt-3" />
+                            <video controls poster={img} height={120} width={150} className="rounded">
+                                <source src={img} type="video/mp4" />
+                            </video>
+                        </div>
                     </Col>
                 </Row>
                 <Row gutter={[8, 8]} align={"middle"} className="pb-5">
@@ -27,10 +29,12 @@ const Instrument1 = () => {
                         <span>- گندم</span> <br />
                     </Col>
                     <Col xs={24} md={12} lg={12}>
-                        <img src={img} height={100} width={150} className="rounded" />
-                        <video controls poster={img} height={110} width={150} className="rounded">
-                            <source src={img} type="video/mp4" />
-                        </video>
+                        <div className="flex justify-items-between gap-5">
+                            <img src={img} height={120} width={150} className="rounded pt-3" />
+                            <video controls poster={img} height={120} width={150} className="rounded">
+                                <source src={img} type="video/mp4" />
+                            </video>
+                        </div>
                     </Col>
                 </Row>
                 <Row gutter={[8, 8]} align={"middle"} className="pb-5">
@@ -39,10 +43,12 @@ const Instrument1 = () => {
                         <span>- ارسباران</span> <br />
                     </Col>
                     <Col xs={24} md={12} lg={12}>
-                        <img src={img} height={100} width={150} className="rounded" />
-                        <video controls poster={img} height={110} width={150} className="rounded">
-                            <source src={img} type="video/mp4" />
-                        </video>
+                        <div className="flex justify-items-between gap-5">
+                            <img src={img} height={120} width={150} className="rounded pt-3" />
+                            <video controls poster={img} height={120} width={150} className="rounded">
+                                <source src={img} type="video/mp4" />
+                            </video>
+                        </div>
                     </Col>
                 </Row>
                 <Row gutter={[8, 8]} align={"middle"} className="pb-5">
@@ -51,10 +57,12 @@ const Instrument1 = () => {
                         <span>- شبکه 5</span> <br />
                     </Col>
                     <Col xs={24} md={12} lg={12}>
-                        <img src={img} height={100} width={150} className="rounded" />
-                        <video controls poster={img} height={110} width={150} className="rounded">
-                            <source src={img} type="video/mp4" />
-                        </video>
+                        <div className="flex justify-items-between gap-5">
+                            <img src={img} height={120} width={150} className="rounded pt-3" />
+                            <video controls poster={img} height={120} width={150} className="rounded">
+                                <source src={img} type="video/mp4" />
+                            </video>
+                        </div>
                     </Col>
                 </Row>
                 <Row gutter={[8, 8]} align={"middle"} className="pb-5">
@@ -63,11 +71,13 @@ const Instrument1 = () => {
                         <span>- خواب های طلایی</span> <br />
                         <span>- خواب های طلایی 2</span> <br />
                     </Col>
-                    <Col xs={24} md={12} lg={12}>
-                        <img src={img} height={100} width={150} className="rounded" />
-                        <video controls poster={img} height={110} width={150} className="rounded">
-                            <source src={img} type="video/mp4" />
-                        </video>
+                    <Col xs={24} md={16} lg={12}>
+                        <div className="flex justify-items-between gap-5">
+                            <img src={img} height={120} width={150} className="rounded pt-3" />
+                            <video controls poster={img} height={120} width={150} className="rounded">
+                                <source src={img} type="video/mp4" />
+                            </video>
+                        </div>
                     </Col>
                 </Row>
             </Form>

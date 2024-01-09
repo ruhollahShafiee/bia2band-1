@@ -16,7 +16,7 @@ const Connect = () => {
             >
                 <Meta title={title}
                 />
-                <Form name="connect-form" className="connect-form mt-5 fs-sx" layout="horizental">
+                <Form name="connect-form" className="connect-form mt-5" layout="horizental">
                     <Row gutter={[8, 8]} align={"middle"}>
                         <Col xs={24} md={12} lg={8}>
                             <Inputs
@@ -24,7 +24,7 @@ const Connect = () => {
                                 placeholder="https://www.twitter.com/sabach"
                             />
                         </Col>
-                        <Col xs={20} md={8} lg={4}>
+                        <Col xs={20} md={8} lg={4} className="pb-4">
                             <TwitterOutlined />
                         </Col>
                         <Col xs={24} md={12} lg={8}>
@@ -33,7 +33,7 @@ const Connect = () => {
                                 placeholder={t("https://www.facebook.com/sabach")}
                             />
                         </Col>
-                        <Col xs={20} md={8} lg={4}>
+                        <Col xs={20} md={8} lg={4} className="pb-4">
                             <FacebookOutlined />
                         </Col>
                     </Row>
@@ -44,7 +44,7 @@ const Connect = () => {
                                 placeholder={t("https://www.instagram.com/sabach")}
                             />
                         </Col>
-                        <Col xs={20} md={8} lg={4}>
+                        <Col xs={20} md={8} lg={4} className="pb-4">
                             <InstagramFilled />
                         </Col>
                         <Col xs={24} md={12} lg={8}>
@@ -53,21 +53,21 @@ const Connect = () => {
                                 placeholder={t("https://www.instagram.com/sabach")}
                             />
                         </Col>
-                        <Col xs={20} md={8} lg={4}>
+                        <Col xs={20} md={8} lg={4} className="pb-4">
                             <InstagramFilled />
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} align={"center"}>
                         <Col xs={24} md={12} lg={8}>
-                            <Buttons content={t("+ افزودن شبکه های اجتماعی")} type="default"
-                                size="large" htmlType="button"
+                            <Buttons content={t(" + افزودن شبکه های اجتماعی")} type="default"
+                                size="large" 
+                                htmlType="button"
                             />
                         </Col>
                     </Row>
                 </Form>
             </Card>
         </>
-
     );
 };
 

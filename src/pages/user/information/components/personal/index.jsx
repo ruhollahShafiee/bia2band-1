@@ -1,12 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { Form, Row, Col, Card, Avatar } from "antd";
 import Meta from "antd/es/card/Meta";
-import { AppstoreOutlined } from "@ant-design/icons";
-
+import { AppstoreOutlined, EnvironmentOutlined} from "@ant-design/icons";
 import Regex from "@/utils/regex";
-
 import { Selects, Inputs } from "@/components";
-
 import img from "../test.jpg";
 
 const title = "مشخصات شخصی من";
@@ -19,7 +16,7 @@ const Personal = () => {
 				<Meta
 					avatar={<Avatar src={img} className="-mt-16 size-24 mb-5" />} />
 				{title}
-				<Form name="personal-form" className="personal-form mt-5 fs-sx" layout="vertical">
+				<Form name="personal-form" className="personal-form mt-5" layout="vertical">
 					<Row gutter={[8, 8]} align={"middle"}>
 						<Col xs={24} md={16} lg={12}>
 							<Inputs name="name" label="نام" placeholder={t("سامان حشمتی")} />
@@ -59,7 +56,7 @@ const Personal = () => {
 								label="محل سکونت"
 								placeholder={
 									<div className="flex gap-2 align-middle items-center">
-										<AppstoreOutlined className="pb-1" />
+										<EnvironmentOutlined className="pb-1" />
 										<span>نام شهر</span>
 									</div>
 								}

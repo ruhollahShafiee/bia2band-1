@@ -55,22 +55,22 @@ const MyProfesional = () => {
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} justify={"space-evenly"} align={"middle"} >
-                        <Col xs={24} md={16} lg={8}>
+                        <Col xs={24} md={16} lg={6}>
                             <video controls poster={img} height={200} width={200} className="rounded-md">
                                 <source src={img} type="video/mp4" />
                             </video>
                         </Col>
-                        <Col xs={24} md={16} lg={8}>
-                            <img src={img} height={150} width={200} className="rounded-md" />
+                        <Col xs={24} md={16} lg={6}>
+                            <img src={img} height={170} width={200} className="rounded-md pt-3" />
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} justify={"space-evenly"} align={"middle"} className="mt-5">
-                        <Col xs={24} md={16} lg={8}>
+                        <Col xs={24} md={16} lg={6}>
                             <Buttons content={t("+ افزودن ویدئو نوازندگی")} type="default"
                                 size="small" htmlType="button"
                             />
                         </Col>
-                        <Col xs={24} md={16} lg={8}>
+                        <Col xs={24} md={16} lg={4}>
                             <Buttons content={t("+ افزودن تصویر")} type="default"
                                 size="small" htmlType="button"
                             />

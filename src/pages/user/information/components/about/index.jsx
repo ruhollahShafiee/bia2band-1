@@ -20,14 +20,17 @@ const About = () => {
                         <Col xs={24} md={24} lg={24}>
                             <TextArea
                                 name="about"
-                                autoSize={10}
+                                autoSize={{
+                                    minRows: 5,
+                                    maxRows: 8,
+                                }}
                                 placeholder={t("ویژگی های شخصیتی و حرفه ای خود را در این قسمت بنویسید.")}
                             />
                         </Col>
                     </Row>
-                    <Row gutter={[8, 8]} justify={"end"} align={"middle"}>
+                    <Row gutter={[8, 8]} justify={"end"} align={"middle"} className="mt-2">
                         <Col xs={20} md={8} lg={4}>
-                            <Buttons content={t("انصراف")}  type="default"
+                            <Buttons content={t("انصراف")} type="default"
                                 size="small" htmlType="button" block={true}
                             />
                         </Col>
@@ -40,8 +43,7 @@ const About = () => {
                 </Form>
             </Card>
         </>
-    )
-
-}
+    );
+};
 
 export default About;

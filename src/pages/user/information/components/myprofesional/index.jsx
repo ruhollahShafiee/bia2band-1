@@ -16,7 +16,7 @@ const Profesional = () => {
                 <Meta
                     title={title}
                 />
-                <Form name="prof-form" className="prof-form mt-5 fs-sx" layout="vertical">
+                <Form name="prof-form" className="prof-form mt-5" layout="vertical">
                     <Row gutter={[8, 8]} align={"middle"}>
                         <Col xs={24} md={16} lg={12}>
                             <Selects
@@ -52,31 +52,30 @@ const Profesional = () => {
                     </Row>
                     <Row gutter={[8, 8]} justify={"center"} align={"middle"} >
                         <Col xs={24} md={16} lg={8}>
-                            <video controls poster={img}  height={200} width={200} className="rounded">
+                            <video controls poster={img}  height={150} width={200} className="rounded">
                                 <source src={img} type="video/mp4" />
                             </video>
                         </Col>
                         <Col xs={24} md={16} lg={8}>
-                            <img src={img} height={150} width={200} className="rounded" />
+                            <img src={img} height={140} width={200} className="rounded" />
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} justify={"center"} align={"middle"} className="mt-5">
-                        <Col xs={22} md={16} lg={8}>
+                        <Col xs={24} md={16} lg={8}>
                             <Buttons content={t("+ افزودن ویدئو معرفی")} type="default"
                                 size="small" htmlType="button"
                             />
                         </Col>
-                        <Col xs={20} md={16} lg={8}>
+                        <Col xs={24} md={16} lg={6}>
                             <Buttons content={t("+ افزودن تصویر")} type="default"
                                 size="small" htmlType="button"
                             />
                         </Col>
                     </Row>
-
                 </Form>
             </Card>
         </>
-    )
-}
+    );
+};
 
 export default Profesional;
