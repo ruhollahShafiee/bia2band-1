@@ -7,68 +7,54 @@ import { TwitterOutlined, FacebookOutlined, InstagramFilled } from "@ant-design/
 const title = "ارتباط با من";
 
 const Connect = () => {
-    const { t } = useTranslation();
-    return (
-        <>
-            <Card
-                bordered
-
-            >
-                <Meta title={title}
-                />
-                <Form name="connect-form" className="connect-form mt-5" layout="horizental">
-                    <Row gutter={[8, 8]} align={"middle"}>
-                        <Col xs={24} md={12} lg={8}>
-                            <Inputs
-                                name="twitter"
-                                placeholder="https://www.twitter.com/sabach"
-                            />
-                        </Col>
-                        <Col xs={20} md={8} lg={4} className="pb-4">
-                            <TwitterOutlined />
-                        </Col>
-                        <Col xs={24} md={12} lg={8}>
-                            <Inputs
-                                name="facebook"
-                                placeholder={t("https://www.facebook.com/sabach")}
-                            />
-                        </Col>
-                        <Col xs={20} md={8} lg={4} className="pb-4">
-                            <FacebookOutlined />
-                        </Col>
-                    </Row>
-                    <Row gutter={[8, 8]} align={"middle"}>
-                        <Col xs={24} md={12} lg={8}>
-                            <Inputs
-                                name="instagram"
-                                placeholder={t("https://www.instagram.com/sabach")}
-                            />
-                        </Col>
-                        <Col xs={20} md={8} lg={4} className="pb-4">
-                            <InstagramFilled />
-                        </Col>
-                        <Col xs={24} md={12} lg={8}>
-                            <Inputs
-                                name="instagram"
-                                placeholder={t("https://www.instagram.com/sabach")}
-                            />
-                        </Col>
-                        <Col xs={20} md={8} lg={4} className="pb-4">
-                            <InstagramFilled />
-                        </Col>
-                    </Row>
-                    <Row gutter={[8, 8]} align={"center"}>
-                        <Col xs={24} md={12} lg={8}>
-                            <Buttons content={t(" + افزودن شبکه های اجتماعی")} type="default"
-                                size="large" 
-                                htmlType="button"
-                            />
-                        </Col>
-                    </Row>
-                </Form>
-            </Card>
-        </>
-    );
+	const { t } = useTranslation();
+	return (
+		<>
+			<Card bordered>
+				<Meta title={title} />
+				<Form name="connect-form" className="connect-form mt-5" layout="horizental">
+					<Row gutter={[8, 8]} align={"middle"}>
+						<Col xs={24} md={12} lg={8}>
+							<Inputs name="twitter" placeholder="https://www.twitter.com/sabach" />
+						</Col>
+						<Col xs={20} md={8} lg={4} className="pb-4">
+							<TwitterOutlined />
+						</Col>
+						<Col xs={24} md={12} lg={8}>
+							<Inputs name="facebook" placeholder={t("https://www.facebook.com/sabach")} />
+						</Col>
+						<Col xs={20} md={8} lg={4} className="pb-4">
+							<FacebookOutlined />
+						</Col>
+					</Row>
+					<Row gutter={[8, 8]} align={"middle"}>
+						<Col xs={24} md={12} lg={8}>
+							<Inputs name="instagram" placeholder={t("https://www.instagram.com/sabach")} />
+						</Col>
+						<Col xs={20} md={8} lg={4} className="pb-4">
+							<InstagramFilled />
+						</Col>
+						<Col xs={24} md={12} lg={8}>
+							<Inputs name="instagram" placeholder={t("https://www.instagram.com/sabach")} />
+						</Col>
+						<Col xs={20} md={8} lg={4} className="pb-4">
+							<InstagramFilled />
+						</Col>
+					</Row>
+					<Row gutter={[8, 8]} align={"center"}>
+						<Col xs={24} md={12} lg={8}>
+							<Buttons
+								content={t(" + افزودن شبکه های اجتماعی")}
+								type="default"
+								size="large"
+								htmlType="button"
+							/>
+						</Col>
+					</Row>
+				</Form>
+			</Card>
+		</>
+	);
 };
 
 export default Connect;

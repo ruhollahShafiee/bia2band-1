@@ -57,8 +57,8 @@ const mainRoutes = {
 					lazy: async () => ({ Component: (await import("../pages/user/profile")).default }),
 				},
 				{
-					path: "groupMember",
-					id: "user/groupMember",
+					path: "group",
+					id: "user/group",
 					lazy: async () => ({ Component: (await import("../pages/user/groupMember")).default }),
 				},
 				{

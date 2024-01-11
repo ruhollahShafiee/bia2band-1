@@ -20,6 +20,7 @@ const UserSidebarMenu = () => {
 		{ label: "اطلاعات تکمیلی من", icon: SolutionOutlined, path: "information" },
 		{ label: "نمونه کار ها", icon: AppstoreOutlined, path: "portfolio" },
 		{ label: "نمای کلی پروفایل", icon: IdcardOutlined, path: "view" },
+		{ label: "اعضای گروه", icon: IdcardOutlined, path: "group" },
 	];
 	// option
 	const [defaultSelectedKeys] = items;

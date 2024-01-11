@@ -12,7 +12,7 @@ const Instrument1 = () => {
                         <span>-کارگاه تئوری موسیقی طهماسبی</span>
                     </Col>
                     <Col xs={24} md={16} lg={12}>
-                        <div className="flex justify-items-between gap-5">
+                        <div className="flex justify-center gap-5">
                             <img src={img} height={120} width={150} className="rounded pt-3" />
                             <video controls poster={img} height={120} width={150} className="rounded">
                                 <source src={img} type="video/mp4" />
