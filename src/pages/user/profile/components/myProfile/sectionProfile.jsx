@@ -24,7 +24,7 @@ const SectionProfile = () => {
                             }
                             description={
                                 <p className="text-justify text-slate-500">
-                                    {description + description + description + description}
+                                    {description + description + description + description + description + description + description}
                                 </p>
                             }
                         />
@@ -37,16 +37,14 @@ const SectionProfile = () => {
                     type="primary"
                     htmlType="button"
                     classes="float-end"
-                    size="default"
                 />
                 <Buttons
                     content={<span className="text-xs">ارسال پیام</span>}
                     type="default"
                     htmlType="button"
                     classes="float-end"
-                    size="default"
                 />
-                <BookOutlined style={{fontSize: "x-large"}} className="pb-6"/>
+                <BookOutlined style={{fontSize: "xx-large"}} className="pb-6"/>
             </Row>
         </section>
     );

@@ -34,7 +34,6 @@ const Description = () => {
                         <Col xs={20} md={8} lg={10}>
                             <Buttons content={t("می خواهم گروه تشکیل دهم و سرپرست گروه باشم")}
                                 type="default"
-                                size="small"
                                 htmlType="button"
                                 block={true}
                             />
@@ -42,14 +41,12 @@ const Description = () => {
                         <Col xs={20} md={8} lg={4}>
                             <Buttons content={t("اضافه کردن ساز")}
                                 type="primary"
-                                size="small"
                                 htmlType="button"
                                 block={true}
                             />
                         </Col>
                     </Row>
                 </Form>
-
             </Card>
         </>
     );

@@ -15,13 +15,19 @@ const Connect = () => {
 				<Form name="connect-form" className="connect-form mt-5" layout="horizental">
 					<Row gutter={[8, 8]} align={"middle"}>
 						<Col xs={24} md={12} lg={8}>
-							<Inputs name="twitter" placeholder="https://www.twitter.com/sabach" />
+							<Inputs 
+							name="twitter" 
+							placeholder="https://www.twitter.com/sabach" 
+							/>
 						</Col>
 						<Col xs={20} md={8} lg={4} className="pb-4">
 							<TwitterOutlined />
 						</Col>
 						<Col xs={24} md={12} lg={8}>
-							<Inputs name="facebook" placeholder={t("https://www.facebook.com/sabach")} />
+							<Inputs 
+							name="facebook" 
+							placeholder={t("https://www.facebook.com/sabach")} 
+							/>
 						</Col>
 						<Col xs={20} md={8} lg={4} className="pb-4">
 							<FacebookOutlined />
@@ -29,13 +35,19 @@ const Connect = () => {
 					</Row>
 					<Row gutter={[8, 8]} align={"middle"}>
 						<Col xs={24} md={12} lg={8}>
-							<Inputs name="instagram" placeholder={t("https://www.instagram.com/sabach")} />
+							<Inputs 
+							name="instagram" 
+							placeholder={t("https://www.instagram.com/sabach")} 
+							/>
 						</Col>
 						<Col xs={20} md={8} lg={4} className="pb-4">
 							<InstagramFilled />
 						</Col>
 						<Col xs={24} md={12} lg={8}>
-							<Inputs name="instagram" placeholder={t("https://www.instagram.com/sabach")} />
+							<Inputs 
+							name="instagram" 
+							placeholder={t("https://www.instagram.com/sabach")} 
+							/>
 						</Col>
 						<Col xs={20} md={8} lg={4} className="pb-4">
 							<InstagramFilled />
@@ -46,7 +58,6 @@ const Connect = () => {
 							<Buttons
 								content={t(" + افزودن شبکه های اجتماعی")}
 								type="default"
-								size="large"
 								htmlType="button"
 							/>
 						</Col>

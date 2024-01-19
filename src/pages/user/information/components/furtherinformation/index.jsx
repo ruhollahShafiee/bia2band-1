@@ -251,7 +251,6 @@ const FurtherInformation = () => {
                         <Col xs={20} md={10} lg={5}>
                             <Buttons content={t("اضافه کردن مکان جدید")}
                                 type="default"
-                                size="small"
                                 htmlType="button"
                             />
                         </Col>

@@ -19,10 +19,20 @@ const Personal = () => {
 				<Form name="personal-form" className="personal-form mt-5" layout="vertical">
 					<Row gutter={[8, 8]} align={"middle"}>
 						<Col xs={24} md={16} lg={12}>
-							<Inputs name="name" label="نام" placeholder={t("سامان حشمتی")} />
+							<Inputs 
+							name="name" 
+							label="نام" 
+							placeholder={t("سامان حشمتی")} 
+							extraClasses="flex-grow"
+							/>
 						</Col>
 						<Col xs={24} md={16} lg={12}>
-							<Inputs name="email" label="ایمیل" placeholder={t("samanHeshmati@gmail.com")} />
+							<Inputs 
+							name="email" 
+							label="ایمیل" 
+							placeholder={t("samanHeshmati@gmail.com")} 
+							extraClasses="flex-grow"
+							/>
 						</Col>
 					</Row>
 					<Row gutter={[8, 8]} align={"middle"}>
@@ -46,6 +56,7 @@ const Personal = () => {
 								patternMessage={"صحیح نیست"}
 								maxLength={11}
 								placeholder={t("09121558087")}
+								extraClasses="flex-grow"
 							/>
 						</Col>
 					</Row>

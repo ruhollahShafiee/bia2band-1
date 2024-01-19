@@ -1,4 +1,4 @@
-import { Card, Form, Avatar, Col, Row, Divider } from "antd";
+import { Card, Form, Avatar, Col, Row, Divider, Badge, Space } from "antd";
 import Meta from "antd/es/card/Meta";
 import { useState } from "react";
 import img from "../../test.jpg";
@@ -28,12 +28,24 @@ const Members = () => {
 						{images.map(({ id }) => (
 							<Col key={id}>
 								<img src={img} id={`image-${id}`} className="rounded-full size-20" />
+								<Space size="small">
+									<Badge 
+									dot={true} 
+									offset={[24, -18]}>
+									</Badge>
+									<Badge 
+									count={0} 
+									showZero 
+									offset={[38, -10]} 
+									size="small">
+									</Badge>
+								</Space>
 							</Col>
 						))}
 					</Row>
 					<Row gutter={[8, 8]}>
 						<Divider orientation="left">
-							<Title level={3}>اطلاعات گروه</Title>
+							<Title level={5}>اطلاعات گروه</Title>
 						</Divider>
 						<Col xs={24} md={16} lg={12}>
 							<Inputs
@@ -52,18 +64,19 @@ const Members = () => {
 							/>
 						</Col>
 					</Row>
-
 					<div className="flex justify-around">
 						<div className="flex gap-5 flex-col justify-center align-middle items-center">
-							<video controls poster={img}  height={200} width={300} className="rounded-lg object-fill">
+							<video controls poster={img} height={200} width={300} className="rounded-lg object-fill">
 								<source src={img} height={200} width={300} type="video/mp4" />
 							</video>
 							<Buttons content={t("+ افزودن ویدئو گروه")} type="default" htmlType="button" />
 						</div>
-
 						<div className="flex gap-5 flex-col justify-center align-middle items-center">
 							<img src={img} height={200} width={300} className="rounded-lg" />
-							<Buttons content={t("+ افزودن تصویر")} type="default" htmlType="button" />
+							<Buttons content={t("+ افزودن تصویر")} 
+							type="default" 
+							htmlType="button" 
+							/>
 						</div>
 					</div>
 				</Form>
