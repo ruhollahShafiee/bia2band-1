@@ -11,7 +11,7 @@ import { Loadings } from "@/components";
 import MainLayout from "@/layout/MainLayouts";
 import UserLayout from "@/layout/UserLayout";
 // pages
-import HomePage from "@/pages/home";
+import HomePage from "@/pages/main/home";
 
 const mainRoutes = {
 	path: "/",
@@ -25,27 +25,27 @@ const mainRoutes = {
 		{
 			path: "search",
 			id: "search",
-			lazy: async () => ({ Component: (await import("../pages/search")).default }),
+			lazy: async () => ({ Component: (await import("../pages/main/search")).default }),
 		},
 		{
 			path: "contact",
 			id: "contact",
-			lazy: async () => ({ Component: (await import("../pages/contact")).default }),
+			lazy: async () => ({ Component: (await import("../pages/main/contact")).default }),
 		},
 		{
 			path: "about",
 			id: "about",
-			lazy: async () => ({ Component: (await import("../pages/about")).default }),
+			lazy: async () => ({ Component: (await import("../pages/main/about")).default }),
 		},
 		{
 			path: "blogs",
 			id: "blogs",
-			lazy: async () => ({ Component: (await import("../pages/blogs")).default }),
+			lazy: async () => ({ Component: (await import("../pages/main/blogs")).default }),
 		},
 		{
 			path: "blogs/:id",
 			id: "blog",
-			lazy: async () => ({ Component: (await import("../pages/blogs")).default }),
+			lazy: async () => ({ Component: (await import("../pages/main/blogs")).default }),
 		},
 		{
 			path: "user",
