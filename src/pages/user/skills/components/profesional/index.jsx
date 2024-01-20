@@ -54,29 +54,19 @@ const MyProfesional = () => {
                             <Inputs name="duration" label="مدت زمان" placeholder={t("سه سال")} />
                         </Col>
                     </Row>
-                    <Row gutter={[8, 8]} justify={"space-evenly"} align={"middle"} >
-                        <Col xs={24} md={16} lg={6}>
-                            <video controls poster={img} height={200} width={200} className="rounded-md">
-                                <source src={img} type="video/mp4" />
-                            </video>
-                        </Col>
-                        <Col xs={24} md={16} lg={6}>
-                            <img src={img} height={170} width={200} className="rounded-md pt-3" />
-                        </Col>
-                    </Row>
-                    <Row gutter={[8, 8]} justify={"space-evenly"} align={"middle"} className="mt-5">
-                        <Col xs={24} md={16} lg={6}>
-                            <Buttons content={t("+ افزودن ویدئو نوازندگی")} type="default"
-                                size="small" htmlType="button"
-                            />
-                        </Col>
-                        <Col xs={24} md={16} lg={4}>
-                            <Buttons content={t("+ افزودن تصویر")} type="default"
-                                size="small" htmlType="button"
-                            />
-                        </Col>
-                    </Row>
+                    <div className="flex justify-around">
+						<div className="flex gap-5 flex-col justify-center align-middle items-center">
+							<video controls poster={img}  height={200} width={300} className="rounded-lg object-fill">
+								<source src={img} height={200} width={300} type="video/mp4" />
+							</video>
+							<Buttons content={t("+ افزودن ویدئو گروه")} type="default" htmlType="button" />
+						</div>
 
+						<div className="flex gap-5 flex-col justify-center align-middle items-center">
+							<img src={img} height={200} width={300} className="rounded-lg" />
+							<Buttons content={t("+ افزودن تصویر")} type="default" htmlType="button" />
+						</div>
+					</div>
                 </Form>
             </Card>
         </>

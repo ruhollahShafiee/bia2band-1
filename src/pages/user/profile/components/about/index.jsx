@@ -42,7 +42,6 @@ const About = () => {
                                 type="default"
                                 htmlType="button"
                                 classes="float-end"
-                                size="default"
                             />
                         </div>
                     </Col>

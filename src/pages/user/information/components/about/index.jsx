@@ -27,10 +27,18 @@ const About = () => {
 					</Row>
 					<Row gutter={[8, 8]} justify={"end"} align={"middle"} className="mt-2">
 						<Col xs={20} md={8} lg={4}>
-							<Buttons content={t("انصراف")} type="default" htmlType="button" block={true} />
+							<Buttons content={t("انصراف")} 
+							type="default" 
+							htmlType="button" 
+							block={true} 
+							/>
 						</Col>
 						<Col xs={20} md={8} lg={4}>
-							<Buttons content={t("ذخیره")} type="primary" htmlType="button" block={true} />
+							<Buttons content={t("ذخیره")} 
+							type="primary" 
+							htmlType="button" 
+							block={true} 
+							/>
 						</Col>
 					</Row>
 				</Form>
