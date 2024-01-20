@@ -13,7 +13,7 @@ const UserLayout = () => {
 	const { t } = useTranslation();
 	const navigation = useNavigate();
 	const { user, loading } = useSelector(authSelector, {
-		equalityFn: ({ user }, { user: nextUser }) => !!user !== !!nextUser,
+		equalityFn: ({ user }, { user: nextState }) => !!user !== !!nextState,
 	});
 	// authentication
 	if (loading) {
