@@ -5,7 +5,7 @@ import { Typography } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 
 import { Modals } from "@/components";
-import Auth from "../../UserAuth";
+import Auth from "../../Auth";
 
 const { Paragraph } = Typography;
 
