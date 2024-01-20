@@ -57,6 +57,11 @@ const mainRoutes = {
 					lazy: async () => ({ Component: (await import("../pages/user/profile")).default }),
 				},
 				{
+					path: "contact",
+					id: "user/contact",
+					lazy: async () => ({ Component: (await import("../pages/user/profile")).default }),
+				},
+				{
 					path: "group",
 					id: "user/group",
 					lazy: async () => ({ Component: (await import("../pages/user/groupMember")).default }),
@@ -70,6 +75,11 @@ const mainRoutes = {
 					path: "skills",
 					id: "user/skills",
 					lazy: async () => ({ Component: (await import("../pages/user/skills")).default }),
+				},
+				{
+					path: "portfolio",
+					id: "user/portfolio",
+					lazy: async () => ({ Component: (await import("../pages/user/information")).default }),
 				},
 				{
 					path: "information",
