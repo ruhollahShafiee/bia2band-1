@@ -30,7 +30,6 @@ const Profesional = () => {
                                     { name: 'سرپرست گروه', id: '4' },
                                     { name: 'صاحب کسب و کار', id: '5' },
                                 ]}
-
                             />
                         </Col>
                         <Col xs={24} md={16} lg={12}>

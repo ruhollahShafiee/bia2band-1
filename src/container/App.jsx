@@ -12,6 +12,7 @@ import MainLayout from "@/layout/MainLayouts";
 import UserLayout from "@/layout/UserLayout";
 // pages
 import HomePage from "@/pages/main/home";
+import AdminLayout from "../pages/admin/layout/AdmainLayouts";
 
 const mainRoutes = {
 	path: "/",
@@ -97,11 +98,33 @@ const mainRoutes = {
 					lazy: async () => ({ Component: (await import("../pages/user/profile")).default }),
 				},
 			],
+
 		},
 	],
 };
 
-const adminRoutes = {};
+
+const adminRoutes = {
+	path: "dashboard",
+	element: <AdminLayout />,
+	children: [
+		{
+			path: "tickets",
+			id: "dashboard/tickets",
+			lazy: async () => ({ Component: (await import("../pages/admin/dashboard/components/tickets")).default }),
+		},
+		{
+			path: "reports",
+			id: "dashboard/reports",
+			lazy: async () => ({ Component: (await import("../pages/admin/dashboard/components/reports")).default }),
+		},
+		{
+			path: "wallet",
+			id: "dashboard/wallet",
+			lazy: async () => ({ Component: (await import("../pages/admin/dashboard/components/wallet")).default }),
+		},
+	],
+};
 
 const router = createBrowserRouter([mainRoutes, adminRoutes]);
 
