@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Typography } from "antd";
-import { SettingOutlined } from "@ant-design/icons";
 
 import { userSelector } from "@/store/selector";
 
@@ -46,15 +45,6 @@ const MainNavbar = ({ onCloseDrawer, token }) => {
 			{/* LogoSection */}
 			<div className="flex">
 				<LogoSection user={user} linkClass={linkClass} />
-				<SettingOutlined
-					className={`text-[${token?.colorPrimary}] text-xl pt-1`}
-					onClick={() => onCloseDrawer("navAction")}
-				/>
-				<div className="hidden hover:text-[#1677ff] text-[#1677ff]" />
-				<div className="hidden hover:text-[#1c4e80] text-[#1c4e80]" />
-				<div className="hidden hover:text-[#1dc362] text-[#1dc362]" />
-				<div className="hidden hover:text-[#d32d41] text-[#d32d41]" />
-				<div className="hidden hover:text-[#1c4e80] text-[#1c4e80]" />
 			</div>
 		</div>
 	);
