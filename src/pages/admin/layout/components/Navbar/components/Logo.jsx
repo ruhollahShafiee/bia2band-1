@@ -27,16 +27,23 @@ export default function LogoSection({ user, linkClass }) {
 			<div className="hidden sm:block">
 				<div className="flex mx-3">
 					{!user && (
+						<>
 						<Paragraph
 							className={`${linkClass} mx-1 cursor-pointer tracking-tighter`}
 							onClick={() => handleModal("show")}
 						>
 							<PhoneOutlined className="mx-2 text-lg" />
 							<span className="pb-1">{t("تماس با ما")}</span>
+							</Paragraph>
+							<Paragraph
+							className={`${linkClass} mx-1 cursor-pointer tracking-tighter`}
+							onClick={() => handleModal("show")}
+							>
 							<UserOutlined className="mx-2 text-lg"/>
 							<span className="pb-1">{t("سامان حشمتی")}</span>
 							<DownOutlined className="text-sm"/>
 						</Paragraph>
+						</>
 					)}
 				</div>
 			</div>

@@ -1,6 +1,6 @@
 import { Typography, Card, Row, Col } from "antd";
 import img from "../test.jpg";
-import { Buttons } from "../../../../../components";
+import { Buttons } from "@/components";
 
 const { Title } = Typography;
 const { Meta } = Card;

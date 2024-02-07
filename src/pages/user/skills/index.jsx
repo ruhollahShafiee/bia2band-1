@@ -13,7 +13,7 @@ const Skills = () => {
 		token: { colorBgContainer },
 	} = theme.useToken();
 	return (
-		<section className="flex flex-col gap-5">
+		<section className="flex flex-col gap-5 mt-5">
 			<Personal />
 			<Connect />
 			<About />

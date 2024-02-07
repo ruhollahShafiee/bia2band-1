@@ -15,6 +15,7 @@ const MainNavbar = ({ onCloseDrawer, token }) => {
 	// links
 	const links = [
 		{ to: "/", title: "صفحه نخست" },
+		{ to: "/dashboard", title: "داشبورد" },
 		{ to: "/user", title: "هم بندی ها" },
 		{ to: "/user", title: "کارها" },
 		{ to: "/blogs", title: "بلاگ" },

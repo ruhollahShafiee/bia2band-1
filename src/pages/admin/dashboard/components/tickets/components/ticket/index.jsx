@@ -1,6 +1,7 @@
-import { Button, Card, Typography } from "antd";
-import { Buttons } from "../../../../../../../components";
+import { Card, Typography } from "antd";
+import { Buttons } from "@/components";
 import { useTranslation } from "react-i18next";
+import NewTicket from "./newTicket";
 
 const { Title } = Typography;
 const { Meta } = Card;

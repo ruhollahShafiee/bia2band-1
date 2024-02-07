@@ -5,7 +5,7 @@ import Profesional from "./components/myprofesional";
 import Personal from "./components/personal";
 
 const EditProfile = () => (
-	<section className="flex flex-col gap-5">
+	<section className="flex flex-col gap-5 mt-5">
 		<Personal />
 		<Connect />
 		<About />

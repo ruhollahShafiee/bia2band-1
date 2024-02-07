@@ -109,7 +109,7 @@ const adminRoutes = {
 	element: <AdminLayout />,
 	children: [
 		{
-			path: "tickets",
+			index: "true",
 			id: "dashboard/tickets",
 			lazy: async () => ({ Component: (await import("../pages/admin/dashboard/components/tickets")).default }),
 		},

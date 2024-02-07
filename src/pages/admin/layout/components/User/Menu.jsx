@@ -15,12 +15,12 @@ import { ProfileCard } from "../../../../../components";
 const UserSidebarMenu = () => {
 	const items = [
 		{ label: "پیشخوان من", icon: DesktopOutlined, path: "" },
-		{ label: "پروفایل من", icon: UserOutlined, path: "contact" },
-		{ label: "تیکت پشتیبانی", icon: MailOutlined, path: "tickets" },
-		{ label: "تراکنش های مالی", icon: RetweetOutlined, path: "skills" },
-		{ label: "درخواست ها و پیام ها", icon: MessageOutlined, path: "information" },
-		{ label: "گواهینامه و مدارک", icon: ReadOutlined, path: "portfolio" },
-		{ label: "علاقه مندی ها", icon: IdcardOutlined, path: "view" },
+		{ label: "پروفایل من", icon: UserOutlined, path: "reports" },
+		{ label: "تیکت پشتیبانی", icon: MailOutlined, path: "" },
+		{ label: "تراکنش های مالی", icon: RetweetOutlined, path: "wallet" },
+		{ label: "درخواست ها و پیام ها", icon: MessageOutlined, path: "" },
+		{ label: "گواهینامه و مدارک", icon: ReadOutlined, path: "" },
+		{ label: "علاقه مندی ها", icon: IdcardOutlined, path: "" },
 	];
 	// option
 	const [defaultSelectedKeys] = items;
@@ -28,7 +28,7 @@ const UserSidebarMenu = () => {
 	return (
 		<div className="mt-5">
 		<ProfileCard />
-		<Card className="mt-2">
+		<div className="mt-2 bg-white rounded-lg">
 		<Menu className="max-w-96 bg-transparent" defaultSelectedKeys={defaultSelectedKeys.label} mode="inline">
 			{items.map(({ label, icon, path }) => (
 				<Menu.Item key={label} icon={React.createElement(icon, { style: { fontSize: "20px" } })}>
@@ -36,7 +36,7 @@ const UserSidebarMenu = () => {
 				</Menu.Item>
 			))}
 		</Menu>
-		</Card>
+		</div>
 		</div>
 	);
 };
