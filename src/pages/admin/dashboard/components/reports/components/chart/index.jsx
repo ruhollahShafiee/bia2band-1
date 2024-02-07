@@ -20,12 +20,8 @@ const Chart = () => {
                         <p className="text-slate-400">{description + description + description}</p>
                     </Col>
                 </Row>
-                <Row gutter={[8, 8]} justify={"end"} align={"middle"}>
-                    <Col xs={24} md={16} lg={12}>
-                    <div className="grid justify-items-center mt-4">
+                 <div className="grid justify-items-center mt-4">
                       </div>
-                    </Col>
-                </Row>
             </div>
         </Card>
     );
