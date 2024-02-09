@@ -8,12 +8,13 @@ const Buttons = ({
 	type = "primary",
 	htmlType = "button",
 	classes = "",
+	formClasses = "",
 	block,
 	size = "large",
 }) => {
 	// return
 	return (
-		<Form.Item>
+		<Form.Item className={formClasses}>
 			<Button
 				size={size}
 				block={block}

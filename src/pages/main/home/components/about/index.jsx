@@ -7,14 +7,14 @@ import img from "/assets/image/test.jpg";
 const { Title } = Typography;
 const { Meta } = Card;
 
-const title = "سامان حشمتی";
+const title = "درباره ما";
 const description = "سام شسیشی  شسی حشمتی سامان حشمتی سامان حشمتیسام شسیشی  شسی حشمتی سامان حشمتی سامان حشمتی";
 
 const AboutSection = () => {
 	return (
-		<section id="about-grid" className="mx-auto p-5 mt-8">
+		<section id="about-grid" className="mx-auto p-5 md:mt-8">
 			<div className="grid gap-4 grid-cols-2">
-				<div className="col-span-1">
+				<div className="col-span-2 md:col-span-1">
 					<div className="flex flex-col justify-between h-full">
 						<Meta
 							title={
@@ -24,7 +24,7 @@ const AboutSection = () => {
 							}
 							description={
 								<p className="text-justify text-slate-500">
-									{description + description + description + description + description + description}
+									{description + description + description + description }
 								</p>
 							}
 						/>
@@ -37,7 +37,7 @@ const AboutSection = () => {
 						/>
 					</div>
 				</div>
-				<div className="col-span-1">
+				<div className="hidden md:block col-span-1">
 					<img src={img} alt="contact-us-img" className="object-cover rounded-lg" loading="lazy" />
 				</div>
 			</div>

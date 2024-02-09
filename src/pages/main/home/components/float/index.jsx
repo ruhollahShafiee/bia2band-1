@@ -7,7 +7,7 @@ import { PhoneOutlined, SearchOutlined, InfoCircleOutlined } from "@ant-design/i
 const FloatLabel = () => {
 	const { t } = useTranslation();
 	return (
-		<>
+		<section className="hidden md:inline-block">
 			<FloatButton
 				type="primary"
 				tooltip={"فیلتر پیشرفته"}
@@ -58,7 +58,7 @@ const FloatLabel = () => {
 					bottom: 200,
 				}}
 			/>
-		</>
+		</section>
 	);
 };
 

@@ -46,7 +46,6 @@ const SearchPersons = forwardRef(function Searching({ onSubmit = () => {}, class
 							name="userType"
 							initialValue={"1"}
 							required={true}
-							size="large"
 						/>
 					</Col>
 					<Col xs={24} md={12} lg={8}>

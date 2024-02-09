@@ -14,7 +14,7 @@ export default function Producers() {
 			<div className="flex justify-between align-bottom items-end">
 				<div className="producer-title">
 					<Title level={2}>برترین آهنگسازان</Title>
-					<p className="my-3 text-slate-400">شما دراین بخش می توانید مورد علاقه خود را پیدا کنید</p>
+					<p className="my-3 text-slate-400 text-xs p-2 md:text-base">شما دراین بخش می توانید مورد علاقه خود را پیدا کنید</p>
 				</div>
 				<Buttons
 					content={
