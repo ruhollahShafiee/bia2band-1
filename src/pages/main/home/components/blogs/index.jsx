@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Typography } from "antd";
 import { DoubleLeftOutlined } from "@ant-design/icons";
 
+import "./style.css";
 import { Buttons, CarouselModule } from "@/components";
 import BlogCards from "./BlogCards";
 
@@ -28,12 +29,16 @@ export default function Blogs() {
 					}
 				/>
 			</div>
-			<CarouselModule
-				name="blogs"
-				swiperSliders={swiperSliders.map(({ key }) => (
-					<BlogCards key={key} id={key} />
-				))}
-			/>
+			<div className="main__blog-section">
+				<CarouselModule
+					effect="fade"
+					showDots={false}
+					name="blogs"
+					swiperSliders={swiperSliders.map(({ key }) => (
+						<BlogCards key={key} id={key} />
+					))}
+				/>
+			</div>
 		</section>
 	);
 }

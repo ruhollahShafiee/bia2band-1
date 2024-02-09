@@ -1,0 +1,6 @@
+.main__blog-section {
+	width: 100vw;
+}
+.main__blog-section .slick-list {
+	width: 120vw !important;
+}
