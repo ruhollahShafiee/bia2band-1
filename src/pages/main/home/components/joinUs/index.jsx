@@ -2,13 +2,13 @@ import { Typography, Card } from "antd";
 
 import { Buttons } from "@/components";
 
-import img from "/assets/image/test.jpg";
+import img from "/assets/icon/pic2.svg";
 
 const { Title } = Typography;
 const { Meta } = Card;
 
-const title = "تماس با ما";
-const description = "سام شسیشی  شسی حشمتی سامان حشمتی سامان حشمتیسام شسیشی  شسی حشمتی سامان حشمتی سامان حشمتی";
+const title = "به ما بپیوندید";
+const description = "مطالبی در مورد بیا تو بند در این قسمت نوشته می شود.\n اهداف و ارزشی که این سایت خلق می کند شرح داده می شود به نحوی که کاربر با مشاهده این بخش توضیحات بیشتر را کلیک کرده و سریعا اکانت را می سازد.کاربر با مشاهده این بخش توضیحات بیشتر را کلیک کرده و سریعا اکانت خود را می سازد.";
 
 const JoinUs = () => {
 	return (
@@ -27,7 +27,7 @@ const JoinUs = () => {
 							}
 							description={
 								<p className="text-justify text-slate-500">
-									{description + description + description + description}
+									{description}
 								</p>
 							}
 						/>
@@ -39,7 +39,7 @@ const JoinUs = () => {
 								size="default"
 							/>
 							<Buttons
-								content={<span className="text-xs">ثبت نام دوره ای</span>}
+								content={<span className="text-xs">ثبت نام فوری</span>}
 								htmlType="button"
 								size="default"
 							/>

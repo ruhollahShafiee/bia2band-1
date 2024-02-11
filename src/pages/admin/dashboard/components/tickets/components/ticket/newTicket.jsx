@@ -1,61 +1,49 @@
+import { Suspense, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Form } from "antd";
+import { Typography } from "antd";
 
-import { Buttons, Inputs } from "@/components";
-import TextArea from "antd/es/input/TextArea";
-import { Selects } from "@/components";
+import { Buttons } from "@/components";
+import { Modals } from "@/components";
+import TicketModal from "./ticketModal";
 
-const NewTicket = () => {
+const { Paragraph } = Typography;
+
+export default function NewTicket({ user, linkClass }) {
 	const { t } = useTranslation();
-	const [form] = Form.useForm();
+	const authRef = useRef();
 	// handles
-	const onSubmit = (formValues) => { };
+	const handleModal = (mode) => {
+		switch (mode) {
+			case "show":
+				return authRef.current.showModal();
+			default:
+				return authRef.current.hideModal();
+		}
+	};
 	// return
 	return (
-		<div className="flex flex-col py-5">
-			<div className="flex items-start">
-				<p className="text-slate-500"> بیا تو بند/ ارسال تیکت جدید </p>
-			</div>
-			<Form
-				form={form}
-				name="sendTicket-form"
-				className="sendTicket-form  self-center pt-3 w-2/3"
-				layout="vertical"
-				onFinish={onSubmit}
-			>
-				<Inputs
-					name="subject"
-					label="موضوع"
-					placeholder={t("گروه ارسباران")}
-				/>
-				<Selects
-					name="unit"
-					label="واحد مربوطه"
-					placeholder={t("انتخاب کنید")}
-					options={[
-						{ name: 'فنی', id: '1' },
-						{ name: 'امور مالی', id: '2' },
-					]}
-				/>
-				<label className="flex mb-1">توضیحات</label>
-				<TextArea
-					name="description"
-					autoSize={{
-						minRows: 5,
-						maxRows: 8,
-					}}
-					placeholder={t("مشکل در این قسمت شرح داده می شود. مشکل در این قسمت شرح داده می شود.")}
-				/>
-				<Buttons
-					content={<span className="px-10">{t("ارسال")}</span>}
-					htmlType="submit"
-					type="default"
-					size="large"
-					classes="mt-2 mr-14"
-				/>
-			</Form>
-		</div>
-	);
-};
+		<>
+			<div className="flex mx-3 justify-end">
+				{!user && (
+					<>
 
-export default NewTicket;
+						<Buttons content={t("تیکت جدید")}
+							onClick={() => handleModal("show")}
+							type="primary"
+							htmlType="button"
+						/>
+					</>
+				)}
+			</div>
+			<Modals
+				reference={authRef}
+				width="40%"
+				content={
+					<Suspense fallback={null}>
+						<TicketModal />
+					</Suspense>
+				}
+			/>
+		</>
+	);
+}

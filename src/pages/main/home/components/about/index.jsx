@@ -2,13 +2,13 @@ import { Typography, Card } from "antd";
 
 import { Buttons } from "@/components";
 
-import img from "/assets/image/test.jpg";
+import groupPic from "/assets/icon/pic2.svg";
 
 const { Title } = Typography;
 const { Meta } = Card;
 
 const title = "درباره ما";
-const description = "سام شسیشی  شسی حشمتی سامان حشمتی سامان حشمتیسام شسیشی  شسی حشمتی سامان حشمتی سامان حشمتی";
+const description = "مطالبی در مورد بیا تو بند در این قسمت نوشته می شود.\n اهداف و ارزشی که این سایت خلق می کند شرح داده می شود به نحوی که کاربر با مشاهده این بخش توضیحات بیشتر را کلیک کرده و سریعا اکانت را می سازد.کاربر با مشاهده این بخش توضیحات بیشتر را کلیک کرده و سریعا اکانت خود را می سازد.";
 
 const AboutSection = () => {
 	return (
@@ -24,7 +24,7 @@ const AboutSection = () => {
 							}
 							description={
 								<p className="text-justify text-slate-500">
-									{description + description + description + description }
+									{description}
 								</p>
 							}
 						/>
@@ -38,7 +38,7 @@ const AboutSection = () => {
 					</div>
 				</div>
 				<div className="hidden md:block col-span-1">
-					<img src={img} alt="contact-us-img" className="object-cover rounded-lg" loading="lazy" />
+					<img src={groupPic} alt="contact-us-img" className="object-cover rounded-lg" loading="lazy" />
 				</div>
 			</div>
 		</section>

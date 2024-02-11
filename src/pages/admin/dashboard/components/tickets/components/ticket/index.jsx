@@ -1,5 +1,4 @@
 import { Card, Typography } from "antd";
-import { Buttons } from "@/components";
 import { useTranslation } from "react-i18next";
 import NewTicket from "./newTicket";
 
@@ -26,11 +25,7 @@ const Ticket = () => {
                     </p>
                 }
             />
-            <Buttons content={t("تیکت جدید")}
-                classes="float-end"
-                type="primary"
-                htmlType="button"
-            />
+            <NewTicket />
         </Card>
 
     );

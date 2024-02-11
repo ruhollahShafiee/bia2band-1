@@ -1,10 +1,13 @@
 import { Card, Form, Avatar, Col, Row, Divider, Badge, Space } from "antd";
 import Meta from "antd/es/card/Meta";
 import { useState } from "react";
-import img from "../../test.jpg";
+import img from "../../components/test.jpg";
+import banner from "/assets/icon/pic2.svg";
 import { Buttons, Inputs } from "@/components";
 import { useTranslation } from "react-i18next";
 import Title from "antd/es/typography/Title";
+
+import pic from "/assets/icon/avatar.svg";
 
 const title = "اعضای گروه";
 
@@ -20,14 +23,14 @@ const Members = () => {
 	]);
 	return (
 		<>
-			<Card cover={<img src={img} className="h-36" />} bordered>
-				<Meta avatar={<Avatar src={img} className="-mt-16 size-24 mb-5" />} />
+			<Card cover={<img src={banner} className="h-36 object-cover" />} bordered>
+				<Meta avatar={<Avatar src={banner} className="-mt-16 size-24 mb-5" />} />
 				{title}
 				<Form name="member-form" className="member-form mt-5 fs-sx" layout="vertical">
 					<Row gutter={[32, 32]} justify={"center"} align={"middle"}>
 						{images.map(({ id }) => (
 							<Col key={id}>
-								<img src={img} id={`image-${id}`} className="rounded-full size-20" />
+								<img src={pic} id={`image-${id}`} className="rounded-full size-20" />
 								<Space size="small">
 									<Badge 
 									dot={true} 

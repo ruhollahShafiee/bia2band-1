@@ -4,7 +4,8 @@ import Meta from "antd/es/card/Meta";
 import { AppstoreOutlined, EnvironmentOutlined} from "@ant-design/icons";
 import Regex from "@/utils/regex";
 import { Selects, Inputs } from "@/components";
-import img from "../test.jpg";
+import banner from "/assets/icon/pic2.svg";
+import myPic from "/assets/icon/avatar1.png";
 
 const title = "مشخصات شخصی من";
 
@@ -12,9 +13,9 @@ const Personal = () => {
 	const { t } = useTranslation();
 	return (
 		<>
-			<Card cover={<img src={img} className="h-36" />} bordered>
+			<Card cover={<img src={banner} className="h-36 object-cover" />} bordered>
 				<Meta
-					avatar={<Avatar src={img} className="-mt-16 size-24 mb-5" />} />
+					avatar={<Avatar src={myPic} className="-mt-16 size-24 mb-5" />} />
 				{title}
 				<Form name="personal-form" className="personal-form mt-5" layout="vertical">
 					<Row gutter={[8, 8]} align={"middle"}>

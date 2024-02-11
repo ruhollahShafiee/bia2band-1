@@ -1,6 +1,13 @@
 import { Avatar, Card, Typography } from "antd";
-import img from "../test.jpg"
-import { YoutubeFilled, WhatsAppOutlined, InstagramFilled, TwitterOutlined, FacebookOutlined } from "@ant-design/icons";
+import banner from "/assets/icon/pic2.svg";
+import myPic from "/assets/icon/avatar1.png";
+import {
+    YoutubeFilled,
+    WhatsAppOutlined,
+    InstagramFilled,
+    TwitterOutlined,
+    FacebookOutlined
+} from "@ant-design/icons";
 import SectionProfile from "./sectionProfile";
 
 
@@ -11,9 +18,9 @@ const title = "سامان حشمتی";
 
 const MyProfile = () => {
     return (
-        <Card cover={<img src={img} className="h-36" />}
+        <Card cover={<img src={banner} className="h-36 object-cover" />}
             bordered>
-            <Meta avatar={[<Avatar src={img} className="-mt-16 size-24" />,
+            <Meta avatar={[<Avatar src={myPic} className="-mt-16 size-24" />,
             ]}
             />
             <div className="-mt-10 flex justify-end gap-2">
