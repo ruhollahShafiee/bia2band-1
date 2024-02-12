@@ -5,7 +5,7 @@ import { Buttons, Inputs } from "@/components";
 import TextArea from "antd/es/input/TextArea";
 import { Selects } from "@/components";
 
-const Auth = () => {
+const TicketModal = () => {
 	const { t } = useTranslation();
 	const [form] = Form.useForm();
 	// handles
@@ -44,7 +44,7 @@ const Auth = () => {
 						minRows: 5,
 						maxRows: 8,
 					}}
-					placeholder={t("مشکل در این قسمت شرح داده می شود. مشکل در این قسمت شرح داده می شود.")}
+					placeholder={t("مشکل در این قسمت شرح داده می شود.\n مشکل در این قسمت شرح داده می شود.")}
 				/>
 				<Buttons
 					content={<span className="px-10">{t("ارسال")}</span>}
@@ -58,4 +58,4 @@ const Auth = () => {
 	);
 };
 
-export default Auth;
+export default TicketModal;

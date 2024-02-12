@@ -4,7 +4,7 @@ import { Typography } from "antd";
 
 import { userSelector } from "@/store/selector";
 
-import logo from "/assets/icon/vite.svg";
+import logo from "/assets/icon/Bia2band1.svg";
 import LogoSection from "./components/Logo";
 import NavbarMobileMenu from "./components/MobileMenu";
 

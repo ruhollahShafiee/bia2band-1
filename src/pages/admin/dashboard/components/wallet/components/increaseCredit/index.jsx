@@ -3,7 +3,7 @@ import { Col, Radio, Row } from "antd";
 import Card from "antd/es/card/Card";
 import Meta from "antd/es/card/Meta";
 import Typography from "antd/es/typography/Typography";
-import { Buttons, Inputs } from "../../../../../../../components";
+import { Buttons, Inputs } from "@/components";
 import { useTranslation } from "react-i18next";
 
 const { Title } = Typography;

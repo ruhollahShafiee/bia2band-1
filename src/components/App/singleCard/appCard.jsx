@@ -2,12 +2,15 @@ import { Avatar, Card, Col, Row } from "antd";
 import { Buttons } from "@/components";
 import { BookOutlined } from "@ant-design/icons";
 
+import img from "/assets/icon/avatar(1).svg";
+
 const { Meta } = Card;
 
-const AppCard = ({ id, imgUrl = "", title = "", description = "" }) => (
+const AppCard = ({ id, imgUrl = "/assets/icon/banner.png",
+ title = "", description = "" }) => (
 	<Card hoverable cover={<img alt={`cover-${id}`} src={imgUrl} className="h-40" />}>
 		<Meta
-			avatar={<Avatar src={imgUrl} className="-mt-14 h-24 w-24 shadow-xl" />}
+			avatar={<Avatar src={img} className="-mt-14 h-24 w-24 shadow-xl" />}
 			title={title}
 			description={description}
 		/>

@@ -3,7 +3,7 @@ import { Col, Form, Row, Typography } from "antd";
 
 import { Buttons, Inputs, InputType } from "@/components";
 
-import img from "/assets/image/test.jpg";
+import banner from "/assets/icon/pic2.svg";
 
 const { Title } = Typography;
 
@@ -21,7 +21,7 @@ const ContactPage = () => {
 			<section id="join-grid" className="mx-auto p-5 mt-8">
 				<div className="grid gap-4 grid-cols-2">
 					<div className="col-span-1" dir="ltr">
-						<img src={img} alt="contact-us-img" className="object-cover rounded-lg" loading="lazy" />
+						<img src={banner} alt="contact-us-img" className="object-cover rounded-lg" loading="lazy" />
 					</div>
 					<div className="col-span-1">
 						<Form

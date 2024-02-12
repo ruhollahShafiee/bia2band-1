@@ -1,6 +1,6 @@
 import { Typography, Card } from "antd";
 
-import img from "/assets/image/test.jpg";
+import groupPic from "/assets/icon/pic2.svg";
 
 const { Title } = Typography;
 const { Meta } = Card;
@@ -31,7 +31,7 @@ const AboutPage = () => {
 					</div>
 				</div>
 				<div className="col-span-1">
-					<img src={img} alt="contact-us-img" className="object-cover rounded-lg" loading="lazy" />
+					<img src={groupPic} alt="contact-us-img" className="object-cover rounded-lg" loading="lazy" />
 				</div>
 			</div>
 		</section>

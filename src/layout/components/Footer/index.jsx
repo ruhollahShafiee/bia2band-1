@@ -2,7 +2,7 @@ import { Col, Row } from "antd";
 import { PhoneOutlined, EnvironmentOutlined } from "@ant-design/icons";
 
 import "./style.css";
-import logo from "/assets/icon/vite.svg";
+import logo from "/assets/icon/Bia2band1.svg";
 import eNamad from "/assets/image/e-namad.png";
 import samandehi from "/assets/image/samandehi.png";
 

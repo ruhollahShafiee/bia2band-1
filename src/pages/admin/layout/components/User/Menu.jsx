@@ -10,7 +10,7 @@ import {
 	RetweetOutlined,
 	UserOutlined,
 } from "@ant-design/icons";
-import { ProfileCard } from "../../../../../components";
+import { ProfileCard } from "@/components";
 
 const UserSidebarMenu = () => {
 	const items = [

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Form } from "antd";
 
-import logo from "/assets/icon/vite.svg";
+import logo from "/assets/icon/Bia2band1.svg";
 
 import { Buttons, Inputs } from "@/components";
 
@@ -13,7 +13,7 @@ const Auth = () => {
 	// return
 	return (
 		<div className="flex flex-col items-center py-5">
-			<div className="flex items-center">
+			<div className="flex items-center gap-1">
 				<img src={logo} alt="guaranty-u-img" className="rounded-full" height={50} loading="lazy" />
 				<strong className="text-xl">بیا توبند</strong>
 			</div>

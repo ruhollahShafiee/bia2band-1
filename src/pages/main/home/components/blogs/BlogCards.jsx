@@ -1,9 +1,9 @@
 import { BlogCard } from "@/components";
 
-import img from "/assets/image/test.jpg";
+import img from "/assets/icon/Frame2.svg";
 
 const title = "سامان حشمتی";
-const description = "سام شسیشی  شسی حشمتی سامان حشمتی سامان حشمتیسام شسیشی  شسی حشمتی سامان حشمتی سامان حشمتی";
+const description = "نوازنده گیتارباس/ استاد یار/ تخصص های دیگر فقط به اندازه دو خط ...";
 
 export default function BlogCards({ id }) {
 	return (
