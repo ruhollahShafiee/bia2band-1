@@ -28,7 +28,7 @@ const UserLayout = () => {
 	// return
 	return (
 		<div className="mx-auto max-w-[1400px] p-2 sm:px-6 lg:px-14 w-screen min-h-[400px]  grid grid-cols-5 gap-2">
-			<div className="col-span-1 mt-5">
+			<div className="col-span-1 md:mt-5 mt-1">
 				<ProfileCard {...user} />
 				<UserSidebarMenu />
 			</div>

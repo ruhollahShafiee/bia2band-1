@@ -1,8 +1,14 @@
 import { Card, Form, Row, Col, Checkbox } from "antd";
 import Meta from "antd/es/card/Meta";
 import { useTranslation } from "react-i18next";
-import { EnvironmentOutlined, PhoneOutlined, TeamOutlined, BuildOutlined,
-    CloudUploadOutlined, CalendarOutlined, ClockCircleOutlined } from "@ant-design/icons";
+import {
+    EnvironmentOutlined,
+    PhoneOutlined,
+    TeamOutlined,
+    BuildOutlined,
+    CalendarOutlined,
+    ClockCircleOutlined
+} from "@ant-design/icons";
 import { Inputs, Selects, Buttons } from "@/components";
 import TextArea from "antd/es/input/TextArea";
 import InputUpload from "../../../skills/components/furtherinformation/inputUpload";
@@ -16,10 +22,10 @@ const FurtherInformation = () => {
             <Card
                 bordered
             >
-                <Meta 
+                <Meta
                     title={title}
                 />
-                <Form name="personal-form" className="personal-form mt-5" layout="vertical">
+                <Form name="personal-form" className="personal-form md:mt-5 text-xs md:text-sm" layout="vertical">
                     <Row gutter={[8, 8]} align={"middle"} className="mt-4 pb-1">
                         <Col xs={24} md={16} lg={12}>
                             <Selects
@@ -47,7 +53,7 @@ const FurtherInformation = () => {
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} align={"middle"} className="mt-2 pb-1">
-                        <Col xs={24} md={12} lg={8}>
+                        <Col xs={16} md={12} lg={8}>
                             <Inputs
                                 name="capacity"
                                 label="گنجایش"
@@ -59,10 +65,10 @@ const FurtherInformation = () => {
                                 placeholder={t("50")}
                             />
                         </Col>
-                        <Col xs={20} md={8} lg={4}>
+                        <Col xs={8} md={8} lg={4}>
                             <label>نفر</label>
                         </Col>
-                        <Col xs={24} md={12} lg={8}>
+                        <Col xs={16} md={12} lg={8}>
                             <Inputs
                                 name="meterage"
                                 label="متراژ"
@@ -74,7 +80,7 @@ const FurtherInformation = () => {
                                 placeholder={t("200")}
                             />
                         </Col>
-                        <Col xs={20} md={8} lg={4}>
+                        <Col xs={8} md={8} lg={4}>
                             <label>مترمربع</label>
                         </Col>
                     </Row>
@@ -129,7 +135,7 @@ const FurtherInformation = () => {
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} align={"middle"} className="mt-1 pb-2">
-                        <Col xs={24} md={16} lg={12}>
+                        <Col xs={8} md={12} lg={12}>
                             <Checkbox.Group style={{ width: '100%' }} defaultValue={"A, H"} >
                                 <div className="flex  my-2 justify-between align-middle items-center gap-2">
                                     <Checkbox value="A" defaultChecked>هیچ سازی ندارد</Checkbox>
@@ -150,7 +156,7 @@ const FurtherInformation = () => {
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} align={"middle"} className="mt-2 pb-2">
-                        <Col xs={24} md={16} lg={12}>
+                        <Col xs={8} md={16} lg={12}>
                             <Checkbox.Group style={{ width: '100%' }} defaultValue={["A", "H"]}>
                                 <div className="flex my-2 justify-between align-middle items-center gap-2">
                                     <Checkbox value="A" defaultChecked>آینه</Checkbox>
@@ -171,18 +177,18 @@ const FurtherInformation = () => {
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} align={"middle"} className="mt-2 pb-1">
-                        <Col xs={20} md={8} lg={6}>
+                        <Col xs={8} md={8} lg={6}>
                             <label>روزهای هفته</label>
                         </Col>
-                        <Col xs={20} md={8} lg={6}>
+                        <Col xs={8} md={8} lg={6}>
                             <label>از ساعت</label>
                         </Col>
-                        <Col xs={20} md={8} lg={6}>
+                        <Col xs={8} md={8} lg={6}>
                             <label>تا</label>
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} align={"middle"}>
-                        <Col xs={20} md={8} lg={6}>
+                        <Col xs={8} md={8} lg={6}>
                             <Inputs
                                 name="week"
                                 placeholder="شنبه"
@@ -193,7 +199,7 @@ const FurtherInformation = () => {
                                 />}
                             />
                         </Col>
-                        <Col xs={20} md={8} lg={6}>
+                        <Col xs={8} md={8} lg={6}>
                             <Inputs
                                 name="time1"
                                 placeholder="11"
@@ -204,7 +210,7 @@ const FurtherInformation = () => {
                                 />}
                             />
                         </Col>
-                        <Col xs={20} md={8} lg={6}>
+                        <Col xs={8} md={8} lg={6}>
                             <Inputs
                                 name="time2"
                                 placeholder="22"
@@ -215,7 +221,7 @@ const FurtherInformation = () => {
                                 />}
                             />
                         </Col>
-                        <Col xs={20} md={8} lg={4} className="pb-5">
+                        <Col xs={8} md={8} lg={4} className="pb-5">
                             <label> + افزودن</label>
                         </Col>
                     </Row>
@@ -248,7 +254,7 @@ const FurtherInformation = () => {
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} justify={"end"} align={"middle"} className="mt-2">
-                        <Col xs={20} md={10} lg={5}>
+                        <Col xs={18} md={10} lg={5}>
                             <Buttons content={t("اضافه کردن مکان جدید")}
                                 type="default"
                                 htmlType="button"

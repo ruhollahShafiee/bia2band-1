@@ -23,15 +23,17 @@ const Members = () => {
 	]);
 	return (
 		<>
-			<Card cover={<img src={banner} className="h-36 object-cover" />} bordered>
-				<Meta avatar={<Avatar src={banner} className="-mt-16 size-24 mb-5" />} />
-				{title}
-				<Form name="member-form" className="member-form mt-5 fs-sx" layout="vertical">
+			<Card cover={<img src={banner} className="md:h-36 h-24 object-cover" />} bordered>
+				<Meta avatar={<Avatar src={banner} className="-mt-16 md:size-24 size-20 mb-5" />} />
+				<Title level={4}>
+					{title}
+				</Title>
+				<Form name="member-form" className="member-form mt-5 text-xs md:text-sm" layout="vertical">
 					<Row gutter={[32, 32]} justify={"center"} align={"middle"}>
 						{images.map(({ id }) => (
 							<Col key={id}>
-								<img src={pic} id={`image-${id}`} className="rounded-full size-20" />
-								<Space size="small">
+								<img src={pic} id={`image-${id}`} className="rounded-full md:size-20 size-14" />
+								<Space md:size="small">
 									<Badge 
 									dot={true} 
 									offset={[24, -18]}>
@@ -39,7 +41,7 @@ const Members = () => {
 									<Badge 
 									count={0} 
 									showZero 
-									offset={[38, -10]} 
+									offset={[38, -10]}
 									size="small">
 									</Badge>
 								</Space>

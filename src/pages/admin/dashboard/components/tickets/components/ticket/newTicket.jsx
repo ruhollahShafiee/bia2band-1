@@ -23,10 +23,9 @@ export default function NewTicket({ user, linkClass }) {
 	// return
 	return (
 		<>
-			<div className="flex mx-3 justify-end">
+			<div className="flex md:mx-3 justify-end">
 				{!user && (
 					<>
-
 						<Buttons content={t("تیکت جدید")}
 							onClick={() => handleModal("show")}
 							type="primary"

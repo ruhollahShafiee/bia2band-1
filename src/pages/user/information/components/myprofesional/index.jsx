@@ -16,7 +16,7 @@ const Profesional = () => {
                 <Meta
                     title={title}
                 />
-                <Form name="prof-form" className="prof-form mt-5" layout="vertical">
+                <Form name="prof-form" className="prof-form mt-5 text-xs md:text-sm" layout="vertical">
                     <Row gutter={[8, 8]} align={"middle"}>
                         <Col xs={24} md={16} lg={12}>
                             <Selects
