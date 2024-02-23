@@ -10,10 +10,12 @@
 @layer base {
 	* {
 		font-family: Dana-FaNum-Bold !important;
-		font-weight: 600;
 	}
 	.borders {
 		border: 1px solid whitesmoke !important;
+	}
+	.borders-black {
+		border: 1px solid black !important;
 	}
 	.ltr {
 		direction: ltr !important;

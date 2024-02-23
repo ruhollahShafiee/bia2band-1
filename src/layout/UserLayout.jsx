@@ -28,11 +28,11 @@ const UserLayout = () => {
 	// return
 	return (
 		<div className="mx-auto max-w-[1400px] p-2 sm:px-6 lg:px-14 w-screen min-h-[400px]  grid grid-cols-5 gap-2">
-			<div className="col-span-1 md:mt-5 mt-1">
+			<div className="col-span-5 md:col-span-1 md:mt-5 mt-1">
 				<ProfileCard {...user} />
 				<UserSidebarMenu />
 			</div>
-			<div className="col-span-4">
+			<div className="col-span-5 md:col-span-4">
 				{/* children */}
 				<Outlet key={"user-layout"} />
 				{/* children */}
