@@ -10,7 +10,7 @@ const Alerts = () => {
           width: '100%',
         }}
       >
-        <Alert style={{ background: "white", borderColor: "white", boxShadow: "2px 2px 8px #C0C0C0" }}
+        <Alert className="text-xs md:text-sm" style={{ background: "white", borderColor: "white", boxShadow: "2px 2px 8px #C0C0C0" }}
           message={
             <Space>
               <BellOutlined style={{ fontSize: 20 }} />

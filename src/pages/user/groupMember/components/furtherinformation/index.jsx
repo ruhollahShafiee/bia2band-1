@@ -1,6 +1,6 @@
 import { Card, Checkbox, Col, Form, Row } from "antd";
 import Meta from "antd/es/card/Meta";
-import { Buttons, Inputs } from "../../../../../components";
+import { Buttons, Inputs } from "@/components";
 import { useTranslation } from "react-i18next";
 import { CloudUploadOutlined } from "@ant-design/icons";
 import TextArea from "antd/es/input/TextArea";
@@ -18,7 +18,7 @@ const FurtherInformation = () => {
                 <Meta
                     title={title}
                 />
-                <Form name="further-form" className="further-form mt-5 fs-sx" layout="vertical">
+                <Form name="further-form" className="further-form mt-5 text-xs md:text-sm" layout="vertical">
                     <Row gutter={[8, 8]} align={"middle"} className="mt-4">
                         <Col xs={24} md={16} lg={12}>
                             <label>سابقه ی اجرای صحنه ای داشته اید؟</label>

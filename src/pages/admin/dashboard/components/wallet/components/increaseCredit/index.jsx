@@ -13,7 +13,7 @@ const title = "افزایش اعتبار";
 const IncreaseCredit = () => {
     const { t } = useTranslation();
     return (
-        <Card bordered>
+        <Card bordered className="text-xs md:text-sm">
             <Meta
                 title={
                     <Title level={5} className="mb-7">
@@ -22,7 +22,7 @@ const IncreaseCredit = () => {
                     </Title>
                 }
             />
-            <div className="flex flex-col mt-5">
+            <div className="flex flex-col mt-5 ">
                 <Radio.Group defaultValue={2}>
                     <Radio value={1} disabled>30,000 تومان</Radio>
                     <Radio value={2}>50,000 تومان</Radio>
@@ -30,7 +30,7 @@ const IncreaseCredit = () => {
                 </Radio.Group>
             </div>
             <div className="flex mt-7 gap-3">
-                <div className="pt-3">
+                <div className="pt-1 md:pt-3">
                     <label>مبالغ دیگر:</label>
                 </div>
                 <Inputs

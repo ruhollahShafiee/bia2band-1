@@ -24,7 +24,7 @@ const About = () => {
                     </Col>
                 </Row>
                 <Row gutter={[8, 8]} align={"middle"}>
-                    <Col xs={24} md={16} lg={12}>
+                    <Col xs={12} md={16} lg={12}>
                         <p className="text-slate-400">{description + description + description + description + description}</p>
                     </Col>
                     <Col xs={24} md={16} lg={12}>

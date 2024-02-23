@@ -6,9 +6,9 @@ import img from "/assets/icon/avatar(1).svg";
 
 const { Meta } = Card;
 
-const AppCard = ({ id, imgUrl = "/assets/icon/banner.png",
+const AppCard = ({ id, imgUrl ,
  title = "", description = "" }) => (
-	<Card hoverable cover={<img alt={`cover-${id}`} src={imgUrl} className="h-40" />}>
+	<Card hoverable cover={<img alt={`cover-${id}`} src={imgUrl} className="h-40 object-cover" />}>
 		<Meta
 			avatar={<Avatar src={img} className="-mt-14 h-24 w-24 shadow-xl" />}
 			title={title}

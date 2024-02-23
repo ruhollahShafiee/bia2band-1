@@ -27,7 +27,7 @@ const MainNavbar = ({ onCloseDrawer, token }) => {
 	return (
 		<div className="relative flex h-12 items-center justify-between">
 			{/* NavbarMobileMenu */}
-			<div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+			<div className="mt-3 sm:hidden">
 				<NavbarMobileMenu user={user} />
 			</div>
 			{/* MenuSection */}

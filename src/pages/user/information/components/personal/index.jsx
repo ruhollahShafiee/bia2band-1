@@ -13,11 +13,11 @@ const Personal = () => {
 	const { t } = useTranslation();
 	return (
 		<>
-			<Card cover={<img src={banner} className="h-36 object-cover" />} bordered>
+			<Card cover={<img src={banner} className="md:h-36 h-24 object-cover" />} bordered>
 				<Meta
-					avatar={<Avatar src={myPic} className="-mt-16 size-24 mb-5" />} />
+					avatar={<Avatar src={myPic} className="-mt-16 size-20 md:size-24 mb-5" />} />
 				{title}
-				<Form name="personal-form" className="personal-form mt-5" layout="vertical">
+				<Form name="personal-form" className="personal-form mt-5 text-xs md:text-sm" layout="vertical">
 					<Row gutter={[8, 8]} align={"middle"}>
 						<Col xs={24} md={16} lg={12}>
 							<Inputs 

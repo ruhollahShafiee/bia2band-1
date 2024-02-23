@@ -26,7 +26,7 @@ const UserSidebarMenu = () => {
 	const [defaultSelectedKeys] = items;
 	// return
 	return (
-		<div className="mt-5">
+		<div className="mt-1 md:mt-5">
 		<ProfileCard />
 		<div className="mt-2 bg-white rounded-lg">
 		<Menu className="max-w-96 bg-transparent" defaultSelectedKeys={defaultSelectedKeys.label} mode="inline">

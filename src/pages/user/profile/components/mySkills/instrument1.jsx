@@ -4,20 +4,18 @@ import img from "../test.jpg";
 const Instrument1 = () => {
     return (
         <section id="instrument-grid" className="mx-auto p-2 mt-0">
-            <Form name="instrument-form" className="instrument-form mt-5 fs-sx" layout="vertical">
+            <Form name="instrument-form" className="instrument-form mt-5 text-xs md:text-sm" layout="vertical">
                 <Row gutter={[8, 8]} align={"middle"} className="pb-5">
                     <Col xs={24} md={16} lg={12}>
                         <h3 className="pb-2">کارگاه های آموزشی و مستر کلاس هایی که شرکت کردم:</h3>
                         <p>- کارگاه تئوری موسیقی ارشد طهماسبی</p>
                         <p>-کارگاه تئوری موسیقی طهماسبی</p>
                     </Col>
-                    <Col xs={24} md={16} lg={12}>
-                        <div className="flex justify-center gap-5">
+                    <Col xs={24} md={16} lg={12} className="flex-col !md:flex justify-center w-full gap-5">
                             <img src={img} height={120} width={150} className="rounded pt-3" />
                             <video controls poster={img} height={120} width={150} className="rounded">
                                 <source src={img} type="video/mp4" />
                             </video>
-                        </div>
                     </Col>
                 </Row>
                 <Row gutter={[8, 8]} align={"middle"} className="pb-5">

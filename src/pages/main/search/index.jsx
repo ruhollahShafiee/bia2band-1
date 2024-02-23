@@ -4,7 +4,8 @@ import { useTranslation } from "react-i18next";
 import { Typography } from "antd";
 import { SearchPersons, RadioGroup, ListModule, AppCard } from "@/components";
 
-import img from "/assets/image/test.jpg";
+import img from "/assets/icon/pic2.svg";
+
 const title = "سامان حشمتی";
 const description = "سام شسیشی  شسی حشمتی سامان حشمتی سامان حشمتی";
 

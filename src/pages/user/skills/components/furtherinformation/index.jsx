@@ -1,8 +1,7 @@
 import { Card, Checkbox, Col, Form, Row } from "antd";
 import Meta from "antd/es/card/Meta";
 import { useTranslation } from "react-i18next";
-import { Buttons, Inputs } from "../../../../../../src/components";
-import { CloudUploadOutlined } from "@ant-design/icons";
+import { Buttons, Inputs } from "@/components";
 import InputUpload from "./inputUpload";
 
 const title = "اطلاعات تکمیلی من";
@@ -13,17 +12,17 @@ const FurtherInfo = () => {
         <>
             <Card
                 bordered >
-                <Meta className="pt-7 pb-2"
+                <Meta className=" pt-4 md:pt-7 pb-2"
                     title={title}
                 />
-                <Form name="further-form" className="further-form mt-5 fs-sx" layout="vertical">
+                <Form name="further-form" className="further-form mt-5 text-xs md:text-sm" layout="vertical">
                     <Row gutter={[8, 8]} align={"middle"} className="mt-7 pb-1">
                         <Col xs={24} md={16} lg={12}>
                             <label>آیا سابقه حضور در کارگاه های آموزشی و مستر کلاس ها را دارید؟</label>
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} align={"middle"} className="pb-1">    
-                        <Col xs={22} md={10} lg={8}>
+                        <Col xs={24} md={10} lg={8}>
                         <Checkbox.Group style={{ width: '100%' }} defaultValue={"B"} >
                                 <Row>
                                     <Checkbox value="A" disabled>ندارم</Checkbox>
@@ -47,7 +46,7 @@ const FurtherInfo = () => {
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} align={"middle"} className="pb-1">    
-                        <Col xs={22} md={10} lg={8}>
+                        <Col xs={24} md={10} lg={8}>
                         <Checkbox.Group style={{ width: '100%' }} defaultValue={"B"} >
                                 <Row>
                                     <Checkbox value="A" disabled>ندارم</Checkbox>
@@ -71,7 +70,7 @@ const FurtherInfo = () => {
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} align={"middle"} className="pb-1">    
-                        <Col xs={22} md={10} lg={8}>
+                        <Col xs={24} md={10} lg={8}>
                         <Checkbox.Group style={{ width: '100%' }} defaultValue={"A"} >
                                 <Row>
                                     <Checkbox value="A">ندارم</Checkbox>
@@ -92,7 +91,7 @@ const FurtherInfo = () => {
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} align={"middle"} className="pb-1">    
-                        <Col xs={22} md={10} lg={8}>
+                        <Col xs={24} md={10} lg={8}>
                         <Checkbox.Group style={{ width: '100%' }} defaultValue={"B"} >
                                 <Row>
                                     <Checkbox value="A" disabled>ندارم</Checkbox>
@@ -116,7 +115,7 @@ const FurtherInfo = () => {
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} align={"middle"} className="pb-1">    
-                        <Col xs={22} md={10} lg={8}>
+                        <Col xs={24} md={10} lg={8}>
                         <Checkbox.Group style={{ width: '100%' }} defaultValue={"B"} >
                                 <Row>
                                     <Checkbox value="A" disabled>ندارم</Checkbox>
@@ -140,7 +139,7 @@ const FurtherInfo = () => {
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} align={"middle"} className="pb-1">    
-                        <Col xs={22} md={10} lg={8}>
+                        <Col xs={24} md={10} lg={8}>
                         <Checkbox.Group style={{ width: '100%' }} defaultValue={"B"} >
                                 <Row>
                                     <Checkbox value="A" disabled>ندارم</Checkbox>
@@ -164,7 +163,7 @@ const FurtherInfo = () => {
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} align={"middle"} className="pb-1">    
-                        <Col xs={22} md={10} lg={8}>
+                        <Col xs={24} md={10} lg={8}>
                         <Checkbox.Group style={{ width: '100%' }} defaultValue={"B"} >
                                 <Row>
                                     <Checkbox value="A" disabled>ندارم</Checkbox>
@@ -188,7 +187,7 @@ const FurtherInfo = () => {
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} align={"middle"} className="pb-4">    
-                        <Col xs={22} md={10} lg={8}>
+                        <Col xs={24} md={10} lg={8}>
                         <Checkbox.Group style={{ width: '100%' }} defaultValue={"B"} >
                                 <Row>
                                     <Checkbox value="A" disabled>ندارم</Checkbox>

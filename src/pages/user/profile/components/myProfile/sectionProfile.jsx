@@ -12,7 +12,7 @@ const description = "استادیار/تخصص های دیگر...استادیا�
 const SectionProfile = () => {
     const { t } = useTranslation();
     return (
-        <section id="sectionprofile-grid" className="mx-auto p-4 pt-0">
+        <section id="sectionprofile-grid" className="mx-auto p-4 pt-0 text-xs md:text-sm">
             <div className="grid gap-4 grid-cols-2">
                 <div className="col-span-1">
                     <div className="flex flex-col justify-between h-full">

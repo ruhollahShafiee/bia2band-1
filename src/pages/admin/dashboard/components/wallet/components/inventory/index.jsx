@@ -3,7 +3,7 @@ import { Card } from "antd"
 
 const Inventory = () => {
     return (
-        <Card bordered>
+        <Card bordered className="text-xs md:text-sm">
             <div className="flex gap-2">
                 <WalletOutlined style={{ fontSize: "large" }} />
                 <h4>موجودی کیف پول:</h4>

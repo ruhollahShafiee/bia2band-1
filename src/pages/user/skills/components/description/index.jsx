@@ -3,7 +3,7 @@ import Meta from "antd/es/card/Meta";
 import TextArea from "antd/es/input/TextArea";
 import { useTranslation } from "react-i18next";
 import { Form } from "react-router-dom";
-import { Buttons } from "../../../../../components";
+import { Buttons } from "@/components";
 
 const title = "توضیحات دلخواه";
 
@@ -17,7 +17,7 @@ const Description = () => {
                 <Meta
                     title={title}
                 />
-                <Form name="about-form" className="about-form mt-5" layout="vertical">
+                <Form name="about-form" className="about-form mt-5 text-xs md:text-sm" layout="vertical">
                     <Row gutter={[8, 8]} align={"middle"}>
                         <Col xs={24} md={24} lg={24}>
                             <TextArea
@@ -31,14 +31,14 @@ const Description = () => {
                         </Col>
                     </Row>
                     <Row gutter={[8, 8]} justify={"end"} align={"middle"} className="mt-3">
-                        <Col xs={20} md={8} lg={10}>
+                        <Col xs={24} md={8} lg={10}>
                             <Buttons content={t("می خواهم گروه تشکیل دهم و سرپرست گروه باشم")}
                                 type="default"
                                 htmlType="button"
                                 block={true}
                             />
                         </Col>
-                        <Col xs={20} md={8} lg={4}>
+                        <Col xs={24} md={8} lg={4}>
                             <Buttons content={t("اضافه کردن ساز")}
                                 type="primary"
                                 htmlType="button"
