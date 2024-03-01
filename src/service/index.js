@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { getFromStorage } from "../utils/storage";
+import { getFromCookie } from "../utils/storage";
 
 const callApi = async ({
 	url = "",
@@ -11,7 +11,7 @@ const callApi = async ({
 	responseType = "json",
 }) => {
 	// eslint-disable-next-line no-undef
-	const baseURL = process.env.REACT_APP_BACKEND_SERVER;
+	const baseURL = "http://84.32.10.113:5800/api/"
 	// create axiosInstance
 	const axiosInstance = axios.create({
 		baseURL,
@@ -24,7 +24,7 @@ const callApi = async ({
 		},
 	});
 	// set request configs
-	const token = getFromStorage("app-token");
+	const token = getFromCookie("app-token");
 	axiosInstance.interceptors.request.use(
 		(config) => {
 			if (token) {
@@ -58,6 +58,7 @@ const callApi = async ({
 	return await new Promise((resolve, reject) => {
 		axiosInstance({ url, method, params, data })
 			.then((res) => {
+				console.log({ res });
 				resolve(res?.data);
 			})
 			.catch((e) => {
