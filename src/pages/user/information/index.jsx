@@ -1,7 +1,7 @@
 import About from "./components/about";
 import Connect from "./components/connect";
 import FurtherInformation from "./components/furtherinformation";
-import Profesional from "./components/myprofesional";
+import Professional from "./components/professional";
 import Personal from "./components/personal";
 
 const EditProfile = () => (
@@ -9,7 +9,7 @@ const EditProfile = () => (
 		<Personal />
 		<Connect />
 		<About />
-		<Profesional />
+		<Professional />
 		<FurtherInformation />
 	</section>
 );

@@ -3,7 +3,7 @@ import { theme } from "antd";
 import Personal from "../information/components/personal";
 import Connect from "../information/components/connect";
 import About from "../information/components/about";
-import MyProfesional from "./components/profesional";
+import MyProfessional from "./components/profesional";
 import FurtherInfo from "./components/furtherinformation";
 import Portfolio from "./components/portfo";
 import Description from "./components/description";
@@ -17,7 +17,7 @@ const Skills = () => {
 			<Personal />
 			<Connect />
 			<About />
-			<MyProfesional />
+			<MyProfessional />
 			<FurtherInfo />
 			<Portfolio bgColor={colorBgContainer} />
 			<Description />

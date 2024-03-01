@@ -1,49 +1,36 @@
-import { Card, Form, Row, Col } from "antd";
-import Meta from "antd/es/card/Meta";
-import { Buttons } from "@/components";
 import { useTranslation } from "react-i18next";
-import TextArea from "antd/es/input/TextArea";
-
-const title = "درباره من";
+import { Card, Form, Row, Col } from "antd";
+import { Buttons, InputType } from "@/components";
 
 const About = () => {
 	const { t } = useTranslation();
 	return (
-		<>
-			<Card bordered>
-				<Meta title={title} />
-				<Form name="about-form" className="about-form mt-5 text-xs md:text-sm" layout="vertical">
-					<Row gutter={[8, 8]} align={"middle"}>
-						<Col xs={24} md={24} lg={24}>
-							<TextArea
-								name="about"
-								autoSize={{
-									minRows: 5,
-									maxRows: 8,
-								}}
-								placeholder={t("ویژگی های شخصیتی و حرفه ای خود را در این قسمت بنویسید.")}
-							/>
-						</Col>
-					</Row>
-					<Row gutter={[8, 8]} justify={"end"} align={"middle"} className="mt-2">
-						<Col xs={8} md={8} lg={4}>
-							<Buttons content={t("انصراف")} 
-							type="default" 
-							htmlType="button" 
-							block={true} 
-							/>
-						</Col>
-						<Col xs={8} md={8} lg={4}>
-							<Buttons content={t("ذخیره")} 
-							type="primary" 
-							htmlType="button" 
-							block={true} 
-							/>
-						</Col>
-					</Row>
-				</Form>
-			</Card>
-		</>
+		<Card bordered>
+			<Form name="about-form" className="about-form" layout="vertical">
+				<Row gutter={[8, 16]} justify={"end"} className="p-5 md:p-10 lg:px-20 lg:py-10">
+					<Col xs={24} md={24} className="text-2xl pb-5">
+						درباره من
+					</Col>
+					<Col xs={24} md={24}>
+						<InputType
+							type="textarea"
+							classes="text-xs md:text-sm"
+							name="about"
+							autoSize={{
+								minRows: 5,
+							}}
+							placeholder={t("ویژگی های شخصیتی و حرفه ای خود را در این قسمت بنویسید .")}
+						/>
+					</Col>
+					<Col xs={12} md={4}>
+						<Buttons content={t("انصراف")} type="default" htmlType="reset" block={true} />
+					</Col>
+					<Col xs={12} md={4}>
+						<Buttons content={t("ذخیره")} type="primary" htmlType="submit" block={true} />
+					</Col>
+				</Row>
+			</Form>
+		</Card>
 	);
 };
 

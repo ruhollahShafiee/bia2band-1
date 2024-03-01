@@ -1,70 +1,60 @@
 import { Form, Row, Col, Card } from "antd";
-import Meta from "antd/es/card/Meta";
 import { Inputs, Buttons } from "@/components";
 import { useTranslation } from "react-i18next";
-import { TwitterOutlined, FacebookOutlined, InstagramFilled } from "@ant-design/icons";
-
-const title = "ارتباط با من";
+import { TwitterOutlined, FacebookOutlined, InstagramFilled, PlusCircleOutlined } from "@ant-design/icons";
 
 const Connect = () => {
 	const { t } = useTranslation();
 	return (
-		<>
-			<Card bordered>
-				<Meta title={title} />
-				<Form name="connect-form" className="connect-form mt-5 text-xs" layout="horizontal">
-					<Row gutter={[8, 8]} align={"middle"}>
-						<Col xs={18} md={12} lg={8}>
-							<Inputs 
-							name="twitter" 
-							placeholder="https://www.twitter.com/sabach" 
-							/>
-						</Col>
-						<Col xs={6} md={8} lg={4} className="pb-4">
-							<TwitterOutlined />
-						</Col>
-						<Col xs={18} md={12} lg={8}>
-							<Inputs 
-							name="facebook" 
-							placeholder={t("https://www.facebook.com/sabach")} 
-							/>
-						</Col>
-						<Col xs={6} md={8} lg={4} className="pb-4">
-							<FacebookOutlined />
-						</Col>
-					</Row>
-					<Row gutter={[8, 8]} align={"middle"}>
-						<Col xs={18} md={12} lg={8}>
-							<Inputs 
-							name="instagram" 
-							placeholder={t("https://www.instagram.com/sabach")} 
-							/>
-						</Col>
-						<Col xs={6} md={8} lg={4} className="pb-4">
-							<InstagramFilled />
-						</Col>
-						<Col xs={18} md={12} lg={8}>
-							<Inputs 
-							name="instagram" 
-							placeholder={t("https://www.instagram.com/sabach")} 
-							/>
-						</Col>
-						<Col xs={6} md={8} lg={4} className="pb-4">
-							<InstagramFilled />
-						</Col>
-					</Row>
-					<Row gutter={[8, 8]} justify={"center"} align={"middle"}>
-						<Col xs={20} md={12} lg={8}>
-							<Buttons
-								content={t(" + افزودن شبکه های اجتماعی")}
-								type="default"
-								htmlType="button"
-							/>
-						</Col>
-					</Row>
-				</Form>
-			</Card>
-		</>
+		<Card bordered>
+			<Form name="connect-form" className="connect-form" layout="horizontal">
+				<Row gutter={[48, 18]} className="p-5 md:p-10 lg:px-20 lg:py-10">
+					<Col xs={24} md={24} className="text-2xl pb-5">
+						ارتباط با من
+					</Col>
+					<Col xs={24} md={12}>
+						<Inputs
+							name="twitter"
+							placeholder="https://www.twitter.com/sabach"
+							addonAfter={<TwitterOutlined className="text-2xl" />}
+						/>
+					</Col>
+					<Col xs={24} md={12}>
+						<Inputs
+							name="facebook"
+							placeholder={t("https://www.facebook.com/sabach")}
+							addonAfter={<FacebookOutlined className="text-2xl" />}
+						/>
+					</Col>
+					<Col xs={24} md={12}>
+						<Inputs
+							name="instagram"
+							placeholder={t("https://www.instagram.com/sabach")}
+							addonAfter={<InstagramFilled className="text-2xl" />}
+						/>
+					</Col>
+					<Col xs={24} md={12}>
+						<Inputs
+							name="instagram"
+							placeholder={t("https://www.instagram.com/sabach")}
+							addonAfter={<InstagramFilled className="text-2xl" />}
+						/>
+					</Col>
+					<Col xs={24} md={24} className="flex justify-center">
+						<Buttons
+							content={
+								<div className="flex justify-center items-center align-middle gap-3">
+									<PlusCircleOutlined className="pb-1" />
+									<span>{t("افزودن شبکه های اجتماعی")}</span>
+								</div>
+							}
+							type="default"
+							htmlType="button"
+						/>
+					</Col>
+				</Row>
+			</Form>
+		</Card>
 	);
 };
 

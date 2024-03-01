@@ -1,20 +1,25 @@
 import { useState } from "react";
-import { Typography } from "antd";
-import { List } from "antd";
-import VideoCards from "./VideoCards.jsx";
-import Item from "antd/es/list/Item.js";
+import { Checkbox } from "antd";
 
-const { Title } = Typography;
-
-const title = "نمونه کارها";
+const VideoCards = ({ id }) => {
+	return (
+		<div className="flex flex-col" key={id}>
+			<video id={`video-${id}`} poster={"/assets/image/test.jpg"} height={200} width={200} className="rounded-xl object-fill">
+				<source src={"/assets/image/test.jpg"} type="video/mp4" />
+			</video>
+			<Checkbox id={`check-${id}`} className="m-4">
+				انتخاب جهت نمایش
+			</Checkbox>
+		</div>
+	);
+};
 
 const Portfolio = ({ bgColor }) => {
 	const [videos, setVideos] = useState([{ id: "1" }, { id: "2" }, { id: "3" }, { id: "4" }]); // fake data
-
 	return (
-		<section style={{ background: bgColor }} className="p-4">
-			<Title level={5}>{title}</Title>
-			<div className="flex gap-3">
+		<section style={{ background: bgColor }} className="p-2 md:p-10 lg:px-20 lg:py-10">
+			<h3 className="text-2xl">نمونه کارها</h3>
+			<div className="flex justify-center align-middle items-center flex-col md:flex-row gap-3">
 				{videos.map((videoItem) => (
 					<VideoCards id={videoItem.id} key={videoItem.id} />
 				))}

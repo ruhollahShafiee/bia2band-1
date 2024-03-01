@@ -21,6 +21,8 @@ const Inputs = ({
 	minLength,
 	prefix,
 	size = "large",
+	addonBefore,
+	addonAfter,
 }) => {
 	const { t } = useTranslation();
 	const rules = [
@@ -53,6 +55,8 @@ const Inputs = ({
 				defaultValue={defaultValue}
 				disabled={disabled}
 				prefix={prefix}
+				addonBefore={addonBefore}
+				addonAfter={addonAfter}
 				size={size}
 				min={min}
 				max={max}
