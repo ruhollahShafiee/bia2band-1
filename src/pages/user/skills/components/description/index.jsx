@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { Card, Col, Form, Row } from "antd";
 import { Buttons, InputType } from "@/components";
+
 const Description = () => {
     const { t } = useTranslation();
-    const responsive=""
 	return (
 		<Card bordered>
 			<Form name="about-form" className="about-form" layout="vertical">
