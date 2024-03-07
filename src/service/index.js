@@ -56,7 +56,6 @@ const callApi = async ({
 	return await new Promise((resolve, reject) => {
 		axiosInstance({ url, method, params, data })
 			.then((res) => {
-				console.log({ res });
 				resolve(res?.data);
 			})
 			.catch((e) => {

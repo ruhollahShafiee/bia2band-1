@@ -66,8 +66,10 @@ const contentList = {
 	instrument3: <Instrument />,
 };
 
-const MySkills = () => {
+const MySkills = ({ user = {} }) => {
 	const [activeTabKey, setActiveTabKey] = useState("instrument1");
+	// user data
+	const { firstname = "", lastname = "", ...userSocials } = user;
 	// tabs
 	const tabList = [
 		{
@@ -75,16 +77,16 @@ const MySkills = () => {
 			tab: "ساز اصلی",
 			className: "!text-3xl",
 		},
-		{
-			key: "instrument2",
-			tab: "ساز دوم",
-			className: "!text-3xl",
-		},
-		{
-			key: "instrument3",
-			tab: "ساز سوم",
-			className: "!text-3xl",
-		},
+		// {
+		// 	key: "instrument2",
+		// 	tab: "ساز دوم",
+		// 	className: "!text-3xl",
+		// },
+		// {
+		// 	key: "instrument3",
+		// 	tab: "ساز سوم",
+		// 	className: "!text-3xl",
+		// },
 	];
 	// handles
 	const onTab1Change = (key) => {

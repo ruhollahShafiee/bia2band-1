@@ -1,16 +1,28 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { ConfigProvider, theme } from "antd";
 
 import callApi from "@/service";
 import useLanguage from "@/langs/useLanguage";
 import useTheme from "@/theme/useTheme";
+import { getCurrentUser } from "@/store/auth/action";
 
 import AppContext from "./index";
 
 function ContextApi({ children }) {
+	// hooks
+	const dispatch = useDispatch();
 	// language
 	const { language, changeLanguage, direction, locale, placement } = useLanguage();
 	// theme
 	const { themeAntMode, fontAntMode, fontMode, selectedToken, tokens, ...handles } = useTheme(theme);
+	// user
+	useEffect(() => {
+		const promise = dispatch(getCurrentUser({ callApi }));
+		return () => {
+			promise.abort();
+		};
+	}, [dispatch]);
 	// return
 	const themColorObject = tokens[selectedToken];
 	return (
