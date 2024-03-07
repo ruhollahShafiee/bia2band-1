@@ -21,10 +21,10 @@ const Personal = () => {
 					/>,
 				]}
 			/>
-			<Form name="personal-form" className="personal-form mt-5 text-xs md:text-sm" layout="vertical">
+			<section className="personal-form mt-5 text-xs md:text-sm">
 				<Row gutter={[8, 8]} className="p-5 md:p-10 lg:px-20 lg:py-10">
 					<Col xs={24} md={12}>
-						<Inputs name="name" label="نام" placeholder={t("سامان حشمتی")} extraClasses="flex-grow" />
+						<Inputs name="fullname" label="نام" placeholder={t("سامان حشمتی")} extraClasses="flex-grow" />
 					</Col>
 					<Col xs={24} md={12}>
 						<Inputs
@@ -48,7 +48,7 @@ const Personal = () => {
 					</Col>
 					<Col xs={24} md={12}>
 						<Inputs
-							name="mobile"
+							name="phone"
 							label="شماره تماس"
 							pattern={Regex.mobileNumber}
 							patternMessage={"صحیح نیست"}
@@ -70,7 +70,7 @@ const Personal = () => {
 						/>
 					</Col>
 				</Row>
-			</Form>
+			</section>
 		</Card>
 	);
 };

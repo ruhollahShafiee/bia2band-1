@@ -18,7 +18,7 @@ const UserProfilePage = () => {
 	const onFinish = async () => {};
 	// initialize
 	useEffect(() => {
-		form.setFieldsValue(user);
+		form.setFieldsValue(user || {});
 	}, [form, user]);
 	// return
 	return (

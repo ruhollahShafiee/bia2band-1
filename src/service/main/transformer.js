@@ -2,6 +2,7 @@ export const mockData = {
     "artist":
     {
         "id": 1,
+        "fullname": "امین عباسی",
         "firstname": "امین",
         "lastname": "عباسی",
         "email": "a.abbasi@gmail.com",

@@ -7,53 +7,51 @@ const Connect = () => {
 	const { t } = useTranslation();
 	return (
 		<Card bordered>
-			<Form name="connect-form" className="connect-form" layout="horizontal">
-				<Row gutter={[48, 18]} className="p-5 md:p-10 lg:px-20 lg:py-10">
-					<Col xs={24} md={24} className="text-2xl pb-5">
-						ارتباط با من
-					</Col>
-					<Col xs={24} md={12}>
-						<Inputs
-							name="twitter"
-							placeholder="https://www.twitter.com/sabach"
-							addonAfter={<TwitterOutlined className="text-2xl" />}
-						/>
-					</Col>
-					<Col xs={24} md={12}>
-						<Inputs
-							name="facebook"
-							placeholder={t("https://www.facebook.com/sabach")}
-							addonAfter={<FacebookOutlined className="text-2xl" />}
-						/>
-					</Col>
-					<Col xs={24} md={12}>
-						<Inputs
-							name="instagram"
-							placeholder={t("https://www.instagram.com/sabach")}
-							addonAfter={<InstagramFilled className="text-2xl" />}
-						/>
-					</Col>
-					<Col xs={24} md={12}>
-						<Inputs
-							name="instagram"
-							placeholder={t("https://www.instagram.com/sabach")}
-							addonAfter={<InstagramFilled className="text-2xl" />}
-						/>
-					</Col>
-					<Col xs={24} md={24} className="flex justify-center">
-						<Buttons
-							content={
-								<div className="flex justify-center items-center align-middle gap-3">
-									<PlusCircleOutlined className="pb-1" />
-									<span>{t("افزودن شبکه های اجتماعی")}</span>
-								</div>
-							}
-							type="default"
-							htmlType="button"
-						/>
-					</Col>
-				</Row>
-			</Form>
+			<Row gutter={[48, 18]} className="p-5 md:p-10 lg:px-20 lg:py-10">
+				<Col xs={24} md={24} className="text-2xl pb-5">
+					ارتباط با من
+				</Col>
+				<Col xs={24} md={12}>
+					<Inputs
+						name="twitterLink"
+						placeholder="https://www.twitter.com/sabach"
+						addonAfter={<TwitterOutlined className="text-2xl" />}
+					/>
+				</Col>
+				<Col xs={24} md={12}>
+					<Inputs
+						name="facebookLink"
+						placeholder={t("https://www.facebook.com/sabach")}
+						addonAfter={<FacebookOutlined className="text-2xl" />}
+					/>
+				</Col>
+				<Col xs={24} md={12}>
+					<Inputs
+						name="instagramLinkOne"
+						placeholder={t("https://www.instagram.com/sabach")}
+						addonAfter={<InstagramFilled className="text-2xl" />}
+					/>
+				</Col>
+				<Col xs={24} md={12}>
+					<Inputs
+						name="instagramLinkTwo"
+						placeholder={t("https://www.instagram.com/sabach")}
+						addonAfter={<InstagramFilled className="text-2xl" />}
+					/>
+				</Col>
+				<Col xs={24} md={24} className="flex justify-center">
+					<Buttons
+						content={
+							<div className="flex justify-center items-center align-middle gap-3">
+								<PlusCircleOutlined className="pb-1" />
+								<span>{t("افزودن شبکه های اجتماعی")}</span>
+							</div>
+						}
+						type="default"
+						htmlType="button"
+					/>
+				</Col>
+			</Row>
 		</Card>
 	);
 };
