@@ -1,3 +1,3 @@
-export const allArtist = async (callApi) => {
-    return await callApi({ url: "artist/all" }).then(data => data)
+export const allArtist = (callApi) => {
+    return callApi({ url: "artist/all" }).then(data => data)
 }
