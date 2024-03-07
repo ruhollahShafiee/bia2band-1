@@ -7,8 +7,7 @@ const callApi = async ({
 	method = "GET",
 	data = {},
 	params = {},
-	contentType = "application/json; charset=utf-8", // "application/json",
-	responseType = "json",
+	contentType = "application/json",
 }) => {
 	// eslint-disable-next-line no-undef
 	const baseURL = "http://84.32.10.113:5800/api/"
@@ -18,9 +17,9 @@ const callApi = async ({
 		headers: {
 			"Access-Control-Allow-Origin": "*",
 			"Access-Control-Allow-Headers": "*",
-			"Accept-Language": "en",
-			"Api-Version": "1.0",
-			Accept: "application/json",
+			// Accept: "application/json",
+			// "Accept-Language": "en",
+			// "Api-Version": "1.0",
 		},
 	});
 	// set request configs
@@ -32,7 +31,6 @@ const callApi = async ({
 			}
 			let customConfig = Object.assign({}, config, {
 				contentType,
-				responseType,
 				withCredentials: false, // send token with credentials
 			});
 			// return

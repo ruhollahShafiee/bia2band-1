@@ -4,7 +4,7 @@ import { clearCurrentUser, getCurrentUser } from "./action";
 
 const initialState = {
 	user: null,
-	loading: true,
+	loading: false,
 };
 
 const authSlice = createSlice({

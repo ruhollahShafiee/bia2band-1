@@ -2,8 +2,6 @@ import { Typography, Card } from "antd";
 
 import { Buttons } from "@/components";
 
-import groupPic from "/assets/icon/pic2.svg";
-
 const { Title } = Typography;
 const { Meta } = Card;
 
@@ -38,7 +36,7 @@ const AboutSection = () => {
 					</div>
 				</div>
 				<div className="hidden md:block col-span-1">
-					<img src={groupPic} alt="contact-us-img" className="object-cover rounded-lg" loading="lazy" />
+					<img src={"/assets/icon/pic2.svg"} alt="contact-us-img" className="object-cover rounded-lg" loading="lazy" />
 				</div>
 			</div>
 		</section>
