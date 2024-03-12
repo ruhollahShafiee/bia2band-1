@@ -3,8 +3,8 @@ import { Card, Col, Row, Tag } from "antd";
 
 const CardTicket = () => {
     return (
-        <Row gutter={6} md:gutter={16} className="text-xs md:text-sm">
-            <Col span={6}>
+        <Row gutter={8} className="grid md:flex text-xs md:text-sm">
+            <Col xs={20} md={6}>
                 <Card >
                     <div className="grid justify-items-center md:gap-2 text-xs md:text-sm">
                         <span>
@@ -16,7 +16,7 @@ const CardTicket = () => {
                     </div>
                 </Card>
             </Col>
-            <Col span={6}>
+            <Col xs={20} md={6}>
                 <Card>
                     <div className="grid justify-items-center md:gap-2 text-xs md:text-sm">
                         <ContainerOutlined style={{ fontSize: 30 }} />
@@ -25,7 +25,7 @@ const CardTicket = () => {
                     </div>
                 </Card>
             </Col>
-            <Col span={6}>
+            <Col xs={20} md={6}>
                 <Card>
                     <div className="grid justify-items-center md:gap-2 text-xs md:text-sm">
                         <span>
@@ -37,7 +37,7 @@ const CardTicket = () => {
                     </div>
                 </Card>
             </Col>
-            <Col span={6}>
+            <Col xs={20} md={6}>
                 <Card>
                     <div className="grid justify-items-center md:gap-2 text-xs md:text-sm">
                         <MailOutlined style={{ fontSize: 30 }} />

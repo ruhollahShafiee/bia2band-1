@@ -14,13 +14,13 @@ const columns = [
         align: 'center',
     },
     {
-        title:'وضعیت',
+        title: 'وضعیت',
         dataIndex: 'status',
         key: 'status',
         align: 'center',
     },
     {
-        title:'عملیات',
+        title: 'عملیات',
         dataIndex: 'operation',
         key: 'operation',
         align: 'center',
@@ -36,7 +36,7 @@ const columns = [
 const data = [
     {
         key: '1',
-        id:'#1231548',
+        id: '#1231548',
         title: 'نت موسیقی گل گلخونه من',
         status: 'پرداخت شده',
         operation: 'دانلود',
@@ -55,13 +55,14 @@ const data = [
 const PrevTransactions = () => {
     return (
         <>
-        <p className="px-4">تراکنش های قبلی</p>
-        <Table columns={columns} dataSource={data}  
-        bordered 
-        size="middle"
-        pagination={{total:[160], position:["bottomCenter"], showSizeChanger:false}}
-        />
-       </>
+            <p className="px-4">تراکنش های قبلی</p>
+            <Table columns={columns} dataSource={data}
+                scroll={{ x: "100%" }}
+                bordered
+                size="middle"
+                pagination={{ total: [160], position: ["bottomCenter"], showSizeChanger: false }}
+            />
+        </>
     );
 };
 

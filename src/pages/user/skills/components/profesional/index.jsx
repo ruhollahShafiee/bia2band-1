@@ -10,7 +10,7 @@ const MyProfessional = () => {
 			<Form name="pro-form" className="pro-form" layout="vertical">
 				<Row gutter={[8, 8]} className="p-5 md:p-10 lg:px-20 lg:py-10">
 					<Col xs={24} md={24} className="text-2xl pb-5">
-						ارتباط با من
+						اطلاعات تخصصی من
 					</Col>
 					<Col xs={24} md={8}>
 						<Selects

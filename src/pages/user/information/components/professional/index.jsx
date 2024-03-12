@@ -6,7 +6,7 @@ const Professional = () => {
 	const { t } = useTranslation();
 	return (
 		<Card bordered>
-			<Form name="prof-form" className="prof-form" layout="vertical">
+			<Form name="prof-form" className="prof-form mt-5 text-xs md:text-sm" layout="vertical">
 				<Row gutter={[8, 16]} className="p-5 md:p-10 lg:px-20 lg:py-10">
 					<Col xs={24} md={24} className="text-2xl pb-5">
 						اطلاعات تخصصی من
@@ -38,7 +38,8 @@ const Professional = () => {
 							]}
 						/>
 					</Col>
-					<div className="flex justify-around">
+					</Row>
+					<div className="flex flex-col md:flex-row justify-around">
 						<div className="flex gap-5 flex-col justify-center align-middle items-center">
 							<video
 								controls
@@ -51,13 +52,11 @@ const Professional = () => {
 							</video>
 							<Buttons content={t("+ افزودن ویدئو گروه")} type="default" htmlType="button" />
 						</div>
-
 						<div className="flex gap-5 flex-col justify-center align-middle items-center">
 							<img src={"/assets/image/test.jpg"} height={200} width={300} className="rounded-lg" />
 							<Buttons content={t("+ افزودن تصویر")} type="default" htmlType="button" />
 						</div>
 					</div>
-				</Row>
 			</Form>
 		</Card>
 	);

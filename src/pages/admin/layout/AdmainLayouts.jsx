@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 
 import { useAppContext } from "@/hooks";
 
+import { ProfileCard } from "@/components";
+
 import { Layout, theme, Typography } from "antd";
 import MainNavbar from "./components/Navbar";
 import MainFooter from "./components/Footer";
@@ -31,16 +33,17 @@ const AdminLayout = () => {
 				<MainNavbar {...{ onCloseDrawer, token }} />
 			</Header>
 			<div className="mx-auto max-w-[1400px] p-2 sm:px-6 lg:px-14 w-screen min-h-[400px]  grid grid-cols-5 gap-2">
-			<div className="col-span-1 gap-2">
-				<UserSidebarMenu />
+				<div className="col-span-5 md:col-span-1 md:mt-5 mt-1">
+					<ProfileCard />
+					<UserSidebarMenu />
 				</div>
-			<div className="col-span-4">
-			<Content>
-				{/* children */}
-				<Outlet key={"admin-layout"} />
-				{/* children */}
-			</Content>
-			</div>
+				<div className="col-span-5 md:col-span-4">
+					<Content>
+						{/* children */}
+						<Outlet key={"admin-layout"} />
+						{/* children */}
+					</Content>
+				</div>
 			</div>
 			<Footer>
 				<MainFooter />

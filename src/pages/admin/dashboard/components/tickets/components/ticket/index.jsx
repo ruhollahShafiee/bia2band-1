@@ -11,23 +11,13 @@ const description = "توضیحات اضافه ";
 const Ticket = () => {
     const { t } = useTranslation();
     return (
-        <Card
-            bordered >
-            <Meta
-                title={
-                    <Title level={5} className="mb-3">
-                        {title}
-                    </Title>
-                }
-                description={
-                    <p className="text-justify text-slate-400">
-                        {description + description + description + description}
-                    </p>
-                }
-            />
+        <Card bordered className="text-xs md:text-sm">
+            <h1 className="mb-4">{title}</h1>
+            <p className="text-justify text-slate-400">
+                {description + description + description + description}
+            </p>
             <NewTicket />
         </Card>
-
     );
 };
 
