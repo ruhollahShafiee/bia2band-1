@@ -1,5 +1,5 @@
-import { Card, Form, Row, Col, Checkbox } from "antd";
 import { useTranslation } from "react-i18next";
+import { Card, Form, Row, Col, Checkbox } from "antd";
 import { EnvironmentOutlined, PhoneOutlined, TeamOutlined, BuildOutlined, CalendarOutlined, ClockCircleOutlined } from "@ant-design/icons";
 import { Inputs, Selects, Buttons, InputType } from "@/components";
 
@@ -9,7 +9,7 @@ const SingleQuestion = ({ title = "", names = [] }) => (
             <h3 className="mb-2">{title}</h3>
         </Col>
         {names.map((item) => (
-            <Col xs={24} md={3} className="flex flex-col">
+            <Col xs={24} md={3} className="flex flex-col"  key={item}>
                 <Checkbox.Group style={{ width: '100%' }} >
                     <Checkbox key={item}>{item}</Checkbox>
                 </Checkbox.Group>

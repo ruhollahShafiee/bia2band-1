@@ -9,10 +9,12 @@ const SingleQuestion = ({ t, title = "", names = [], hasUpload = true }) => (
 			<h3 className="mb-2">{title}</h3>
 		</Col>
 		<Col xs={24} md={6}>
-			<Radio.Group name="answer">
-				<Radio value={"yes"}>دارم</Radio>
-				<Radio value={"no"}>ندارم</Radio>
-			</Radio.Group>
+			<Form.Item name={title} initialValue={false}>
+				<Radio.Group>
+					<Radio value={true}>دارم</Radio>
+					<Radio value={false}>ندارم</Radio>
+				</Radio.Group>
+			</Form.Item>
 		</Col>
 		<Col xs={24} md={12} className="flex flex-col">
 			{names.map((item) => (
@@ -35,7 +37,7 @@ const SingleQuestion = ({ t, title = "", names = [], hasUpload = true }) => (
 	</Row>
 );
 
-const FurtherInfo = () => {
+const FurtherInfo = ({ user = {} }) => {
 	const { t } = useTranslation();
 	const furthers = [
 		{
@@ -79,10 +81,15 @@ const FurtherInfo = () => {
 			title: "آیا سابقه ی تدریس در آموزشگاه ها را داشته اید ؟",
 			names: ["آموزشگاه فجر"],
 		},
+		{
+			key: "question-8",
+			title: "چندسال هست که در این کار هستید ؟",
+			names: ["جدید"],
+		},
 	];
 	return (
 		<Card>
-			<Form name="further-form" className="further-form mt-5 text-xs md:text-sm" layout="vertical">
+			<section className="further-form mt-5 text-xs md:text-sm">
 				<Row className="p-2 md:p-10 lg:px-20 lg:py-10">
 					<Col xs={24} md={24} className="text-2xl pb-5">
 						اطلاعات تکمیلی من
@@ -91,7 +98,7 @@ const FurtherInfo = () => {
 						<SingleQuestion key={key} title={title} names={names} hasUpload={hasUpload} t={t} />
 					))}
 				</Row>
-			</Form>
+			</section>
 		</Card>
 	);
 };

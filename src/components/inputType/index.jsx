@@ -52,7 +52,7 @@ const InputType = ({
 				/>
 			) : type === "password" ? (
 				<Input.Password
-					type={type}
+					type={"password"}
 					placeholder={placeholder}
 					className={classes}
 					autoComplete="off"
@@ -68,7 +68,6 @@ const InputType = ({
 				/>
 			) : type === "textarea" ? (
 				<Input.TextArea
-					type={type}
 					className={classes}
 					autoComplete="off"
 					placeholder={placeholder}

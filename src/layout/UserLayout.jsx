@@ -19,8 +19,7 @@ const UserLayout = () => {
 	if (loading) {
 		return <Loadings />;
 	}
-	if (user) {
-		// *** !user ***
+	if (!user) {
 		notificationMaker(t("برای دسترسی به این بخش وارد حساب کاربری خود شوید"));
 		navigation("/");
 		return <Loadings />;

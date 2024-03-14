@@ -15,7 +15,7 @@ const About = () => {
 						<InputType
 							type="textarea"
 							classes="text-xs md:text-sm"
-							name="about"
+							name="aboutMe"
 							autoSize={{
 								minRows: 5,
 							}}

@@ -5,8 +5,7 @@ import { ConfigProvider, theme } from "antd";
 import callApi from "@/service";
 import useLanguage from "@/langs/useLanguage";
 import useTheme from "@/theme/useTheme";
-
-import { getCurrentUser } from "../store/auth/action";
+import { getCurrentUser } from "@/store/auth/action";
 
 import AppContext from "./index";
 
@@ -17,14 +16,13 @@ function ContextApi({ children }) {
 	const { language, changeLanguage, direction, locale, placement } = useLanguage();
 	// theme
 	const { themeAntMode, fontAntMode, fontMode, selectedToken, tokens, ...handles } = useTheme(theme);
-	// initialize context
+	// user
 	useEffect(() => {
-		const userPromise = dispatch(getCurrentUser({ callApi }));
-		// cleanUp
+		const promise = dispatch(getCurrentUser({ callApi }));
 		return () => {
-			userPromise.abort();
+			promise.abort();
 		};
-	}, [locale, dispatch]);
+	}, [dispatch]);
 	// return
 	const themColorObject = tokens[selectedToken];
 	return (

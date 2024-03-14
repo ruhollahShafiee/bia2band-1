@@ -1,30 +1,29 @@
 import axios from "axios";
 
-import { getFromStorage } from "../utils/storage";
+import { getFromCookie } from "../utils/storage";
 
 const callApi = async ({
 	url = "",
 	method = "GET",
 	data = {},
 	params = {},
-	contentType = "application/json; charset=utf-8", // "application/json",
-	responseType = "json",
+	contentType = "application/json",
 }) => {
 	// eslint-disable-next-line no-undef
-	const baseURL = process.env.REACT_APP_BACKEND_SERVER;
+	const baseURL = "http://84.32.10.113:5800/api/"
 	// create axiosInstance
 	const axiosInstance = axios.create({
 		baseURL,
 		headers: {
 			"Access-Control-Allow-Origin": "*",
 			"Access-Control-Allow-Headers": "*",
-			"Accept-Language": "en",
-			"Api-Version": "1.0",
-			Accept: "application/json",
+			// Accept: "application/json",
+			// "Accept-Language": "en",
+			// "Api-Version": "1.0",
 		},
 	});
 	// set request configs
-	const token = getFromStorage("app-token");
+	const token = getFromCookie("app-token");
 	axiosInstance.interceptors.request.use(
 		(config) => {
 			if (token) {
@@ -32,7 +31,6 @@ const callApi = async ({
 			}
 			let customConfig = Object.assign({}, config, {
 				contentType,
-				responseType,
 				withCredentials: false, // send token with credentials
 			});
 			// return

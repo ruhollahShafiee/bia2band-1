@@ -2,8 +2,6 @@ import { Typography, Card } from "antd";
 
 import { Buttons } from "@/components";
 
-import img from "/assets/icon/pic2.svg";
-
 const { Title } = Typography;
 const { Meta } = Card;
 
@@ -15,7 +13,7 @@ const JoinUs = () => {
 		<section id="join-grid" className="mx-auto p-5 md:mt-8">
 			<div className="grid gap-4 grid-cols-2">
 				<div className="hidden md:inline-block col-span-1" dir="ltr">
-					<img src={img} alt="contact-us-img" className="object-cover rounded-lg" loading="lazy" />
+					<img src={"/assets/icon/pic2.svg"} alt="contact-us-img" className="object-cover rounded-lg" loading="lazy" />
 				</div>
 				<div className="col-span-2 md:col-span-1">
 					<div className="flex flex-col justify-between h-full">

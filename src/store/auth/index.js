@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { clearCurrentUser, getCurrentUser } from "./action";
+import { getCurrentUser } from "./action";
 
 const initialState = {
 	user: null,
@@ -25,15 +25,6 @@ const authSlice = createSlice({
 				state.user = action.payload.user;
 				state.loading = false;
 			})
-			// clearCurrentUser
-			.addCase(clearCurrentUser.rejected, (state) => {
-				state.user = null;
-				state.loading = false;
-			})
-			.addCase(clearCurrentUser.fulfilled, (state,) => {
-				state.user = null;
-				state.loading = false;
-			});
 	},
 });
 

@@ -1,21 +1,17 @@
+import { jwtDecode } from "jwt-decode";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-import { setToCookie, removeFromCookie } from "@/utils/storage";
+import { setToCookie, getFromCookie } from "@/utils/storage";
+import { mockData } from "@/service/main/transformer";
 
-export const getCurrentUser = createAsyncThunk("auth/currentUser", async ({ callApi }, _thunkAPI) => {
-	return await callApi({ url: "user/whoAmI" })
+export const getCurrentUser = createAsyncThunk("auth/currentUser", async ({ callApi }) => {
+	const token = getFromCookie("app-token")
+	if (!token) return { user: mockData["artist"] }
+	const { id } = jwtDecode(token)
+	return await callApi({ url: `artist/${id}` })
 		.then(({ token, ...response }) => {
-			setToCookie("app-token", token);
+			setToCookie("access_token", token);
 			return { user: response };
 		})
-		.catch((_error) => ({ user: null }));
-});
-
-export const clearCurrentUser = createAsyncThunk("auth/clearUser", async ({ callApi }, _thunkAPI) => {
-	return await callApi({ url: "auth/signOut", method: "POST" })
-		.then(() => {
-			removeFromCookie("app-token");
-			return { user: null };
-		})
-		.catch((_error) => ({ user: null }));
+		.catch(() => ({ user: null }));
 });
