@@ -4,11 +4,11 @@ import Ticket from "./components/ticket";
 
 const Tickets = () => {
     return (
-       <section className="flex flex-col gap-2 md:gap-5 mt-1 md:mt-5">
-        <Ticket />
-        <CardTicket />
-        <TableTicket />
-       </section>
+        <section className="grid md:flex md:flex-col gap-2 md:gap-5 mt-1 md:mt-5">
+            <Ticket />
+            <CardTicket />
+            <TableTicket />
+        </section>
     );
 };
 

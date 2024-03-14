@@ -11,12 +11,12 @@ const Chart = () => {
         <Card bordered >
             <div className="justify-between">
                 <Row gutter={[8, 8]} align={"middle"}>
-                    <Col xs={24} md={16} lg={12}>
+                    <Col xs={24} md={16}>
                         <h3>{title}</h3>
                     </Col>
                 </Row>
                 <Row gutter={[8, 8]} align={"middle"}>
-                    <Col xs={24} md={12} lg={8}>
+                    <Col xs={24} md={12}>
                         <p className="text-slate-400 text-xs md:text-sm">{description + description + description}</p>
                     </Col>
                 </Row>

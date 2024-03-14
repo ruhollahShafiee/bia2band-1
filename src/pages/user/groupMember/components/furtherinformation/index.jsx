@@ -1,161 +1,98 @@
-import { Card, Checkbox, Col, Form, Row } from "antd";
-import Meta from "antd/es/card/Meta";
-import { Buttons, Inputs } from "@/components";
+import { Card, Col, Form, Radio, Row } from "antd";
+import { Inputs, InputType, Buttons } from "@/components";
 import { useTranslation } from "react-i18next";
-import { CloudUploadOutlined } from "@ant-design/icons";
-import TextArea from "antd/es/input/TextArea";
-import InputUpload from "../../../skills/components/furtherinformation/inputUpload";
+import { CloudUploadOutlined, PlusCircleOutlined } from "@ant-design/icons";
 
-const title = "اطلاعات تکمیلی";
+const SingleQuestion = ({ t, title = "", names = [], hasUpload = true }) => (
+    <Row gutter={[8, 8]} justify={"start"}>
+        <Col xs={24} md={24}>
+            <h3 className="mb-2">{title}</h3>
+        </Col>
+        <Col xs={24} md={6}>
+            <Radio.Group name="answer">
+                <Radio value={"yes"}>دارم</Radio>
+                <Radio value={"no"}>ندارم</Radio>
+            </Radio.Group>
+        </Col>
+        <Col xs={24} md={12} className="flex flex-col">
+            {names.map((item) => (
+                <Inputs key={item} name={item} defaultValue={item} addonAfter={<PlusCircleOutlined />} />
+            ))}
+        </Col>
+        <Col xs={24} md={6}>
+            <Buttons
+                disabled={!hasUpload}
+                content={
+                    <div className="flex gap-3">
+                        <span className="pb-2"> {t("آپلود تصویر یا فایل ضمیمه")} </span>
+                        <CloudUploadOutlined className="pb-3" />
+                    </div>
+                }
+                type="dashed"
+                htmlType="link"
+            />
+        </Col>
+    </Row>
+);
 
 const FurtherInformation = () => {
     const { t } = useTranslation();
+    const furthers = [
+        {
+            key: "question-1",
+            title: "سابقه ی اجرای صحنه ای داشته اید؟",
+            names: ["ارسباران"],
+        },
+        {
+            key: "question-2",
+            title: "سابقه ی ضبط استودیویی داشته اید؟",
+            names: ["ارسباران"],
+        }, {
+            key: "question-3",
+            title: "سابقه ی حضور در آلبوم موسیقی داشته اید؟",
+            names: ["ارسباران"],
+            hasUpload: false,
+        }, {
+            key: "question-4",
+            title: "سابقه ی حضور در جشنواره موسیقی داشته اید؟",
+            names: ["ارسباران"],
+        }, {
+            key: "question-5",
+            title: "سابقه ی همکاری با رسانه ی ملی داشته اید؟",
+            names: ["ارسباران"],
+        },
+    ];
     return (
-        <>
-            <Card
-                bordered
-            >
-                <Meta
-                    title={title}
-                />
-                <Form name="further-form" className="further-form mt-5 text-xs md:text-sm" layout="vertical">
-                    <Row gutter={[8, 8]} align={"middle"} className="mt-4">
-                        <Col xs={24} md={16} lg={12}>
-                            <label>سابقه ی اجرای صحنه ای داشته اید؟</label>
-                        </Col>
-                    </Row>
-                    <Row gutter={[8, 8]} align={"middle"} className="mb-4">
-                        <Col xs={22} md={10} lg={8}>
-                            <Checkbox.Group style={{ width: '100%' }} defaultValue={"B"} >
-                                <Row>
-                                    <Checkbox value="A" disabled>ندارم</Checkbox>
-                                    <Checkbox value="B">دارم</Checkbox>
-                                </Row>
-                            </Checkbox.Group>
-                        </Col>
-                        <Col xs={24} md={10} lg={8}>
-                            <Inputs
-                                name="add"
-                                placeholder={t("ارسباران")}
-                            />
-                        </Col>
-                        <Col xs={18} md={6} lg={8} className="pb-5">
-                            <InputUpload />
-                        </Col>
-                    </Row>
-                    <Row gutter={[8, 8]} align={"middle"} className="mt-4">
-                        <Col xs={24} md={16} lg={12}>
-                            <label>سابقه ی ضبط استودیویی داشته اید؟</label>
-                        </Col>
-                    </Row>
-                    <Row gutter={[8, 8]} align={"middle"} className="mb-4">
-                        <Col xs={22} md={10} lg={8}>
-                            <Checkbox.Group style={{ width: '100%' }} defaultValue={"B"} >
-                                <Row>
-                                    <Checkbox value="A" disabled>ندارم</Checkbox>
-                                    <Checkbox value="B">دارم</Checkbox>
-                                </Row>
-                            </Checkbox.Group>
-                        </Col>
-                        <Col xs={24} md={10} lg={8}>
-                            <Inputs
-                                name="add"
-                                placeholder={t("ارسباران")}
-                            />
-                        </Col>
-                        <Col xs={18} md={6} lg={8} className="pb-5">
-                            <InputUpload />
-                        </Col>
-                    </Row>
-                    <Row gutter={[8, 8]} align={"middle"} className="mt-4">
-                        <Col xs={24} md={16} lg={12}>
-                            <label>سابقه ی حضور در آلبوم موسیقی داشته اید؟</label>
-                        </Col>
-                    </Row>
-                    <Row gutter={[8, 8]} align={"middle"} className="mb-4">
-                        <Col xs={22} md={10} lg={8}>
-                            <Checkbox.Group style={{ width: '100%' }} defaultValue={"B"} >
-                                <Row>
-                                    <Checkbox value="A" disabled>ندارم</Checkbox>
-                                    <Checkbox value="B">دارم</Checkbox>
-                                </Row>
-                            </Checkbox.Group>
-                        </Col>
-                        <Col xs={24} md={10} lg={8}>
-                            <Inputs
-                                name="add"
-                                placeholder={t("ارسباران")}
-                            />
-                        </Col>
-                    </Row>
-                    <Row gutter={[8, 8]} align={"middle"} className="mt-4">
-                        <Col xs={24} md={16} lg={12}>
-                            <label>سابقه ی حضور در جشنواره موسیقی داشته اید؟</label>
-                        </Col>
-                    </Row>
-                    <Row gutter={[8, 8]} align={"middle"} className="mb-4">
-                        <Col xs={22} md={10} lg={8}>
-                            <Checkbox.Group style={{ width: '100%' }} defaultValue={"B"} >
-                                <Row>
-                                    <Checkbox value="A" disabled>ندارم</Checkbox>
-                                    <Checkbox value="B">دارم</Checkbox>
-                                </Row>
-                            </Checkbox.Group>
-                        </Col>
-                        <Col xs={24} md={10} lg={8}>
-                            <Inputs
-                                name="add"
-                                placeholder={t("ارسباران")}
-                            />
-                        </Col>
-                        <Col xs={18} md={6} lg={8} className="pb-5">
-                            <InputUpload />
-                        </Col>
-                    </Row>
-                    <Row gutter={[8, 8]} align={"middle"} className="mt-4">
-                        <Col xs={24} md={16} lg={12}>
-                            <label>سابقه ی همکاری با رسانه ی ملی داشته اید؟</label>
-                        </Col>
-                    </Row>
-                    <Row gutter={[8, 8]} align={"middle"} className="mb-4">
-                        <Col xs={22} md={10} lg={8}>
-                            <Checkbox.Group style={{ width: '100%' }} defaultValue={"B"} >
-                                <Row>
-                                    <Checkbox value="A" disabled>ندارم</Checkbox>
-                                    <Checkbox value="B">دارم</Checkbox>
-                                </Row>
-                            </Checkbox.Group>
-                        </Col>
-                        <Col xs={24} md={10} lg={8}>
-                            <Inputs
-                                name="add"
-                                placeholder={t("ارسباران")}
-                            />
-                        </Col>
-                        <Col xs={18} md={6} lg={8} className="pb-5">
-                            <InputUpload />
-                        </Col>
-                    </Row>
-                    <Row gutter={[8, 8]} align={"middle"} className="mt-4 pb-2">
-                        <Col xs={24} md={16} lg={12}>
-                            <label>توضیحات دلخواه</label>
-                        </Col>
-                    </Row>
-                    <Row gutter={[8, 8]} align={"middle"} className="pb-4">
-                        <Col xs={24} md={24} lg={24}>
-                            <TextArea
-                                name="about"
-                                autoSize={{
-                                    minRows: 5,
-                                    maxRows: 8,
-                                }}
-                                placeholder={t("اگر توضیحات خاصی مدنظرتان هست در این قسمت بنویسید.")}
-                            />
-                        </Col>
-                    </Row>
-                </Form>
-            </Card>
-        </>
+        <Card
+            bordered
+        >
+            <Form name="further-form" className="further-form mt-5 text-xs md:text-sm" layout="vertical">
+                <Row className="p-2 md:p-10 lg:px-20 lg:py-10">
+                    <Col xs={24} md={24} className="text-2xl pb-5">
+                        اطلاعات تکمیلی
+                    </Col>
+                    {furthers.map(({ key, title, names, hasUpload }) => (
+                        <SingleQuestion key={key} title={title} names={names} hasUpload={hasUpload} t={t} />
+                    ))}
+                </Row>
+                <Row gutter={[8, 16]} className="p-5 md:p-10 lg:px-20 lg:py-6">
+					<Col xs={24} md={24} className="text-xl pb-5">
+                        توضیحات دلخواه
+                    </Col>
+                    <Col xs={24} md={24}>
+                        <InputType
+                            type="textarea"
+                            classes="text-xs md:text-sm"
+                            name="about"
+                            autoSize={{
+                                minRows: 5,
+                            }}
+                            placeholder={t("اگر توضیحات خاصی مدنظرتان هست در این قسمت بنویسید.")}
+                        />
+                    </Col>
+                </Row>
+            </Form>
+        </Card>
     );
 };
 export default FurtherInformation;

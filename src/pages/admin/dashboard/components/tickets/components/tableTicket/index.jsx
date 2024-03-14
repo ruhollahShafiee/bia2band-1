@@ -17,7 +17,7 @@ const columns = [
 
     },
     {
-        title:'وضعیت',
+        title: 'وضعیت',
         dataIndex: 'status',
         key: 'status',
         align: 'center',
@@ -25,7 +25,7 @@ const columns = [
 
     },
     {
-        title:'عملیات',
+        title: 'عملیات',
         dataIndex: 'operation',
         key: 'operation',
         align: 'center',
@@ -45,7 +45,7 @@ const columns = [
 const data = [
     {
         key: '1',
-        id:'#1231548',
+        id: '#1231548',
         title: 'عدم مشاهده آمار',
         status: 'در دست بررسی',
         operation: 'مشاهده',
@@ -63,13 +63,12 @@ const data = [
 
 const TableTicket = () => {
     return (
-        <Table columns={columns} dataSource={data} 
-        scroll={{x:"100%"}} 
-        bordered 
-        size="middle"
-        pagination={{total:[160], position:["bottomCenter"], showSizeChanger:false}}
+        <Table columns={columns} dataSource={data}
+            scroll={{ x: "100%" }}
+            bordered
+            size="middle"
+            pagination={{ total: [160], position: ["bottomCenter"], showSizeChanger: false }}
         />
-       
     );
 };
 
