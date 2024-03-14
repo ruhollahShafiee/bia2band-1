@@ -5,7 +5,7 @@ import { setToCookie, getFromCookie } from "@/utils/storage";
 import { mockData } from "@/service/main/transformer";
 
 export const getCurrentUser = createAsyncThunk("auth/currentUser", async ({ callApi }) => {
-	const token = getFromCookie("app-token")
+	const token = getFromCookie("access_token")
 	if (!token) return { user: mockData["artist"] }
 	const { id } = jwtDecode(token)
 	return await callApi({ url: `artist/${id}` })

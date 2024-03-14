@@ -2,11 +2,11 @@ import axios from "axios";
 
 import { getFromCookie } from "../utils/storage";
 
-const callApi = async ({
+const callApi = ({
 	url = "",
 	method = "GET",
-	data = {},
-	params = {},
+	data = {}, // body
+	params = {}, // query
 	contentType = "application/json",
 }) => {
 	// eslint-disable-next-line no-undef
@@ -23,7 +23,7 @@ const callApi = async ({
 		},
 	});
 	// set request configs
-	const token = getFromCookie("app-token");
+	const token = getFromCookie("access_token");
 	axiosInstance.interceptors.request.use(
 		(config) => {
 			if (token) {
@@ -53,7 +53,7 @@ const callApi = async ({
 		},
 	);
 	// return
-	return await new Promise((resolve, reject) => {
+	return new Promise((resolve, reject) => {
 		axiosInstance({ url, method, params, data })
 			.then((res) => {
 				resolve(res?.data);
