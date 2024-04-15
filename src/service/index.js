@@ -10,13 +10,14 @@ const callApi = ({
 	contentType = "application/json",
 }) => {
 	// eslint-disable-next-line no-undef
-	const baseURL = "http://84.32.10.113:5800/api/"
+	const baseURL = "http://localhost:5800/api/"
 	// create axiosInstance
 	const axiosInstance = axios.create({
 		baseURL,
 		headers: {
 			"Access-Control-Allow-Origin": "*",
 			"Access-Control-Allow-Headers": "*",
+			"Authorization":"Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxMTk0Njc5OCwiZXhwIjoxNzEyNTUxNTk4fQ.tX0Ro7zq6ctllpvAHqf72ob9XvYRUCLbZsu60KrmeBo"
 			// Accept: "application/json",
 			// "Accept-Language": "en",
 			// "Api-Version": "1.0",

@@ -2,9 +2,9 @@ export const mockData = {
     "artist":
     {
         "id": 1,
-        "fullname": "امین عباسی",
-        "firstname": "امین",
-        "lastname": "عباسی",
+        "fullname": "dewwgegewg عباسی",
+        "firstname": "gewgewg",
+        "lastname": "ewgwegwegewg",
         "email": "a.abbasi@gmail.com",
         "phone": "+98218564235",
         "homeAddress": "تهران میدان نبوت",
@@ -40,8 +40,8 @@ export const mockData = {
     "artist/all": [
         {
             "id": 1,
-            "firstname": "امین",
-            "lastname": "عباسی",
+            "firstname": "جابر",
+            "lastname": "رحیمی",
             "email": "a.abbasi@gmail.com",
             "phone": "+98218564235",
             "homeAddress": "تهران میدان نبوت",

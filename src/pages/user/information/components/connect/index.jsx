@@ -44,13 +44,14 @@ const Connect = () => {
 						content={
 							<div className="flex justify-center items-center align-middle gap-3">
 								<PlusCircleOutlined className="pb-1" />
-								<span>{t("افزودن شبکه های اجتماعی")}</span>
+								<span>{t("ذخیره")}</span>
 							</div>
 						}
 						type="default"
 						htmlType="button"
 					/>
 				</Col>
+				
 			</Row>
 		</Card>
 	);

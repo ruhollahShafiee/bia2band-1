@@ -4,11 +4,13 @@ import { AppstoreOutlined, EnvironmentOutlined } from "@ant-design/icons";
 
 import Regex from "@/utils/regex";
 
-import { Selects, Inputs } from "@/components";
+import { Inputs, Buttons } from "@/components";
 
 const { Meta } = Card;
 const Personal = () => {
 	const { t } = useTranslation();
+
+
 	return (
 		<Card cover={<img src={"/assets/icon/pic2.svg"} className="h-32 md:h-56 object-cover" />} bordered>
 			<Meta
@@ -23,8 +25,19 @@ const Personal = () => {
 			/>
 			<section className="personal-form mt-5 text-xs md:text-sm">
 				<Row gutter={[8, 8]} className="p-5 md:p-10 lg:px-20 lg:py-10">
-					<Col xs={24} md={12}>
-						<Inputs name="fullname" label="نام" placeholder={t("سامان حشمتی")} extraClasses="flex-grow" />
+					<Col xs={24} md={4}>
+						<Inputs name="firstname" label="نام" placeholder={t("سامان حشمتی")} extraClasses="flex-grow" />
+					</Col>
+					<Col xs={24} md={6}>
+						<Inputs name="lastname" label="نام خانوادگی" placeholder={t("سامان حشمتی")} extraClasses="flex-grow" />
+					</Col>
+					<Col xs={24} md={8}>
+						<Inputs
+							name="brithYear"
+							label="سال تولد"
+							placeholder={t("1368")}
+							extraClasses="flex-grow"
+						/>
 					</Col>
 					<Col xs={24} md={12}>
 						<Inputs
@@ -32,18 +45,6 @@ const Personal = () => {
 							label="ایمیل"
 							placeholder={t("samanHeshmati@gmail.com")}
 							extraClasses="flex-grow"
-						/>
-					</Col>
-					<Col xs={24} md={12}>
-						<Selects
-							name="birthdate"
-							label="سال تولد"
-							placeholder={
-								<div className="flex gap-2 align-middle items-center">
-									<AppstoreOutlined className="pb-1" />
-									<span>1369</span>
-								</div>
-							}
 						/>
 					</Col>
 					<Col xs={24} md={12}>
@@ -57,17 +58,16 @@ const Personal = () => {
 							extraClasses="flex-grow"
 						/>
 					</Col>
-					<Col xs={24} md={12}>
-						<Selects
-							name="city"
+					<Col xs={24} md={18}>
+						<Inputs
+							name="homeAddress"
 							label="محل سکونت"
-							placeholder={
-								<div className="flex gap-2 align-middle items-center">
-									<EnvironmentOutlined className="pb-1" />
-									<span>نام شهر</span>
-								</div>
-							}
+							placeholder={t("آدرس")}
+							extraClasses="flex-grow"
 						/>
+					</Col>
+					<Col xs={24} md={24}>
+						<Buttons content={t("بروزرسانی")} type="primary" htmlType="submit" block={true} />
 					</Col>
 				</Row>
 			</section>

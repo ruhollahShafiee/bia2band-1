@@ -5,5 +5,9 @@ export const allArtist = (callApi) => {
 }
 
 export const artist = (callApi, id) => {
-    return callApi({ url: `artist/${id}`, }).then(data => mockData["artist"])
+
+    console.log(id)
+    return callApi({ url: `artist/${id}` }).then(({ ...response }) => {
+			return { user: response };
+		})
 }

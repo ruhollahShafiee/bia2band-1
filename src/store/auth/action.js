@@ -1,17 +1,14 @@
 import { jwtDecode } from "jwt-decode";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-
+import { artist, allArtist } from "@/service/main";
 import { setToCookie, getFromCookie } from "@/utils/storage";
 import { mockData } from "@/service/main/transformer";
+import callApi from "@/service";
 
-export const getCurrentUser = createAsyncThunk("auth/currentUser", async ({ callApi }) => {
+export const getCurrentUser = createAsyncThunk(
+	"auth/currentUser", 
+	async ({ callApi }) => {
 	const token = getFromCookie("access_token")
-	if (!token) return { user: mockData["artist"] }
-	const { id } = jwtDecode(token)
-	return await callApi({ url: `artist/${id}` })
-		.then(({ token, ...response }) => {
-			setToCookie("access_token", token);
-			return { user: response };
-		})
-		.catch(() => ({ user: null }));
+	const { id } = { id: 1 }
+	return await artist(callApi,id)
 });

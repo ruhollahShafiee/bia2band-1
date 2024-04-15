@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Form, theme } from "antd";
 import { useSelector } from "react-redux";
 
@@ -11,8 +11,11 @@ import MyProfessional from "./components/profesional";
 import FurtherInfo from "./components/furtherinformation";
 import Portfolio from "./components/portfo";
 import Description from "./components/description";
+import { useAppContext } from "@/hooks";
+
 
 const Skills = () => {
+	const { callApi } = useAppContext();
 	const {
 		token: { colorBgContainer },
 	} = theme.useToken();
