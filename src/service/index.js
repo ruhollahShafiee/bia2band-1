@@ -17,7 +17,7 @@ const callApi = ({
 		headers: {
 			"Access-Control-Allow-Origin": "*",
 			"Access-Control-Allow-Headers": "*",
-			"Authorization":"Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxMTk0Njc5OCwiZXhwIjoxNzEyNTUxNTk4fQ.tX0Ro7zq6ctllpvAHqf72ob9XvYRUCLbZsu60KrmeBo"
+			"Authorization":"Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxMzE5MDI3MSwiZXhwIjoxNzEzNzk1MDcxfQ.G1R79SotPfqaQkBxtEb57uOxKEVjOJkdw8eHT9Xx6sU"
 			// Accept: "application/json",
 			// "Accept-Language": "en",
 			// "Api-Version": "1.0",
