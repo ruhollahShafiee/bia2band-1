@@ -5,7 +5,7 @@ import { TwitterOutlined, FacebookOutlined, InstagramFilled, PlusCircleOutlined 
 
 const Connect = () => {
 	const { t } = useTranslation();
-	return (
+	return ( 
 		<Card bordered>
 			<Row gutter={[48, 18]} className="p-5 md:p-10 lg:px-20 lg:py-10">
 				<Col xs={24} md={24} className="text-2xl pb-5">
